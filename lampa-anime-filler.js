@@ -1,5 +1,5 @@
 /*
- * Lampa Anime Filler — Online_Mod / Kodik test build 0.5.0-kodik.4
+ * Lampa Anime Filler — Online_Mod / Kodik test build 0.5.0-kodik.5
  * Source code is independently written; no Lampa code copied.
  * Metadata backends: optional user-provided AFL JSON, fallback CC BY 4.0 SkipTheFiller dataset.
  * Phase 1: labels only; no playback/playlist modification.
@@ -142,6 +142,31 @@
       seasonOffsets: input.seasonOffsets || (clean(input.slug) === 'one-piece' ? {'1': 0} : null),
       kodik: input.kodik || null,
       source: input.source || source || 'Пользовательские данные' };
+  }
+  function findEmbeddedGuide(movie) {
+    var embedded = window.LampaAnimeFillerEmbeddedGuides;
+    if (!embedded || !Array.isArray(embedded.items)) return null;
+    var id = String(movie && movie.id || '');
+    var matches = embedded.items.filter(function (item) {
+      return item.ids && String(item.ids.tmdbTv || '') === id;
+    });
+    var method = 'TMDB ID';
+    if (!matches.length) {
+      var names = candidateSlugs(movie);
+      matches = embedded.items.filter(function (item) {
+        var aliases = [item.slug, item.title].concat(item.aliases || []).map(clean);
+        return aliases.some(function (alias) { return names.indexOf(alias) >= 0; });
+      });
+      method = 'проверенный alias';
+    }
+    if (matches.length !== 1) return null;
+    var item = matches[0];
+    var guide = normalizeGuide({ slug: item.slug, title: item.title, episodes: item.episodes,
+      seasonOffsets: item.numbering && item.numbering.seasonOffsets,
+      kodik: item.numbering && item.numbering.kodik }, 'Встроенный каталог');
+    if (!guide) return null;
+    guide.embeddedResolution = method;
+    return guide;
   }
   function isObject(value) { return value && typeof value === 'object' && !Array.isArray(value); }
   function withTimeout(promise, label) {
@@ -561,6 +586,22 @@
     state.slug = candidateSlugs(movie)[0] || '';
     if (!state.slug) return;
 
+    // The self-contained test build activates its already validated guide
+    // synchronously. This avoids network, Promise and Storage differences in
+    // Android/webOS Lampa runtimes before the card status is rendered.
+    var embeddedGuide = findEmbeddedGuide(movie);
+    if (embeddedGuide) {
+      state.guide = embeddedGuide;
+      state.slug = embeddedGuide.slug;
+      state.diagnostics.provider = 'встроенный каталог 45 / 9552';
+      state.diagnostics.integrity = 'проверен при сборке';
+      state.diagnostics.resolution = embeddedGuide.embeddedResolution;
+      state.diagnostics.phase = 'встроенный каталог активирован';
+      updateCard();
+      scheduleScan();
+      return;
+    }
+
     var base = String(getSetting('source_url', '') || '').trim().replace(/\/+$/, '');
     // A user-provided HTTPS JSON endpoint, e.g. https://host.example/filler/naruto.json
     var custom = base && /^https:\/\//i.test(base)
@@ -831,7 +872,7 @@
     var diag = state.diagnostics;
     var example = diag.sampleTitle || 'не захвачено';
     var lines = [
-      'Версия: 0.5.0-kodik.4',
+      'Версия: 0.5.0-kodik.5',
       'Карточка: ' + (state.movie ? (state.movie.name || state.movie.title || state.movie.original_name || 'без названия') + ' (TMDB ' + state.movie.id + ')' : 'не открывалась'),
       'Каталог: ' + (state.slug || 'не выбран'),
       'Состояние: ' + diag.phase,
@@ -932,12 +973,12 @@
     Lampa.Listener.follow('activity', scheduleScan);
     observer = new MutationObserver(scheduleScan);
     if (document.body) observer.observe(document.body, { childList: true, subtree: true });
-    log('Loaded 0.5.0-kodik.4, Online_Mod / Kodik marking only');
+    log('Loaded 0.5.0-kodik.5, Online_Mod / Kodik marking only');
   }
   window.LampaAnimeFiller = { parseEpisode: parseEpisode, normalizeGuide: normalizeGuide,
     findGuide: findGuide, classify: classify, scan: scan, sha256Text: sha256Text,
     loadBundleGuide: loadBundleGuide, indexForDetailed: indexForDetailed,
-    state: state, version: '0.5.0-kodik.4' };
+    state: state, version: '0.5.0-kodik.5' };
   if (window.appready) init();
   else Lampa.Listener.follow('app', function (evt) { if (evt.type === 'ready') init(); });
 })();

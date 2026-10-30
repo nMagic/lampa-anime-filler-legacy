@@ -214,17 +214,23 @@ test('uses the Lampa transport on webOS and requests response bodies as text', a
   assert.equal(calls.length, 3);
 });
 
-test('standalone build loads Naruto without any catalog network request', async () => {
-  const standalone = fs.readFileSync(path.join(__dirname, '..', 'lampa-anime-filler-kodik4.js'), 'utf8');
-  const { api } = createHarness({
+test('standalone build activates Naruto synchronously from the actual Lampa card event', () => {
+  const standalone = fs.readFileSync(path.join(__dirname, '..', 'lampa-anime-filler-kodik5.js'), 'utf8');
+  let networkCalls = 0;
+  const { api, listeners } = createHarness({
     source: standalone,
-    fetch: () => Promise.reject(new Error('catalog network must not be used'))
+    fetch: () => { networkCalls++; return Promise.reject(new Error('catalog network must not be used')); }
   });
-  const guide = await api.loadBundleGuide({ id: 46260, name: 'Наруто', original_name: 'Naruto' });
-  assert.equal(api.version, '0.5.0-kodik.4');
-  assert.equal(guide.slug, 'naruto');
-  assert.equal(guide.episodes[136], 'filler');
-  assert.equal(guide.kodik.coveredEpisodes, 220);
+  listeners.full[0]({ type: 'complite', data: { movie: {
+    id: 46260, name: 'Наруто', original_name: 'Naruto', media_type: 'tv'
+  } }, object: {} });
+  assert.equal(api.version, '0.5.0-kodik.5');
+  assert.equal(api.state.diagnostics.phase, 'встроенный каталог активирован');
+  assert.equal(api.state.diagnostics.provider, 'встроенный каталог 45 / 9552');
+  assert.equal(api.state.guide.slug, 'naruto');
+  assert.equal(api.state.guide.episodes[136], 'filler');
+  assert.equal(api.state.guide.kodik.coveredEpisodes, 220);
+  assert.equal(networkCalls, 0);
 });
 
 test('coalesces repeated full-screen events while the same card is loading', async () => {
