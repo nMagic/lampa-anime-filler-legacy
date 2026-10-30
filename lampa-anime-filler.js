@@ -1,5 +1,5 @@
 /*
- * Lampa Anime Filler — Online_Mod / Kodik test build 0.5.0-kodik.3
+ * Lampa Anime Filler — Online_Mod / Kodik test build 0.5.0-kodik.4
  * Source code is independently written; no Lampa code copied.
  * Metadata backends: optional user-provided AFL JSON, fallback CC BY 4.0 SkipTheFiller dataset.
  * Phase 1: labels only; no playback/playlist modification.
@@ -208,6 +208,10 @@
     });
   }
   function fetchText(url) {
+    var embedded = window.LampaAnimeFillerEmbedded;
+    if (embedded && Object.prototype.hasOwnProperty.call(embedded, url)) {
+      return Promise.resolve(embedded[url]);
+    }
     // Online_Mod uses this transport too; it is reliable on old webOS WebViews.
     if (Lampa.Reguest) {
       return withTimeout(new Promise(function (resolve, reject) {
@@ -827,7 +831,7 @@
     var diag = state.diagnostics;
     var example = diag.sampleTitle || 'не захвачено';
     var lines = [
-      'Версия: 0.5.0-kodik.3',
+      'Версия: 0.5.0-kodik.4',
       'Карточка: ' + (state.movie ? (state.movie.name || state.movie.title || state.movie.original_name || 'без названия') + ' (TMDB ' + state.movie.id + ')' : 'не открывалась'),
       'Каталог: ' + (state.slug || 'не выбран'),
       'Состояние: ' + diag.phase,
@@ -928,12 +932,12 @@
     Lampa.Listener.follow('activity', scheduleScan);
     observer = new MutationObserver(scheduleScan);
     if (document.body) observer.observe(document.body, { childList: true, subtree: true });
-    log('Loaded 0.5.0-kodik.3, Online_Mod / Kodik marking only');
+    log('Loaded 0.5.0-kodik.4, Online_Mod / Kodik marking only');
   }
   window.LampaAnimeFiller = { parseEpisode: parseEpisode, normalizeGuide: normalizeGuide,
     findGuide: findGuide, classify: classify, scan: scan, sha256Text: sha256Text,
     loadBundleGuide: loadBundleGuide, indexForDetailed: indexForDetailed,
-    state: state, version: '0.5.0-kodik.3' };
+    state: state, version: '0.5.0-kodik.4' };
   if (window.appready) init();
   else Lampa.Listener.follow('app', function (evt) { if (evt.type === 'ready') init(); });
 })();

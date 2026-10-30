@@ -137,7 +137,7 @@ function createHarness(options = {}) {
     Promise,
     fetch: options.fetch || (() => Promise.reject(new Error('unexpected fetch')))
   };
-  vm.runInNewContext(source, context);
+  vm.runInNewContext(options.source || source, context);
   return {
     api: context.window.LampaAnimeFiller,
     context,
@@ -212,6 +212,19 @@ test('uses the Lampa transport on webOS and requests response bodies as text', a
   const guide = await api.loadBundleGuide({ id: 37854, name: 'Ван-Пис' });
   assert.equal(guide.episodes[55], 'filler');
   assert.equal(calls.length, 3);
+});
+
+test('standalone build loads Naruto without any catalog network request', async () => {
+  const standalone = fs.readFileSync(path.join(__dirname, '..', 'lampa-anime-filler-kodik4.js'), 'utf8');
+  const { api } = createHarness({
+    source: standalone,
+    fetch: () => Promise.reject(new Error('catalog network must not be used'))
+  });
+  const guide = await api.loadBundleGuide({ id: 46260, name: 'Наруто', original_name: 'Naruto' });
+  assert.equal(api.version, '0.5.0-kodik.4');
+  assert.equal(guide.slug, 'naruto');
+  assert.equal(guide.episodes[136], 'filler');
+  assert.equal(guide.kodik.coveredEpisodes, 220);
 });
 
 test('coalesces repeated full-screen events while the same card is loading', async () => {
