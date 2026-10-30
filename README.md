@@ -7,12 +7,12 @@
 В Lampa откройте **Настройки → Расширения / Плагины → Добавить плагин** и укажите:
 
 ```text
-https://cdn.jsdelivr.net/gh/nMagic/lampa-anime-filler@kodik-test/install-kodik6.js
+https://cdn.jsdelivr.net/gh/nMagic/lampa-anime-filler@kodik-test/install-kodik7.js
 ```
 
 Затем полностью перезапустите Lampa. Стабильный адрес `https://nmagic.github.io/lampa-anime-filler/a.js` этой веткой не изменяется.
 
-## Что исправлено в 0.5.0-kodik.6
+## Что исправлено в 0.5.0-kodik.7
 
 - Исследован актуальный Online_Mod, commit `cde2cf057e6634df43553fe8deeaef5030f95945`.
 - Kodik сначала определяется Online_Mod по Shikimori, WorldArt, Kinopoisk, IMDb или внутреннему ID. В список передаются реальные `season`, `episode` и оригинальное название выбранной записи Kodik.

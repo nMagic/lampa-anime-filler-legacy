@@ -16,5 +16,5 @@ const plugin = fs.readFileSync(path.join(root, 'lampa-anime-filler.js'), 'utf8')
 const marker = 'var EMBEDDED_GUIDES = null;';
 if (!plugin.includes(marker)) throw new Error('Embedded guide marker not found');
 const standalone = plugin.replace(marker, 'var EMBEDDED_GUIDES = ' + JSON.stringify({ items }) + ';');
-fs.writeFileSync(path.join(root, 'lampa-anime-filler-kodik6.js'), standalone);
+fs.writeFileSync(path.join(root, 'lampa-anime-filler-kodik7.js'), standalone);
 console.log(`Built synchronous standalone Kodik plugin: ${items.length} guides`);

@@ -215,16 +215,16 @@ test('uses the Lampa transport on webOS and requests response bodies as text', a
 });
 
 test('standalone build activates Naruto synchronously from the actual Lampa card event', () => {
-  const standalone = fs.readFileSync(path.join(__dirname, '..', 'lampa-anime-filler-kodik6.js'), 'utf8');
+  const standalone = fs.readFileSync(path.join(__dirname, '..', 'lampa-anime-filler-kodik7.js'), 'utf8');
   let networkCalls = 0;
   const { api, listeners } = createHarness({
     source: standalone,
     fetch: () => { networkCalls++; return Promise.reject(new Error('catalog network must not be used')); }
   });
   listeners.full[0]({ type: 'complite', data: { movie: {
-    id: 46260, name: 'Наруто', original_name: 'Naruto', media_type: 'tv'
+    id: 46260, name: 'Наруто', media_type: 'tv'
   } }, object: {} });
-  assert.equal(api.version, '0.5.0-kodik.6');
+  assert.equal(api.version, '0.5.0-kodik.7');
   assert.equal(api.state.diagnostics.phase, 'встроенный каталог активирован');
   assert.equal(api.state.diagnostics.provider, 'встроенный каталог 45 / 9552');
   assert.equal(api.state.diagnostics.embeddedItems, 45);

@@ -1,5 +1,5 @@
 /*
- * Lampa Anime Filler — Online_Mod / Kodik test build 0.5.0-kodik.6
+ * Lampa Anime Filler — Online_Mod / Kodik test build 0.5.0-kodik.7
  * Source code is independently written; no Lampa code copied.
  * Metadata backends: optional user-provided AFL JSON, fallback CC BY 4.0 SkipTheFiller dataset.
  * Phase 1: labels only; no playback/playlist modification.
@@ -590,12 +590,9 @@
     state.diagnostics.noClassification = 0;
     state.diagnostics.kodikRows = 0;
     state.diagnostics.numbering = '';
-    state.slug = candidateSlugs(movie)[0] || '';
-    if (!state.slug) return;
-
     // The self-contained test build activates its already validated guide
-    // synchronously. This avoids network, Promise and Storage differences in
-    // Android/webOS Lampa runtimes before the card status is rendered.
+    // synchronously by TMDB ID BEFORE any title/slug processing. Localized
+    // cards may contain only Cyrillic, while the legacy slugger is ASCII-only.
     var embeddedGuide = findEmbeddedGuide(movie);
     if (embeddedGuide) {
       state.guide = embeddedGuide;
@@ -606,6 +603,14 @@
       state.diagnostics.phase = 'встроенный каталог активирован';
       updateCard();
       scheduleScan();
+      return;
+    }
+
+    state.slug = candidateSlugs(movie)[0] || '';
+    if (!state.slug) {
+      state.diagnostics.phase = 'карточка не сопоставлена';
+      state.diagnostics.error = 'нет TMDB-привязки и латинского названия';
+      updateCard();
       return;
     }
 
@@ -879,7 +884,7 @@
     var diag = state.diagnostics;
     var example = diag.sampleTitle || 'не захвачено';
     var lines = [
-      'Версия: 0.5.0-kodik.6',
+      'Версия: 0.5.0-kodik.7',
       'Карточка: ' + (state.movie ? (state.movie.name || state.movie.title || state.movie.original_name || 'без названия') + ' (TMDB ' + state.movie.id + ')' : 'не открывалась'),
       'Каталог: ' + (state.slug || 'не выбран'),
       'Состояние: ' + diag.phase,
@@ -982,12 +987,12 @@
     Lampa.Listener.follow('activity', scheduleScan);
     observer = new MutationObserver(scheduleScan);
     if (document.body) observer.observe(document.body, { childList: true, subtree: true });
-    log('Loaded 0.5.0-kodik.6, Online_Mod / Kodik marking only');
+    log('Loaded 0.5.0-kodik.7, Online_Mod / Kodik marking only');
   }
   window.LampaAnimeFiller = { parseEpisode: parseEpisode, normalizeGuide: normalizeGuide,
     findGuide: findGuide, classify: classify, scan: scan, sha256Text: sha256Text,
     loadBundleGuide: loadBundleGuide, indexForDetailed: indexForDetailed,
-    state: state, version: '0.5.0-kodik.6' };
+    state: state, version: '0.5.0-kodik.7' };
   if (window.appready) init();
   else Lampa.Listener.follow('app', function (evt) { if (evt.type === 'ready') init(); });
 })();
