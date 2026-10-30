@@ -16,7 +16,7 @@ async function flushMany(count = 8) {
 }
 
 function bundleFixture(options = {}) {
-  const base = 'https://raw.githubusercontent.com/nMagic/lampa-anime-filler/kodik-test/data/generated/v1';
+  const base = 'https://cdn.jsdelivr.net/gh/nMagic/lampa-anime-filler@kodik-test/data/generated/v1';
   const episodes = {};
   for (let number = 1; number <= 55; number++) episodes[number] = number === 55 ? 'filler' : 'canon';
   const shard = {
@@ -191,7 +191,7 @@ test('loads and verifies manifest, index and one title shard', async () => {
 });
 
 test('loads the committed One Piece bundle end to end', async () => {
-  const base = 'https://raw.githubusercontent.com/nMagic/lampa-anime-filler/kodik-test/data/generated/v1/';
+  const base = 'https://cdn.jsdelivr.net/gh/nMagic/lampa-anime-filler@kodik-test/data/generated/v1/';
   const fetch = async url => {
     assert.ok(url.startsWith(base), 'unexpected URL ' + url);
     const relative = url.slice(base.length);
@@ -206,7 +206,7 @@ test('loads the committed One Piece bundle end to end', async () => {
 });
 
 test('loads real Kodik numbering for Bleach and multi-season My Hero Academia', async () => {
-  const base = 'https://raw.githubusercontent.com/nMagic/lampa-anime-filler/kodik-test/data/generated/v1/';
+  const base = 'https://cdn.jsdelivr.net/gh/nMagic/lampa-anime-filler@kodik-test/data/generated/v1/';
   const fetch = async url => {
     assert.ok(url.startsWith(base), 'unexpected URL ' + url);
     const relative = url.slice(base.length);

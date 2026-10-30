@@ -1,5 +1,5 @@
 /*
- * Lampa Anime Filler — Online_Mod / Kodik test build 0.5.0-kodik.1
+ * Lampa Anime Filler — Online_Mod / Kodik test build 0.5.0-kodik.2
  * Source code is independently written; no Lampa code copied.
  * Metadata backends: optional user-provided AFL JSON, fallback CC BY 4.0 SkipTheFiller dataset.
  * Phase 1: labels only; no playback/playlist modification.
@@ -13,7 +13,7 @@
 
   var BUNDLE_SCHEMA_VERSION = 1;
   // Test branch only. Stable GitHub Pages remains untouched until device verification.
-  var BUNDLE_BASE_URL = 'https://raw.githubusercontent.com/nMagic/lampa-anime-filler/kodik-test/data/generated/v1';
+  var BUNDLE_BASE_URL = 'https://cdn.jsdelivr.net/gh/nMagic/lampa-anime-filler@kodik-test/data/generated/v1';
   var LEGACY_DATASET_URL = 'https://raw.githubusercontent.com/animecannonhunter-hash/anime-filler-list-data/main/anime.json';
   var PREFIX = 'laf_';
   var CACHE_TTL = 24 * 60 * 60 * 1000;
@@ -759,7 +759,7 @@
     var diag = state.diagnostics;
     var example = diag.sampleTitle || 'не захвачено';
     var lines = [
-      'Версия: 0.5.0-kodik.1',
+      'Версия: 0.5.0-kodik.2',
       'Карточка: ' + (state.movie ? (state.movie.name || state.movie.title || state.movie.original_name || 'без названия') + ' (TMDB ' + state.movie.id + ')' : 'не открывалась'),
       'Каталог: ' + (state.slug || 'не выбран'),
       'Состояние: ' + diag.phase,
@@ -860,12 +860,12 @@
     Lampa.Listener.follow('activity', scheduleScan);
     observer = new MutationObserver(scheduleScan);
     if (document.body) observer.observe(document.body, { childList: true, subtree: true });
-    log('Loaded 0.5.0-kodik.1, Online_Mod / Kodik marking only');
+    log('Loaded 0.5.0-kodik.2, Online_Mod / Kodik marking only');
   }
   window.LampaAnimeFiller = { parseEpisode: parseEpisode, normalizeGuide: normalizeGuide,
     findGuide: findGuide, classify: classify, scan: scan, sha256Text: sha256Text,
     loadBundleGuide: loadBundleGuide, indexForDetailed: indexForDetailed,
-    state: state, version: '0.5.0-kodik.1' };
+    state: state, version: '0.5.0-kodik.2' };
   if (window.appready) init();
   else Lampa.Listener.follow('app', function (evt) { if (evt.type === 'ready') init(); });
 })();
