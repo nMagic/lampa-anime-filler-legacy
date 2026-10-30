@@ -1,5 +1,5 @@
 /*
- * Lampa Anime Filler — Online_Mod / Kodik test build 0.5.0-kodik.5
+ * Lampa Anime Filler — Online_Mod / Kodik test build 0.5.0-kodik.6
  * Source code is independently written; no Lampa code copied.
  * Metadata backends: optional user-provided AFL JSON, fallback CC BY 4.0 SkipTheFiller dataset.
  * Phase 1: labels only; no playback/playlist modification.
@@ -18,12 +18,15 @@
   var PREFIX = 'laf_';
   var CACHE_TTL = 24 * 60 * 60 * 1000;
   var FETCH_TIMEOUT = 8000;
+  // The standalone build replaces this exact declaration with the validated catalog.
+  // Lexical storage avoids host cleanup or sandboxing of temporary window globals.
+  var EMBEDDED_GUIDES = null;
   var state = { movie: null, movieKey: '', slug: '', guide: null, loadId: 0, dataset: null, datasetPromise: null,
     bundleCatalog: null, bundleCatalogPromise: null,
     diagnostics: { phase: 'ожидаем карточку аниме', error: '', fullEvents: 0, templateHits: 0,
       rows: 0, matched: 0, parsed: 0, unknownMapping: 0, noClassification: 0,
       kodikRows: 0, numbering: '', sampleTitle: '', sampleTemplate: '',
-      provider: '', integrity: '', resolution: '' } };
+      provider: '', integrity: '', resolution: '', embeddedItems: 0, embeddedLookup: '' } };
   var timer = null;
   var observer = null;
   var ROW_SELECTORS = '.online, .online-prestige, .online-prestige__episode, .online-prestige__item, ' +
@@ -144,13 +147,16 @@
       source: input.source || source || 'Пользовательские данные' };
   }
   function findEmbeddedGuide(movie) {
-    var embedded = window.LampaAnimeFillerEmbeddedGuides;
+    var embedded = EMBEDDED_GUIDES;
+    state.diagnostics.embeddedItems = embedded && Array.isArray(embedded.items) ? embedded.items.length : 0;
+    state.diagnostics.embeddedLookup = 'TMDB ' + String(movie && movie.id || '') + ': каталог недоступен';
     if (!embedded || !Array.isArray(embedded.items)) return null;
     var id = String(movie && movie.id || '');
     var matches = embedded.items.filter(function (item) {
       return item.ids && String(item.ids.tmdbTv || '') === id;
     });
     var method = 'TMDB ID';
+    state.diagnostics.embeddedLookup = 'TMDB ' + id + ': совпадений ' + matches.length;
     if (!matches.length) {
       var names = candidateSlugs(movie);
       matches = embedded.items.filter(function (item) {
@@ -158,6 +164,7 @@
         return aliases.some(function (alias) { return names.indexOf(alias) >= 0; });
       });
       method = 'проверенный alias';
+      state.diagnostics.embeddedLookup = 'alias: совпадений ' + matches.length;
     }
     if (matches.length !== 1) return null;
     var item = matches[0];
@@ -872,7 +879,7 @@
     var diag = state.diagnostics;
     var example = diag.sampleTitle || 'не захвачено';
     var lines = [
-      'Версия: 0.5.0-kodik.5',
+      'Версия: 0.5.0-kodik.6',
       'Карточка: ' + (state.movie ? (state.movie.name || state.movie.title || state.movie.original_name || 'без названия') + ' (TMDB ' + state.movie.id + ')' : 'не открывалась'),
       'Каталог: ' + (state.slug || 'не выбран'),
       'Состояние: ' + diag.phase,
@@ -887,6 +894,8 @@
       'Data Provider: ' + (diag.provider || 'нет'),
       'Целостность: ' + (diag.integrity || 'не проверялась'),
       'Сопоставление: ' + (diag.resolution || 'нет'),
+      'Встроенных произведений: ' + diag.embeddedItems,
+      'Поиск во встроенном каталоге: ' + (diag.embeddedLookup || 'не выполнялся'),
       'Открытий карточки: ' + diag.fullEvents,
       'Шаблонов серий: ' + diag.templateHits,
       'Последний шаблон: ' + (diag.sampleTemplate || 'нет'),
@@ -973,12 +982,12 @@
     Lampa.Listener.follow('activity', scheduleScan);
     observer = new MutationObserver(scheduleScan);
     if (document.body) observer.observe(document.body, { childList: true, subtree: true });
-    log('Loaded 0.5.0-kodik.5, Online_Mod / Kodik marking only');
+    log('Loaded 0.5.0-kodik.6, Online_Mod / Kodik marking only');
   }
   window.LampaAnimeFiller = { parseEpisode: parseEpisode, normalizeGuide: normalizeGuide,
     findGuide: findGuide, classify: classify, scan: scan, sha256Text: sha256Text,
     loadBundleGuide: loadBundleGuide, indexForDetailed: indexForDetailed,
-    state: state, version: '0.5.0-kodik.5' };
+    state: state, version: '0.5.0-kodik.6' };
   if (window.appready) init();
   else Lampa.Listener.follow('app', function (evt) { if (evt.type === 'ready') init(); });
 })();

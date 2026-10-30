@@ -215,7 +215,7 @@ test('uses the Lampa transport on webOS and requests response bodies as text', a
 });
 
 test('standalone build activates Naruto synchronously from the actual Lampa card event', () => {
-  const standalone = fs.readFileSync(path.join(__dirname, '..', 'lampa-anime-filler-kodik5.js'), 'utf8');
+  const standalone = fs.readFileSync(path.join(__dirname, '..', 'lampa-anime-filler-kodik6.js'), 'utf8');
   let networkCalls = 0;
   const { api, listeners } = createHarness({
     source: standalone,
@@ -224,9 +224,11 @@ test('standalone build activates Naruto synchronously from the actual Lampa card
   listeners.full[0]({ type: 'complite', data: { movie: {
     id: 46260, name: 'Наруто', original_name: 'Naruto', media_type: 'tv'
   } }, object: {} });
-  assert.equal(api.version, '0.5.0-kodik.5');
+  assert.equal(api.version, '0.5.0-kodik.6');
   assert.equal(api.state.diagnostics.phase, 'встроенный каталог активирован');
   assert.equal(api.state.diagnostics.provider, 'встроенный каталог 45 / 9552');
+  assert.equal(api.state.diagnostics.embeddedItems, 45);
+  assert.equal(api.state.diagnostics.embeddedLookup, 'TMDB 46260: совпадений 1');
   assert.equal(api.state.guide.slug, 'naruto');
   assert.equal(api.state.guide.episodes[136], 'filler');
   assert.equal(api.state.guide.kodik.coveredEpisodes, 220);
