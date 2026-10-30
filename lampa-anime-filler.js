@@ -22,7 +22,7 @@
   // Lexical storage avoids host cleanup or sandboxing of temporary window globals.
   var EMBEDDED_GUIDES = null;
   var state = { movie: null, movieKey: '', slug: '', guide: null, loadId: 0, dataset: null, datasetPromise: null,
-    bundleCatalog: null, bundleCatalogPromise: null,
+    bundleCatalog: null,
     diagnostics: { phase: 'ожидаем карточку аниме', error: '', fullEvents: 0, templateHits: 0,
       rows: 0, matched: 0, parsed: 0, unknownMapping: 0, noClassification: 0,
       kodikRows: 0, numbering: '', sampleTitle: '', sampleTemplate: '',
@@ -179,7 +179,7 @@
   function withTimeout(promise, label) {
     return new Promise(function (resolve, reject) {
       var settled = false;
-      var timeout = setTimeout(function () {
+      var timer = setTimeout(function () {
         if (settled) return;
         settled = true;
         reject(new Error(label + ': timeout ' + FETCH_TIMEOUT + 'ms'));
@@ -187,12 +187,12 @@
       promise.then(function (value) {
         if (settled) return;
         settled = true;
-        clearTimeout(timeout);
+        clearTimeout(timer);
         resolve(value);
       }, function (error) {
         if (settled) return;
         settled = true;
-        clearTimeout(timeout);
+        clearTimeout(timer);
         reject(error);
       });
     });
@@ -225,26 +225,11 @@
   }
   function fetchJSON(url) {
     if (Lampa.Reguest) {
-      return fetchText(url).then(function (text) {
-        return typeof text === 'string' ? parseJSON(text, 'HTTP JSON') : text;
-      });
+      return fetchText(url).then(function (text) { return parseJSON(text, 'HTTP JSON'); });
     }
-    return fetchResponse(url).then(function (response) {
-      if (typeof response.text === 'function') {
-        return withTimeout(response.text(), 'Fetch JSON body').then(function (text) {
-          return parseJSON(text, 'HTTP JSON');
-        });
-      }
-      if (typeof response.json === 'function') return withTimeout(response.json(), 'Fetch JSON body');
-      throw new Error('JSON response is unavailable');
-    });
+    return fetchResponse(url).then(function (response) { return response.json(); });
   }
   function fetchText(url) {
-    var embedded = window.LampaAnimeFillerEmbedded;
-    if (embedded && Object.prototype.hasOwnProperty.call(embedded, url)) {
-      return Promise.resolve(embedded[url]);
-    }
-    // Online_Mod uses this transport too; it is reliable on old webOS WebViews.
     if (Lampa.Reguest) {
       return withTimeout(new Promise(function (resolve, reject) {
         var network = new Lampa.Reguest();
@@ -399,18 +384,6 @@
       });
     });
   }
-  function fetchBundleCatalogOnce() {
-    if (!state.bundleCatalogPromise) {
-      state.bundleCatalogPromise = fetchBundleCatalog().then(function (candidate) {
-        state.bundleCatalogPromise = null;
-        return candidate;
-      }, function (error) {
-        state.bundleCatalogPromise = null;
-        throw error;
-      });
-    }
-    return state.bundleCatalogPromise;
-  }
   function resolveBundleItem(index, movie) {
     var id = String(movie && movie.id || '');
     var matches = index.titles.filter(function (item) {
@@ -517,13 +490,13 @@
     var previous = readBundleCatalog('previous');
     if (active && active.date > Date.now() - CACHE_TTL) {
       return tryBundleCandidates(uniqueCatalogs([active, previous]), movie, 0, null, false).catch(function (cachedError) {
-        return fetchBundleCatalogOnce().then(function (network) {
+        return fetchBundleCatalog().then(function (network) {
           state.bundleCatalog = network;
           return tryBundleCandidates(uniqueCatalogs([network, active, previous]), movie, 0, cachedError, false);
         });
       });
     }
-    return fetchBundleCatalogOnce().then(function (network) {
+    return fetchBundleCatalog().then(function (network) {
       state.bundleCatalog = network;
       return tryBundleCandidates(uniqueCatalogs([network, active, previous]), movie, 0, null, false);
     }).catch(function (error) {
