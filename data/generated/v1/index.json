@@ -5,8 +5,25 @@
       "id": "skipthefiller:ace-of-diamond",
       "slug": "ace-of-diamond",
       "title": "Ace of Diamond",
-      "aliases": [],
-      "ids": {},
+      "aliases": [
+        "Ace Of Diamond: Act II",
+        "Ace of Diamond Act II S2",
+        "Ace of Diamond Saison 2",
+        "Dia no Ace",
+        "Dia no Ace: Act II",
+        "Dia no Ace: Act II Second Season",
+        "Dia no Ace: Second Season",
+        "Diamond no Ace",
+        "Путь аса [ТВ-1]",
+        "Путь аса [ТВ-2]",
+        "Путь аса [ТВ-4, часть 1]",
+        "Путь аса: Акт II [ТВ-1]"
+      ],
+      "ids": {
+        "imdb": "tt3105422",
+        "kinopoisk": 840074,
+        "tmdbTv": 60761
+      },
       "episodeCount": 191,
       "counts": {
         "canon": 184,
@@ -16,14 +33,36 @@
         "mixed": 2
       },
       "shard": "titles/ace-of-diamond.json",
-      "sha256": "5e81a92dafd3897441d0cadcfe4c645c919453ca44ad2ef9624d9d2e9e1d8ee3"
+      "sha256": "f044836d717434cfcf890edf3b81bd52f0d9c9cf49451468cb79839f0cdb1610"
     },
     {
       "id": "skipthefiller:attack-on-titan",
       "slug": "attack-on-titan",
       "title": "Attack on Titan",
-      "aliases": [],
-      "ids": {},
+      "aliases": [
+        "Advancing Giants",
+        "Angreifende Riesen 2",
+        "AoT 3",
+        "AoT 3 Part 2",
+        "AoT 4",
+        "Shingeki no Kyojin",
+        "Shingeki no Kyojin Season 2",
+        "Shingeki no Kyojin Season 3",
+        "Shingeki no Kyojin Season 3 (2019)",
+        "Shingeki no Kyojin: The Final Season",
+        "Shingeki no Kyojin: The Final Season (2022)",
+        "Атака титанов [ТВ-1]",
+        "Атака титанов [ТВ-2]",
+        "Атака титанов [ТВ-3, часть 1]",
+        "Атака титанов [ТВ-3, часть 2]",
+        "Атака титанов [ТВ-4, часть 1]",
+        "Атака титанов [ТВ-4, часть 2]"
+      ],
+      "ids": {
+        "imdb": "tt2560140",
+        "kinopoisk": 749374,
+        "tmdbTv": 1429
+      },
       "episodeCount": 94,
       "counts": {
         "canon": 88,
@@ -33,14 +72,20 @@
         "mixed": 6
       },
       "shard": "titles/attack-on-titan.json",
-      "sha256": "00f791f76856cdb2e2209f2adfb2ae31296e01930fffaeec8bd85cd57738cf8c"
+      "sha256": "f230c70f212efdea731730d21400ae945d8df05d331fd8710c3df3f848145aaf"
     },
     {
       "id": "skipthefiller:black-clover",
       "slug": "black-clover",
       "title": "Black Clover",
-      "aliases": [],
-      "ids": {},
+      "aliases": [
+        "Чёрный клевер [ТВ-1]"
+      ],
+      "ids": {
+        "imdb": "tt7441658",
+        "kinopoisk": 1049731,
+        "tmdbTv": 73223
+      },
       "episodeCount": 170,
       "counts": {
         "canon": 145,
@@ -50,14 +95,21 @@
         "mixed": 7
       },
       "shard": "titles/black-clover.json",
-      "sha256": "cd43a67757c6e3bf132dd072646014adbabe79f1a5d0c4420f2623ec6efd72d9"
+      "sha256": "cdd93884dea4bb8f76ebc6df52aca11e6791b25f0d9dc85c181785d4da6d0539"
     },
     {
       "id": "skipthefiller:bleach",
       "slug": "bleach",
       "title": "Bleach",
-      "aliases": [],
-      "ids": {},
+      "aliases": [
+        "BLEACH",
+        "Блич [ТВ-1]"
+      ],
+      "ids": {
+        "imdb": "tt0434665",
+        "kinopoisk": 258621,
+        "tmdbTv": 30984
+      },
       "episodeCount": 408,
       "counts": {
         "canon": 204,
@@ -67,14 +119,31 @@
         "mixed": 41
       },
       "shard": "titles/bleach.json",
-      "sha256": "3929d79fbc6cbed1ab55616ec16d0ce45b084424977ac5bb3dd74ce8e49a30d5"
+      "sha256": "fd05b6d0799cf060074614ca5d8ff1ce5e2f5b7e674ce337de18fafc5fd08a62"
     },
     {
       "id": "skipthefiller:blue-exorcist",
       "slug": "blue-exorcist",
       "title": "Blue Exorcist",
-      "aliases": [],
-      "ids": {},
+      "aliases": [
+        "AnE",
+        "Ao no Exorcist",
+        "Ao no Exorcist - Yosuga-hen",
+        "Ao no Exorcist - Yuki no Hate-hen",
+        "Ao no Exorcist 3",
+        "Ao no Exorcist: Shimane Illuminati Hen",
+        "Ao no Exorcist: Yosuga Hen",
+        "Ao no Exorcist: Yuki no Hate Hen",
+        "Синий экзорцист [ТВ-1]",
+        "Синий экзорцист [ТВ-3]",
+        "Синий экзорцист [ТВ-4, часть 1]",
+        "Синий экзорцист [ТВ-4, часть 2]"
+      ],
+      "ids": {
+        "imdb": "tt1799631",
+        "kinopoisk": 574182,
+        "tmdbTv": 38464
+      },
       "episodeCount": 73,
       "counts": {
         "canon": 58,
@@ -84,14 +153,16 @@
         "mixed": 5
       },
       "shard": "titles/blue-exorcist.json",
-      "sha256": "9fb018f77f655c6a576a3cfc90ee37d6f30ab41ac13fe24c8724c67ba72223af"
+      "sha256": "a455093411c7895b8f9e0db359c600f3e7f8c947ecc28c14772e524c2f466781"
     },
     {
       "id": "skipthefiller:bobobo-bo-bobo",
       "slug": "bobobo-bo-bobo",
       "title": "Bobobo-bo Bo-bobo",
       "aliases": [],
-      "ids": {},
+      "ids": {
+        "tmdbTv": 35236
+      },
       "episodeCount": 76,
       "counts": {
         "canon": 76,
@@ -101,14 +172,21 @@
         "mixed": 0
       },
       "shard": "titles/bobobo-bo-bobo.json",
-      "sha256": "69279cbfec6333b3503c41b018eb8aa28aba1a7a5251a6ae41f633ffef60f9cc"
+      "sha256": "464b686bc926fa4cc0f711680648d13353e4ae7c76ae90641f3f23c72fcb347e"
     },
     {
       "id": "skipthefiller:boruto",
       "slug": "boruto",
       "title": "Boruto: Naruto Next Generations",
-      "aliases": [],
-      "ids": {},
+      "aliases": [
+        "BORUTO -NARUTO NEXT GENERATIONS-",
+        "Боруто: Новое поколение Наруто"
+      ],
+      "ids": {
+        "imdb": "tt6342474",
+        "kinopoisk": 1042757,
+        "tmdbTv": 70881
+      },
       "episodeCount": 293,
       "counts": {
         "canon": 134,
@@ -118,14 +196,21 @@
         "mixed": 16
       },
       "shard": "titles/boruto.json",
-      "sha256": "a9e073d5cba62e0d0c2d1b15f820a4e63c854a4748fb4ce46451ca251fe8a13c"
+      "sha256": "2ae76f3f7da038e093d430405e3777b915f03a3e7603ba9073b4a40cf4ca80b9"
     },
     {
       "id": "skipthefiller:cardcaptor-sakura",
       "slug": "cardcaptor-sakura",
       "title": "Cardcaptor Sakura",
-      "aliases": [],
-      "ids": {},
+      "aliases": [
+        "CCS",
+        "Сакура - собирательница карт [ТВ-1]"
+      ],
+      "ids": {
+        "imdb": "tt0221735",
+        "kinopoisk": 229703,
+        "tmdbTv": 35790
+      },
       "episodeCount": 93,
       "counts": {
         "canon": 60,
@@ -135,14 +220,27 @@
         "mixed": 0
       },
       "shard": "titles/cardcaptor-sakura.json",
-      "sha256": "d60fb1f58c2b1c3d61a282babc397bb4c0d745826a9b342a10579c31e1df1502"
+      "sha256": "6873c96a128df890cfce1973c4efab92a9f10db952ace335166da26f0b6aec35"
     },
     {
       "id": "skipthefiller:certain-magical-index",
       "slug": "certain-magical-index",
       "title": "A Certain Magical Index",
-      "aliases": [],
-      "ids": {},
+      "aliases": [
+        "A Certain Magical Index 2",
+        "A Certain Magical Index III",
+        "Toaru Majutsu no Index",
+        "Toaru Majutsu no Index II",
+        "Toaru Majutsu no Index III",
+        "Индекс волшебства [ТВ-1]",
+        "Индекс волшебства [ТВ-2]",
+        "Индекс волшебства [ТВ-3]"
+      ],
+      "ids": {
+        "imdb": "tt1308089",
+        "kinopoisk": 437359,
+        "tmdbTv": 30980
+      },
       "episodeCount": 74,
       "counts": {
         "canon": 74,
@@ -152,14 +250,21 @@
         "mixed": 0
       },
       "shard": "titles/certain-magical-index.json",
-      "sha256": "0a477c365b38b6adfa4acaa4199176be0448011d1da0bb961379696a88672a6d"
+      "sha256": "31adfd393d7ebc2aa4e5ee05d7cf7d1221de511976ff1fca7097b0adb0acb8a8"
     },
     {
       "id": "skipthefiller:d-gray-man",
       "slug": "d-gray-man",
       "title": "D.Gray-man",
-      "aliases": [],
-      "ids": {},
+      "aliases": [
+        "D. Gray-man",
+        "D.Gray-man Hallow",
+        "Ди Грэй-мен [ТВ-1]"
+      ],
+      "ids": {
+        "imdb": "tt0899258",
+        "kinopoisk": 408655
+      },
       "episodeCount": 116,
       "counts": {
         "canon": 88,
@@ -169,14 +274,22 @@
         "mixed": 3
       },
       "shard": "titles/d-gray-man.json",
-      "sha256": "e5ae009164913e3ea3e52a0e37e3eeb70d8c3fcf26da645946b0ae853eccc886"
+      "sha256": "459e2d1eec34a1267081a01c1b153bbdc6095ae9c574c15e308db0a0dc21707a"
     },
     {
       "id": "skipthefiller:detective-conan",
       "slug": "detective-conan",
       "title": "Detective Conan",
-      "aliases": [],
-      "ids": {},
+      "aliases": [
+        "Al Mohackek Conan",
+        "Meitantei Conan",
+        "Детектив Конан [ТВ]"
+      ],
+      "ids": {
+        "imdb": "tt0131179",
+        "kinopoisk": 391104,
+        "tmdbTv": 30983
+      },
       "episodeCount": 1209,
       "counts": {
         "canon": 637,
@@ -186,14 +299,24 @@
         "mixed": 1
       },
       "shard": "titles/detective-conan.json",
-      "sha256": "32b53d48f2b3c5e479c113c2d845aa548526802ad672a455273eb5a995459dba"
+      "sha256": "777a912b7598b9d545810a89130db63b0a2c4d23da32c439637d2e61cdbdad0d"
     },
     {
       "id": "skipthefiller:digimon-adventure",
       "slug": "digimon-adventure",
       "title": "Digimon Adventure",
-      "aliases": [],
-      "ids": {},
+      "aliases": [
+        "DA02",
+        "Digimon",
+        "Digimon Adventure 02",
+        "Digimon: Digital Monsters",
+        "Приключения Дигимонов",
+        "Приключения Дигимонов 02"
+      ],
+      "ids": {
+        "imdb": "tt0210418",
+        "kinopoisk": 229590
+      },
       "episodeCount": 104,
       "counts": {
         "canon": 104,
@@ -203,14 +326,38 @@
         "mixed": 0
       },
       "shard": "titles/digimon-adventure.json",
-      "sha256": "33dcdda4bb3d8eb7c8b4a0df8a2aa78731e02690e7609c3ca0697a4deb09dc05"
+      "sha256": "a6c0418900c4cac97b90ef623c1711f3dbf59a19e40e92d1d7a33ccb35e168d3"
     },
     {
       "id": "skipthefiller:dr-stone",
       "slug": "dr-stone",
       "title": "Dr. Stone",
-      "aliases": [],
-      "ids": {},
+      "aliases": [
+        "DR.STONE ภาค 2",
+        "DR.STONE ภาค 3",
+        "Dcst",
+        "Doctor Stone 4th Season",
+        "Dr. STONE SCIENCE FUTURE Cour 2",
+        "Dr. STONE SCIENCE FUTURE Cour 3",
+        "Dr. Stone: New World",
+        "Dr. Stone: New World (2023)",
+        "Dr. Stone: Science Future",
+        "Dr. Stone: Science Future (2025)",
+        "Dr. Stone: Science Future (2026)",
+        "Dr. Stone: Stone Wars",
+        "Доктор Стоун [ТВ-1]",
+        "Доктор Стоун [ТВ-2]",
+        "Доктор Стоун [ТВ-3, часть 1]",
+        "Доктор Стоун [ТВ-3, часть 2]",
+        "Доктор Стоун [ТВ-4, часть 1]",
+        "Доктор Стоун [ТВ-4, часть 2]",
+        "Доктор Стоун [ТВ-4, часть 3]"
+      ],
+      "ids": {
+        "imdb": "tt9679542",
+        "kinopoisk": 1249511,
+        "tmdbTv": 86031
+      },
       "episodeCount": 94,
       "counts": {
         "canon": 94,
@@ -220,14 +367,21 @@
         "mixed": 0
       },
       "shard": "titles/dr-stone.json",
-      "sha256": "d54cfd941359322f50390f2b335f9a32817f5a72cfa0fee41ea75aba0fa1123f"
+      "sha256": "716b84e45e7b3639d69b700cd6d60eccf3b4cf755d8ad34612d7521f6249a28b"
     },
     {
       "id": "skipthefiller:dragon-ball",
       "slug": "dragon-ball",
       "title": "Dragon Ball",
-      "aliases": [],
-      "ids": {},
+      "aliases": [
+        "7 viên ngọc rồng",
+        "Драгонболл [ТВ]"
+      ],
+      "ids": {
+        "imdb": "tt0280249",
+        "kinopoisk": 230611,
+        "tmdbTv": 12609
+      },
       "episodeCount": 153,
       "counts": {
         "canon": 102,
@@ -237,14 +391,21 @@
         "mixed": 10
       },
       "shard": "titles/dragon-ball.json",
-      "sha256": "5a7a09afa52f607770351f584fa0a1a2d55da9e3d1ff060b54de0cfa1931a891"
+      "sha256": "1f66f848eb76e3f26c38d53d3700cb1dc24b9b228618f5c920a66a521a5679f8"
     },
     {
       "id": "skipthefiller:dragon-ball-super",
       "slug": "dragon-ball-super",
       "title": "Dragon Ball Super",
-      "aliases": [],
-      "ids": {},
+      "aliases": [
+        "Bola de Drac Super",
+        "Драгонболл Супер"
+      ],
+      "ids": {
+        "imdb": "tt4644488",
+        "kinopoisk": 921973,
+        "tmdbTv": 62715
+      },
       "episodeCount": 131,
       "counts": {
         "canon": 114,
@@ -254,14 +415,21 @@
         "mixed": 3
       },
       "shard": "titles/dragon-ball-super.json",
-      "sha256": "3a0cabf00b4d2f34011518ce0b9ab6562191f93e9395e5cd8471d72ebec87468"
+      "sha256": "b381f7dd25d63d0cae13222a8c5907db6f2bad72891b23e9e3577c4bc2491d19"
     },
     {
       "id": "skipthefiller:dragon-ball-z",
       "slug": "dragon-ball-z",
       "title": "Dragon Ball Z",
-      "aliases": [],
-      "ids": {},
+      "aliases": [
+        "Bola De Drac Z",
+        "Драгонболл Зет [ТВ]"
+      ],
+      "ids": {
+        "imdb": "tt0214341",
+        "kinopoisk": 230594,
+        "tmdbTv": 12971
+      },
       "episodeCount": 291,
       "counts": {
         "canon": 244,
@@ -271,14 +439,27 @@
         "mixed": 9
       },
       "shard": "titles/dragon-ball-z.json",
-      "sha256": "6107535a85613482bb0c0efa78b08b0494c8aacd02459f39b60d037f98ad437a"
+      "sha256": "8d6e35236e90a7d7ba2f40e3ca3e3a22a4301ec98dc062ce2859046a4c1d5749"
     },
     {
       "id": "skipthefiller:fairy-tail",
       "slug": "fairy-tail",
       "title": "Fairy Tail",
-      "aliases": [],
-      "ids": {},
+      "aliases": [
+        "Conto de Fadas (2014)",
+        "Conto de Fadas (2018)",
+        "FAIRY TAIL",
+        "Fairy Tail (2014)",
+        "Fairy Tail (2018)",
+        "Фейри Тейл [ТВ-1]",
+        "Фейри Тейл [ТВ-2]",
+        "Фейри Тейл [ТВ-3]"
+      ],
+      "ids": {
+        "imdb": "tt1528406",
+        "kinopoisk": 480158,
+        "tmdbTv": 46261
+      },
       "episodeCount": 328,
       "counts": {
         "canon": 256,
@@ -288,14 +469,24 @@
         "mixed": 11
       },
       "shard": "titles/fairy-tail.json",
-      "sha256": "3cec41a9aec418894e7562fca99bcc3c2bcc8cc576651a161b1ea0471c1de261"
+      "sha256": "c2ce21070721515c32f5c3d188984176ac8b876574b8d08f01a4b0143ffd6a03"
     },
     {
       "id": "skipthefiller:fist-of-the-north-star",
       "slug": "fist-of-the-north-star",
       "title": "Fist of the North Star",
-      "aliases": [],
-      "ids": {},
+      "aliases": [
+        "El Puño de la Estrella del Norte",
+        "FOTNS 2",
+        "Seikimatsu Kyuseishu Densetsu: Hokuto no Ken",
+        "Seikimatsu Kyuseishu Densetsu: Hokuto no Ken 2",
+        "Кулак Северной звезды [ТВ-1]",
+        "Кулак Северной звезды [ТВ-2]"
+      ],
+      "ids": {
+        "imdb": "tt0091211",
+        "kinopoisk": 229693
+      },
       "episodeCount": 152,
       "counts": {
         "canon": 118,
@@ -305,14 +496,37 @@
         "mixed": 14
       },
       "shard": "titles/fist-of-the-north-star.json",
-      "sha256": "92cd159eb794fea4931a6133110594122676fce111743695f1913de54d5b6201"
+      "sha256": "8b6348cea09a6e473a21b898658f544a5927da1d006353c9ed228efde1edeb66"
     },
     {
       "id": "skipthefiller:food-wars",
       "slug": "food-wars",
       "title": "Food Wars! Shokugeki no Soma",
-      "aliases": [],
-      "ids": {},
+      "aliases": [
+        "Food Wars ! Shokugeki no Soma",
+        "Food Wars ! Shokugeki no Soma : Second Service",
+        "Food Wars ! Shokugeki no Soma : Troisième Service",
+        "Food Wars ! Shokugeki no Soma : Troisième Service (Totsuki Train-Arc)",
+        "Food Wars ! The Fifth Plate",
+        "Food Wars! Season 4",
+        "Shokugeki no Souma",
+        "Shokugeki no Souma: Gou no Sara",
+        "Shokugeki no Souma: Ni no Sara",
+        "Shokugeki no Souma: San no Sara",
+        "Shokugeki no Souma: San no Sara - Tootsuki Ressha Hen",
+        "Shokugeki no Souma: Shin no Sara",
+        "Кулинарные поединки Сомы [ТВ-1]",
+        "Кулинарные поединки Сомы [ТВ-2]",
+        "Кулинарные поединки Сомы [ТВ-3, сезон 1]",
+        "Кулинарные поединки Сомы [ТВ-3, сезон 2]",
+        "Кулинарные поединки Сомы [ТВ-4]",
+        "Кулинарные поединки Сомы [ТВ-5]"
+      ],
+      "ids": {
+        "imdb": "tt4731072",
+        "kinopoisk": 917288,
+        "tmdbTv": 62273
+      },
       "episodeCount": 86,
       "counts": {
         "canon": 86,
@@ -322,14 +536,43 @@
         "mixed": 0
       },
       "shard": "titles/food-wars.json",
-      "sha256": "4ed89c98d05c92369ed8cd11fedde3d5aa5ec7f54445347f91a7b260a792fd69"
+      "sha256": "10712c6b637ee2500a8da78720b7c9fd1ca017255d4761e1293cc3366034410e"
     },
     {
       "id": "skipthefiller:gintama",
       "slug": "gintama",
       "title": "Gintama",
-      "aliases": [],
-      "ids": {},
+      "aliases": [
+        "Gin Tama",
+        "Gintama (2011)",
+        "Gintama (2017)",
+        "Gintama (Episoden 329-341)",
+        "Gintama (Episoden 342-353)",
+        "Gintama (Episodes 253-265)",
+        "Gintama Season 4",
+        "Gintama Season 4 (2017)",
+        "Gintama TV",
+        "Gintama'",
+        "Gintama' (2012)",
+        "Gintama': Enchousen",
+        "Gintama. (2017)",
+        "Gintama. (2018)",
+        "Gintama. Shirogane no Tamashii-hen - Kouhan-sen",
+        "Gintama°",
+        "Гинтама [ТВ-1]",
+        "Гинтама [ТВ-2]",
+        "Гинтама [ТВ-3]",
+        "Гинтама [ТВ-4]",
+        "Гинтама [ТВ-5]",
+        "Гинтама [ТВ-6]",
+        "Гинтама [ТВ-7]",
+        "Гинтама [ТВ-8]"
+      ],
+      "ids": {
+        "imdb": "tt0988818",
+        "kinopoisk": 490128,
+        "tmdbTv": 57041
+      },
       "episodeCount": 367,
       "counts": {
         "canon": 340,
@@ -339,14 +582,34 @@
         "mixed": 4
       },
       "shard": "titles/gintama.json",
-      "sha256": "611e967e83e1a1c2cb4a1b3dcda6d19e7f9527f8de27afa640204b47cffa9cf1"
+      "sha256": "82ff63b15761edbdf8d258fc43d76ceac70efa55dd19685457c2d083c532efb0"
     },
     {
       "id": "skipthefiller:haikyuu",
       "slug": "haikyuu",
       "title": "Haikyu!!",
-      "aliases": [],
-      "ids": {},
+      "aliases": [
+        "HAIKYU!!",
+        "HAIKYU!! 2nd Season",
+        "HAIKYU!! 3rd Season",
+        "HAIKYU!! TO THE TOP",
+        "HAIKYU!! TO THE TOP Part 2",
+        "Haikyuu!!",
+        "Haikyuu!! Karasuno Koukou vs Shiratorizawa Gakuen Koukou",
+        "Haikyuu!! Second Season",
+        "Haikyuu!! To the Top",
+        "Haikyuu!! To the Top (2020)",
+        "Волейбол [ТВ-1]",
+        "Волейбол [ТВ-2]",
+        "Волейбол [ТВ-3]",
+        "Волейбол [ТВ-4, второй сезон]",
+        "Волейбол [ТВ-4, первый сезон]"
+      ],
+      "ids": {
+        "imdb": "tt3398540",
+        "kinopoisk": 840073,
+        "tmdbTv": 60863
+      },
       "episodeCount": 85,
       "counts": {
         "canon": 85,
@@ -356,14 +619,22 @@
         "mixed": 0
       },
       "shard": "titles/haikyuu.json",
-      "sha256": "e061a7a9a6ec1daf4b9bb8697c0526459822dd26960358301abaa70b6ebb6082"
+      "sha256": "5c41e223f6743866673cc355ccfc85fa0e9891197d240cea70ac53da6eca5560"
     },
     {
       "id": "skipthefiller:hajime-no-ippo",
       "slug": "hajime-no-ippo",
       "title": "Hajime no Ippo",
-      "aliases": [],
-      "ids": {},
+      "aliases": [
+        "Espiritu de Pelea",
+        "Hajime no Ippo: The Fighting",
+        "Первый шаг [ТВ-1]"
+      ],
+      "ids": {
+        "imdb": "tt0481256",
+        "kinopoisk": 408577,
+        "tmdbTv": 42705
+      },
       "episodeCount": 127,
       "counts": {
         "canon": 124,
@@ -373,14 +644,22 @@
         "mixed": 1
       },
       "shard": "titles/hajime-no-ippo.json",
-      "sha256": "d9b83c41260505e129fbf0dc82bab5955de3dfca0cb7825c866e2e77f6ae63cf"
+      "sha256": "da3b2a722ea3c733445ce4a8bc4d19a2c1636459a581c299c9742bf40d597890"
     },
     {
       "id": "skipthefiller:hunter-x-hunter",
       "slug": "hunter-x-hunter",
       "title": "Hunter x Hunter (2011)",
-      "aliases": [],
-      "ids": {},
+      "aliases": [
+        "HUNTERxHUNTER",
+        "Hunter x Hunter",
+        "Охотник х Охотник [ТВ-2]"
+      ],
+      "ids": {
+        "imdb": "tt2098220",
+        "kinopoisk": 647602,
+        "tmdbTv": 46298
+      },
       "episodeCount": 148,
       "counts": {
         "canon": 145,
@@ -390,14 +669,21 @@
         "mixed": 1
       },
       "shard": "titles/hunter-x-hunter.json",
-      "sha256": "883e5f159e05ca6511d92fc562b77c973b7d7baa26a8b878852509099d234afb"
+      "sha256": "f1f15b342b439837f39186aae9ef56878cdda2e055e47d8c4eb2b1a6349c041f"
     },
     {
       "id": "skipthefiller:inuyasha",
       "slug": "inuyasha",
       "title": "Inuyasha",
-      "aliases": [],
-      "ids": {},
+      "aliases": [
+        "Dog Yaksha",
+        "Инуяся [ТВ-1]"
+      ],
+      "ids": {
+        "imdb": "tt0290223",
+        "kinopoisk": 408433,
+        "tmdbTv": 35610
+      },
       "episodeCount": 167,
       "counts": {
         "canon": 121,
@@ -407,14 +693,35 @@
         "mixed": 15
       },
       "shard": "titles/inuyasha.json",
-      "sha256": "57781991eb2dfa1406b2d562ece936e0c52ae444e1c27a55690b2f79cf2f1311"
+      "sha256": "3a2544b7ad88e78063f6040660e3f498ef7a1806c0d9fc62ddd5590958e3cc3c"
     },
     {
       "id": "skipthefiller:jojos-bizarre-adventure",
       "slug": "jojos-bizarre-adventure",
       "title": "JoJo's Bizarre Adventure",
-      "aliases": [],
-      "ids": {},
+      "aliases": [
+        "Aventurile Bizare ale lui JoJo (2012)",
+        "Aventurile Bizare ale lui JoJo Partea 3: Vitejii Stelelor",
+        "Aventurile Bizare ale lui JoJo Partea 3: Vitejii Stelelor - Lupta din Egipt",
+        "Aventurile Bizare ale lui JoJo Partea 4: Diamant Indestructibil",
+        "Aventurile Bizare ale lui JoJo Partea 5: Vântul de Aur",
+        "JoJo no Kimyou na Bouken (2012)",
+        "JoJo no Kimyou na Bouken (TV)",
+        "JoJo no Kimyou na Bouken: Diamond wa Kudakenai",
+        "JoJo no Kimyou na Bouken: Ougon no Kaze",
+        "JoJo no Kimyou na Bouken: Stardust Crusaders",
+        "JoJo no Kimyou na Bouken: Stardust Crusaders - Egypt Hen",
+        "Невероятные приключения Джоджо [ТВ-1]",
+        "Невероятные приключения Джоджо [ТВ-2, сезон 1]",
+        "Невероятные приключения Джоджо [ТВ-2, сезон 2]",
+        "Невероятные приключения Джоджо [ТВ-3]",
+        "Невероятные приключения Джоджо [ТВ-4]"
+      ],
+      "ids": {
+        "imdb": "tt2359704",
+        "kinopoisk": 707636,
+        "tmdbTv": 45790
+      },
       "episodeCount": 191,
       "counts": {
         "canon": 191,
@@ -424,14 +731,23 @@
         "mixed": 0
       },
       "shard": "titles/jojos-bizarre-adventure.json",
-      "sha256": "aef84e01e6cc4fb51366bfac36ad5b03ff3500c6578c8c63079dfec6c6595d44"
+      "sha256": "0f385a08f27223c1435ca83579b8c2aa3258723bfde3ece432e0ab35c8213da7"
     },
     {
       "id": "skipthefiller:katekyo-hitman-reborn",
       "slug": "katekyo-hitman-reborn",
       "title": "Katekyo Hitman Reborn!",
-      "aliases": [],
-      "ids": {},
+      "aliases": [
+        "Gia sư HITMAN REBORN!",
+        "Katei Kyoshi Hitman Reborn!",
+        "Katekyou Hitman Reborn!",
+        "Учитель-мафиози Реборн!"
+      ],
+      "ids": {
+        "imdb": "tt1224144",
+        "kinopoisk": 481421,
+        "tmdbTv": 45857
+      },
       "episodeCount": 203,
       "counts": {
         "canon": 165,
@@ -441,14 +757,31 @@
         "mixed": 8
       },
       "shard": "titles/katekyo-hitman-reborn.json",
-      "sha256": "4c7c46a139e531cb9a295812c5612bb50f551275690ed02fac5cf961757344a5"
+      "sha256": "7f9baee28df20b90540b1bfe42cffb7ea668d180de81b24bf16e6e3ac9e48745"
     },
     {
       "id": "skipthefiller:kingdom",
       "slug": "kingdom",
       "title": "Kingdom",
-      "aliases": [],
-      "ids": {},
+      "aliases": [
+        "Kingdom (2013)",
+        "Kingdom (2020)",
+        "Kingdom (2022)",
+        "Kingdom (2024)",
+        "Kingdom (2025)",
+        "Kingdom 2",
+        "Царство [ТВ-1]",
+        "Царство [ТВ-2]",
+        "Царство [ТВ-3]",
+        "Царство [ТВ-4]",
+        "Царство [ТВ-5]",
+        "Царство [ТВ-6]"
+      ],
+      "ids": {
+        "imdb": "tt2404499",
+        "kinopoisk": 690182,
+        "tmdbTv": 46437
+      },
       "episodeCount": 155,
       "counts": {
         "canon": 155,
@@ -458,14 +791,29 @@
         "mixed": 0
       },
       "shard": "titles/kingdom.json",
-      "sha256": "b14ba7c79b779e26c85eafa1e7787c96db70ea72dbef032ff08812b3763a1027"
+      "sha256": "4d62b1e724f09f2c003147287c4cc7f3d3fec4edb72405a4f7538bf22a0d9e3b"
     },
     {
       "id": "skipthefiller:kuroko-no-basketball",
       "slug": "kuroko-no-basketball",
       "title": "Kuroko's Basketball",
-      "aliases": [],
-      "ids": {},
+      "aliases": [
+        "El baloncesto de Kuroko",
+        "KNB2",
+        "KNB3",
+        "Kuroko no Baske",
+        "Kuroko no Baske 3",
+        "Kuroko no Basket",
+        "Kuroko no Basuke 2",
+        "Баскетбол Куроко [ТВ-1]",
+        "Баскетбол Куроко [ТВ-2]",
+        "Баскетбол Куроко [ТВ-3]"
+      ],
+      "ids": {
+        "imdb": "tt2348803",
+        "kinopoisk": 676672,
+        "tmdbTv": 45783
+      },
       "episodeCount": 75,
       "counts": {
         "canon": 75,
@@ -475,14 +823,21 @@
         "mixed": 0
       },
       "shard": "titles/kuroko-no-basketball.json",
-      "sha256": "51c7755960c509240ca85fd1667e4945fc8363efa1198b79ca0dfa39e5677ada"
+      "sha256": "3b24e54cd667db8d0783ee2245955ab07d8eba27d29ab717f16bed80d89fc3a9"
     },
     {
       "id": "skipthefiller:monster",
       "slug": "monster",
       "title": "Monster",
-      "aliases": [],
-      "ids": {},
+      "aliases": [
+        "Canavar",
+        "Монстр"
+      ],
+      "ids": {
+        "imdb": "tt0434706",
+        "kinopoisk": 258582,
+        "tmdbTv": 30981
+      },
       "episodeCount": 74,
       "counts": {
         "canon": 74,
@@ -492,14 +847,43 @@
         "mixed": 0
       },
       "shard": "titles/monster.json",
-      "sha256": "e1236a1674fa2e2ef4e1553a0de0b632c5095f51921aabe0bbece01a5e524a6e"
+      "sha256": "ff2c72c1745ea8af37ac6dea773c9be08b38a22350e2c333d38fa8b45167a200"
     },
     {
       "id": "skipthefiller:my-hero-academia",
       "slug": "my-hero-academia",
       "title": "My Hero Academia",
-      "aliases": [],
-      "ids": {},
+      "aliases": [
+        "3أكاديميتي للأبطال",
+        "Akademia bohaterów",
+        "Akademia bohaterów (2017)",
+        "BNHA 4",
+        "BNHA 5",
+        "BNHA 6",
+        "Boku no Hero Academia",
+        "Boku no Hero Academia (2018)",
+        "Boku no Hero Academia 2",
+        "Boku no Hero Academia 3rd Season",
+        "Boku no Hero Academia 4th Season",
+        "Boku no Hero Academia 5",
+        "Boku no Hero Academia 5th Season",
+        "Boku no Hero Academia 6",
+        "Boku no Hero Academia 6th Season",
+        "Boku no Hero Academia 7th Season",
+        "Boku no Hero Academia: Final Season",
+        "My Hero Academia Season 4",
+        "Моя геройская академия [ТВ-1]",
+        "Моя геройская академия [ТВ-2]",
+        "Моя геройская академия [ТВ-3]",
+        "Моя геройская академия [ТВ-4]",
+        "Моя геройская академия [ТВ-5]",
+        "Моя геройская академия [ТВ-6]"
+      ],
+      "ids": {
+        "imdb": "tt5626028",
+        "kinopoisk": 975897,
+        "tmdbTv": 65930
+      },
       "episodeCount": 138,
       "counts": {
         "canon": 129,
@@ -509,14 +893,21 @@
         "mixed": 5
       },
       "shard": "titles/my-hero-academia.json",
-      "sha256": "2080811db209c86ec942075816d411077b779c962c4ddf6b595e2eb7d3109be6"
+      "sha256": "7a90ffca855120d3286221a52776dbb80d3e2d27019a3f319a05f74dadbfe0d0"
     },
     {
       "id": "skipthefiller:naruto",
       "slug": "naruto",
       "title": "Naruto",
-      "aliases": [],
-      "ids": {},
+      "aliases": [
+        "NARUTO",
+        "Наруто [ТВ-1]"
+      ],
+      "ids": {
+        "imdb": "tt0409591",
+        "kinopoisk": 283290,
+        "tmdbTv": 46260
+      },
       "episodeCount": 220,
       "counts": {
         "canon": 74,
@@ -526,14 +917,23 @@
         "mixed": 56
       },
       "shard": "titles/naruto.json",
-      "sha256": "10de6099d9ba53f0fc2b0f65e2a5b155b64bd4cc0480095b518ea6d0710a10f6"
+      "sha256": "de76e1901c2fdc5eda08259a0818eeaac29fb75eb9fed1ff9775357f09ee6cb2"
     },
     {
       "id": "skipthefiller:naruto-shippuden",
       "slug": "naruto-shippuden",
       "title": "Naruto: Shippuden",
-      "aliases": [],
-      "ids": {},
+      "aliases": [
+        "NARUTO -ナルト- 疾風伝",
+        "Naruto Shippuuden",
+        "Naruto: Shippuuden",
+        "Наруто [ТВ-2]"
+      ],
+      "ids": {
+        "imdb": "tt0988824",
+        "kinopoisk": 281884,
+        "tmdbTv": 31910
+      },
       "episodeCount": 500,
       "counts": {
         "canon": 233,
@@ -543,17 +943,19 @@
         "mixed": 64
       },
       "shard": "titles/naruto-shippuden.json",
-      "sha256": "70cb1fa066bfba108afa1d48aeab39c6db0fb4f00160754d275f464007e8e15f"
+      "sha256": "6245d8faf8a58d9d8b69a75d75c782f18d4fe949ee66a77aebf00b8c3ed7097e"
     },
     {
       "id": "skipthefiller:one-piece",
       "slug": "one-piece",
       "title": "One Piece",
       "aliases": [
-        "Ван-Пис",
-        "ワンピース"
+        "1P",
+        "Ван-Пис [ТВ]"
       ],
       "ids": {
+        "imdb": "tt0388629",
+        "kinopoisk": 382731,
         "tmdbTv": 37854
       },
       "episodeCount": 1173,
@@ -565,14 +967,22 @@
         "mixed": 43
       },
       "shard": "titles/one-piece.json",
-      "sha256": "2572938715a52cdc8ebbb62a05d2754bb6e04915188478e90c33f56e5f795b8a"
+      "sha256": "ad642d2307d46b0ad33e3b52898a588af91121dc674fbc69581832165ed1b57c"
     },
     {
       "id": "skipthefiller:pokemon",
       "slug": "pokemon",
       "title": "Pokémon",
-      "aliases": [],
-      "ids": {},
+      "aliases": [
+        "Adventures on the Orange Islands",
+        "Pocket Monsters",
+        "Покемон"
+      ],
+      "ids": {
+        "imdb": "tt0176385",
+        "kinopoisk": 79517,
+        "tmdbTv": 60572
+      },
       "episodeCount": 276,
       "counts": {
         "canon": 44,
@@ -582,14 +992,21 @@
         "mixed": 107
       },
       "shard": "titles/pokemon.json",
-      "sha256": "f88318882e4dad2933acf00d434a7d5c76629ba1b93d353988d862581718e29c"
+      "sha256": "e36250b3e04e7745b31e55878685d59a1ae942c9e82be8feb66f90e54a2f7b33"
     },
     {
       "id": "skipthefiller:ranma-1-2",
       "slug": "ranma-1-2",
       "title": "Ranma ½",
-      "aliases": [],
-      "ids": {},
+      "aliases": [
+        "Ranma 1/2",
+        "Ранма 1/2"
+      ],
+      "ids": {
+        "imdb": "tt0096686",
+        "kinopoisk": 258291,
+        "tmdbTv": 57706
+      },
       "episodeCount": 161,
       "counts": {
         "canon": 77,
@@ -599,14 +1016,22 @@
         "mixed": 13
       },
       "shard": "titles/ranma-1-2.json",
-      "sha256": "280e2c509b9a4e25473635d95874d3269a8e97744b8c8d9263aefae568759b07"
+      "sha256": "b2701bd4d4ccf8646cf4bbeb7d8681e07dcb08876589bd6011725741325014d7"
     },
     {
       "id": "skipthefiller:rurouni-kenshin",
       "slug": "rurouni-kenshin",
       "title": "Rurouni Kenshin",
-      "aliases": [],
-      "ids": {},
+      "aliases": [
+        "El Guerrero Samuraï",
+        "Rurouni Kenshin: Meiji Kenkaku Romantan",
+        "Бродяга Кэнсин [ТВ-1]"
+      ],
+      "ids": {
+        "imdb": "tt0182629",
+        "kinopoisk": 268758,
+        "tmdbTv": 28136
+      },
       "episodeCount": 95,
       "counts": {
         "canon": 51,
@@ -616,14 +1041,22 @@
         "mixed": 1
       },
       "shard": "titles/rurouni-kenshin.json",
-      "sha256": "addc6906cc9ed6671caf7064f1ad34456d130ff9142de9108eae403942d33319"
+      "sha256": "d467b9cf9dfa7eaf248eb839b3a86c8c6739872382dd862f7a84fa9f3b109265"
     },
     {
       "id": "skipthefiller:sailor-moon",
       "slug": "sailor-moon",
       "title": "Sailor Moon",
-      "aliases": [],
-      "ids": {},
+      "aliases": [
+        "Ay Savaşçısı",
+        "Bishoujo Senshi Sailor Moon",
+        "Красавица-воин Сейлор Мун [ТВ]"
+      ],
+      "ids": {
+        "imdb": "tt0103369",
+        "kinopoisk": 229704,
+        "tmdbTv": 3570
+      },
       "episodeCount": 200,
       "counts": {
         "canon": 85,
@@ -633,14 +1066,35 @@
         "mixed": 17
       },
       "shard": "titles/sailor-moon.json",
-      "sha256": "cc11044fdd7a6be59b1526ae95ed939a311688a99fb57124e4214ac8f285d0a2"
+      "sha256": "28a1df849131430134f782a3e4d648ff3808ced493496ccb77b01101d111b4a9"
     },
     {
       "id": "skipthefiller:slime-isekai",
       "slug": "slime-isekai",
       "title": "That Time I Got Reincarnated as a Slime",
-      "aliases": [],
-      "ids": {},
+      "aliases": [
+        "Aquella vez que me convertí en slime - Temporada 4",
+        "Bereinkarnasi Malah Menjadi Slime",
+        "Meine Wiedergeburt als Schleim in einer anderen Welt (2021)",
+        "Meine Wiedergeburt als Schleim in einer anderen Welt (2021) Teil 2",
+        "Meine Wiedergeburt als Schleim in einer anderen Welt Staffel 3",
+        "Tensei Shitara Slime Datta Ken",
+        "Tensei Shitara Slime Datta Ken (2021 Dai 2 Bu)",
+        "Tensei Shitara Slime Datta Ken (2021)",
+        "Tensei Shitara Slime Datta Ken (2026)",
+        "Tensei Shitara Slime Datta Ken 3",
+        "Tensei shitara Slime Datta Ken",
+        "О моём перерождении в слизь [ТВ-1]",
+        "О моём перерождении в слизь [ТВ-2, второй сезон]",
+        "О моём перерождении в слизь [ТВ-2, первый сезон]",
+        "О моём перерождении в слизь [ТВ-3]",
+        "О моём перерождении в слизь [ТВ-4]"
+      ],
+      "ids": {
+        "imdb": "tt9054364",
+        "kinopoisk": 1224030,
+        "tmdbTv": 82684
+      },
       "episodeCount": 75,
       "counts": {
         "canon": 70,
@@ -650,14 +1104,33 @@
         "mixed": 2
       },
       "shard": "titles/slime-isekai.json",
-      "sha256": "70182634c2a81881bd8713bf012440b4b507744433d7e9977efb03aa77a7baff"
+      "sha256": "56ff75f2a7aa0003a67859db936b762159382fb219e43c5509201ac3c46467e1"
     },
     {
       "id": "skipthefiller:sword-art-online",
       "slug": "sword-art-online",
       "title": "Sword Art Online",
-      "aliases": [],
-      "ids": {},
+      "aliases": [
+        "Alicization",
+        "GGO",
+        "S.A.O",
+        "SAO 3 3rd Season",
+        "SAO Alicization 2",
+        "Sword Art Online II",
+        "Sword Art Online: Alicization",
+        "Sword Art Online: Alicization - War of Underworld",
+        "Sword Art Online: Alicization - War of Underworld (2020)",
+        "Мастера меча онлайн [ТВ-1]",
+        "Мастера меча онлайн [ТВ-2]",
+        "Мастера меча онлайн: Алисизация",
+        "Мастера меча онлайн: Алисизация - Война в Подмирье [ТВ-1]",
+        "Мастера меча онлайн: Алисизация - Война в Подмирье [ТВ-2]"
+      ],
+      "ids": {
+        "imdb": "tt2250192",
+        "kinopoisk": 691223,
+        "tmdbTv": 45782
+      },
       "episodeCount": 96,
       "counts": {
         "canon": 96,
@@ -667,14 +1140,32 @@
         "mixed": 0
       },
       "shard": "titles/sword-art-online.json",
-      "sha256": "704b2406406be29bc8237137005eae300db1bba2116883ea1de97e9cab9879b2"
+      "sha256": "9ed570f7e8237db6e0b83c2d1a92701bb5e84cf3472a50715d39e6d5d8f3067f"
     },
     {
       "id": "skipthefiller:the-seven-deadly-sins",
       "slug": "the-seven-deadly-sins",
       "title": "The Seven Deadly Sins",
-      "aliases": [],
-      "ids": {},
+      "aliases": [
+        "7DS",
+        "7DS 2",
+        "Los Siete Pecados Capitales: La Ira Imperial de los dioses",
+        "Nanatsu no Taizai",
+        "Nanatsu no Taizai 4th season",
+        "Nanatsu no Taizai: Fundo no Shinpan",
+        "Nanatsu no Taizai: Imashime no Fukkatsu",
+        "Nanatsu no Taizai: Kamigami no Gekirin",
+        "Nanatsu no Taizai: The Seven Deadly Sins",
+        "Семь смертных грехов [ТВ-1]",
+        "Семь смертных грехов [ТВ-2]",
+        "Семь смертных грехов [ТВ-3]",
+        "Семь смертных грехов [ТВ-4]"
+      ],
+      "ids": {
+        "imdb": "tt3909224",
+        "kinopoisk": 843954,
+        "tmdbTv": 62104
+      },
       "episodeCount": 100,
       "counts": {
         "canon": 91,
@@ -684,14 +1175,23 @@
         "mixed": 5
       },
       "shard": "titles/the-seven-deadly-sins.json",
-      "sha256": "170d0070efd0b9d04e1fcc9aaba8eb0ac69837b6129b427df2cd76d171ebbe75"
+      "sha256": "ac36ab32ee37b3de47958cffa636819bf8ba5e22d61c805bc3ced1f15c34709b"
     },
     {
       "id": "skipthefiller:urusei-yatsura-1981",
       "slug": "urusei-yatsura-1981",
       "title": "Urusei Yatsura (1981)",
-      "aliases": [],
-      "ids": {},
+      "aliases": [
+        "Alien Musibat",
+        "Urusei Yatsura",
+        "Urusei yatsura",
+        "Несносные пришельцы"
+      ],
+      "ids": {
+        "imdb": "tt0081954",
+        "kinopoisk": 334703,
+        "tmdbTv": 34163
+      },
       "episodeCount": 167,
       "counts": {
         "canon": 134,
@@ -701,14 +1201,33 @@
         "mixed": 13
       },
       "shard": "titles/urusei-yatsura-1981.json",
-      "sha256": "38b3c439ea5fa3c5bda5483a8fcd1510e6c8e8fd293cb8e4de7f09f23edd3a41"
+      "sha256": "91d6a6bfbc27ab684f38bce0ca65d6b41e91cebed72a3ccc92ab5b7248ddb652"
     },
     {
       "id": "skipthefiller:yowamushi-pedal",
       "slug": "yowamushi-pedal",
       "title": "Yowamushi Pedal",
-      "aliases": [],
-      "ids": {},
+      "aliases": [
+        "En Selle, Sakamichi !",
+        "En Selle, Sakamichi - Grande Road",
+        "YowaPeda 3",
+        "YowaPeda 4",
+        "YowaPeda 5",
+        "Yowamushi Pedal: Glory Line",
+        "Yowamushi Pedal: Grande Road",
+        "Yowamushi Pedal: Limit Break",
+        "Yowamushi Pedal: New Generation",
+        "Трусливый велосипедист [ТВ-1]",
+        "Трусливый велосипедист [ТВ-2]",
+        "Трусливый велосипедист [ТВ-3]",
+        "Трусливый велосипедист [ТВ-4]",
+        "Трусливый велосипедист [ТВ-5]"
+      ],
+      "ids": {
+        "imdb": "tt2942228",
+        "kinopoisk": 804556,
+        "tmdbTv": 61441
+      },
       "episodeCount": 137,
       "counts": {
         "canon": 135,
@@ -718,14 +1237,23 @@
         "mixed": 2
       },
       "shard": "titles/yowamushi-pedal.json",
-      "sha256": "8e190812e011b2e7dbf2bd685a035d0f1e0bb87fbabdea0fdecd15a9fccaf87d"
+      "sha256": "8a6f9a587e0390a7b0cfa418ba24a982d299a869caccbd634f530aefbb7728bb"
     },
     {
       "id": "skipthefiller:yu-gi-oh",
       "slug": "yu-gi-oh",
       "title": "Yu-Gi-Oh!",
-      "aliases": [],
-      "ids": {},
+      "aliases": [
+        "König der Spiele",
+        "Yuu Gi Ou: Duel Monsters",
+        "Yu☆Gi☆Oh! Duel Monsters",
+        "Югио! Дуэльные монстры"
+      ],
+      "ids": {
+        "imdb": "tt0247902",
+        "kinopoisk": 230088,
+        "tmdbTv": 902
+      },
       "episodeCount": 224,
       "counts": {
         "canon": 152,
@@ -735,14 +1263,23 @@
         "mixed": 15
       },
       "shard": "titles/yu-gi-oh.json",
-      "sha256": "e696dab4730d841212cf55e4186ed26d6f7ffb5432df16e7e5239300055376ed"
+      "sha256": "910d5c1e16343ced738986c89cdbe7bb74593f98fe2c8fa8958a2df9b6a29abb"
     },
     {
       "id": "skipthefiller:yu-yu-hakusho",
       "slug": "yu-yu-hakusho",
       "title": "Yu Yu Hakusho",
-      "aliases": [],
-      "ids": {},
+      "aliases": [
+        "Ghost Detectives",
+        "Yuu Yuu Hakusho",
+        "Yuu☆Yuu☆Hakusho",
+        "Отчет о буйстве духов [ТВ]"
+      ],
+      "ids": {
+        "imdb": "tt0185133",
+        "kinopoisk": 230090,
+        "tmdbTv": 30669
+      },
       "episodeCount": 112,
       "counts": {
         "canon": 108,
@@ -752,14 +1289,22 @@
         "mixed": 4
       },
       "shard": "titles/yu-yu-hakusho.json",
-      "sha256": "81a18f81e37d0a8d215f155a79ce75c1b96953eb34fbb068f25e5f4614273a44"
+      "sha256": "711e2c987d7dc09d3ce7630270d6300cc908ea51f5f39ec28d31063057e9777d"
     },
     {
       "id": "skipthefiller:zatch-bell",
       "slug": "zatch-bell",
       "title": "Zatch Bell!",
-      "aliases": [],
-      "ids": {},
+      "aliases": [
+        "GASH BELL!!",
+        "Konjiki no Gash Bell!!",
+        "Златовласый Гаш Белл"
+      ],
+      "ids": {
+        "imdb": "tt0455295",
+        "kinopoisk": 1049465,
+        "tmdbTv": 35894
+      },
       "episodeCount": 150,
       "counts": {
         "canon": 121,
@@ -769,7 +1314,7 @@
         "mixed": 0
       },
       "shard": "titles/zatch-bell.json",
-      "sha256": "da1bf3ad2689b514951c1d5d80170746503225e40574805d69d9fadbdd09e874"
+      "sha256": "9de76b7b2b928223ab00d4441cda17340231ed4dba722caedde77e0dc0c34397"
     }
   ]
 }

@@ -1,5 +1,5 @@
 /*
- * Lampa Anime Filler — marking-only prototype 0.4.0
+ * Lampa Anime Filler — Online_Mod / Kodik test build 0.5.0-kodik.1
  * Source code is independently written; no Lampa code copied.
  * Metadata backends: optional user-provided AFL JSON, fallback CC BY 4.0 SkipTheFiller dataset.
  * Phase 1: labels only; no playback/playlist modification.
@@ -12,7 +12,8 @@
   window.lampa_anime_filler_loaded = true;
 
   var BUNDLE_SCHEMA_VERSION = 1;
-  var BUNDLE_BASE_URL = 'https://nmagic.github.io/lampa-anime-filler/data/generated/v1';
+  // Test branch only. Stable GitHub Pages remains untouched until device verification.
+  var BUNDLE_BASE_URL = 'https://raw.githubusercontent.com/nMagic/lampa-anime-filler/kodik-test/data/generated/v1';
   var LEGACY_DATASET_URL = 'https://raw.githubusercontent.com/animecannonhunter-hash/anime-filler-list-data/main/anime.json';
   var PREFIX = 'laf_';
   var CACHE_TTL = 24 * 60 * 60 * 1000;
@@ -20,7 +21,8 @@
   var state = { movie: null, slug: '', guide: null, loadId: 0, dataset: null, datasetPromise: null,
     bundleCatalog: null,
     diagnostics: { phase: 'ожидаем карточку аниме', error: '', fullEvents: 0, templateHits: 0,
-      rows: 0, matched: 0, parsed: 0, sampleTitle: '', sampleTemplate: '',
+      rows: 0, matched: 0, parsed: 0, unknownMapping: 0, noClassification: 0,
+      kodikRows: 0, numbering: '', sampleTitle: '', sampleTemplate: '',
       provider: '', integrity: '', resolution: '' } };
   var timer = null;
   var observer = null;
@@ -56,6 +58,12 @@
     if (typeof str.normalize === 'function') str = str.normalize('NFKD');
     return str.replace(/[\u0300-\u036f]/g, '').replace(/&/g, ' and ')
       .replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+  }
+  function lookupTitle(s) {
+    var value = String(s || '').toLowerCase();
+    if (typeof value.normalize === 'function') value = value.normalize('NFKC');
+    return value.replace(/[ё]/g, 'е').replace(/[^a-z0-9а-я一-龯ぁ-んァ-ン]+/g, ' ')
+      .replace(/^\s+|\s+$/g, '').replace(/\s+/g, ' ');
   }
   function titles(movie) {
     return [movie.original_name, movie.original_title, movie.name, movie.title]
@@ -132,6 +140,7 @@
     return { slug: input.slug || '', title: input.title || '', episodes: map,
       // Season offsets are OPTIONAL and must be explicitly sourced/verified.
       seasonOffsets: input.seasonOffsets || (clean(input.slug) === 'one-piece' ? {'1': 0} : null),
+      kodik: input.kodik || null,
       source: input.source || source || 'Пользовательские данные' };
   }
   function isObject(value) { return value && typeof value === 'object' && !Array.isArray(value); }
@@ -355,7 +364,7 @@
       }
     }
     var guide = normalizeGuide({ slug: item.slug, title: shard.identity.title, episodes: shard.episodes,
-      seasonOffsets: shard.numbering.seasonOffsets || null }, 'Versioned bundle');
+      seasonOffsets: shard.numbering.seasonOffsets || null, kodik: shard.numbering.kodik || null }, 'Versioned bundle');
     if (!guide) throw new Error('Bundle shard has no supported episodes');
     var source = candidate.manifest.sources.filter(function (entry) {
       return entry.id === shard.classification.sourceId;
@@ -470,6 +479,13 @@
     state.diagnostics.provider = '';
     state.diagnostics.integrity = '';
     state.diagnostics.resolution = '';
+    state.diagnostics.rows = 0;
+    state.diagnostics.parsed = 0;
+    state.diagnostics.matched = 0;
+    state.diagnostics.unknownMapping = 0;
+    state.diagnostics.noClassification = 0;
+    state.diagnostics.kodikRows = 0;
+    state.diagnostics.numbering = '';
     state.slug = candidateSlugs(movie)[0] || '';
     if (!state.slug) return;
 
@@ -564,18 +580,48 @@
     return hasSeason ? Number(offsets[String(season)]) + episode : episode;
   }
   function indexFor(item, guide) {
-    if (!guide || !item) return null;
-    if (item.absolute_episode != null && /^\d+$/.test(String(item.absolute_episode))) return Number(item.absolute_episode);
+    var result = indexForDetailed(item, guide);
+    return result.number;
+  }
+  function indexForDetailed(item, guide) {
+    if (!guide || !item) return { number: null, reason: 'нет данных эпизода' };
+    if (item.absolute_episode != null && /^\d+$/.test(String(item.absolute_episode))) {
+      return { number: Number(item.absolute_episode), reason: '', numbering: 'absolute_episode' };
+    }
     // Structured season+episode requires verified offsets. Do not guess from TMDB seasons.
     if (item.episode != null && /^\d{1,4}$/.test(String(item.episode))) {
-      if (item.season == null || item.season === '') return Number(item.episode);
+      var episode = Number(item.episode);
+      var season = Number(item.season);
+      var kodik = guide.kodik;
+      if (kodik && Array.isArray(kodik.rules)) {
+        var rules = kodik.rules.filter(function (rule) {
+          return Number(rule.season) === season && episode >= 1 && episode <= Number(rule.episodes);
+        });
+        var title = lookupTitle(item.kodik_title || item.orig_title || '');
+        if (title) {
+          var titleRules = rules.filter(function (rule) {
+            return (rule.titles || []).some(function (candidate) { return lookupTitle(candidate) === title; });
+          });
+          if (titleRules.length === 1) return { number: Number(titleRules[0].offset) + episode,
+            reason: '', numbering: 'Kodik title + season + episode' };
+          if (titleRules.length > 1) return { number: null, reason: 'неоднозначное название Kodik' };
+        }
+        if (rules.length === 1) return { number: Number(rules[0].offset) + episode,
+          reason: '', numbering: 'Kodik season + episode' };
+        if (!rules.length) return { number: null, reason: 'сезон или номер вне проверенного диапазона Kodik' };
+        return { number: null, reason: 'часть сезона Kodik не определена по названию' };
+      }
+      if (item.season == null || item.season === '') return { number: episode, reason: '', numbering: 'episode' };
       var offsets = guide.seasonOffsets;
       var key = String(item.season);
-      if (!offsets || !Object.prototype.hasOwnProperty.call(offsets, key)) return null;
-      return Number(offsets[key]) + Number(item.episode);
+      if (!offsets || !Object.prototype.hasOwnProperty.call(offsets, key)) {
+        return { number: null, reason: 'нет проверенного смещения сезона' };
+      }
+      return { number: Number(offsets[key]) + episode, reason: '', numbering: 'season offset' };
     }
     var name = item.name || item.title || item.filename || item.file || '';
-    return parseEpisode(name, guide.seasonOffsets);
+    var parsed = parseEpisode(name, guide.seasonOffsets);
+    return { number: parsed, reason: parsed ? '' : 'номер эпизода не распознан', numbering: parsed ? 'title parser' : '' };
   }
   function classify(item, guide) {
     var n = typeof item === 'string' ? parseEpisode(item, guide && guide.seasonOffsets) : indexFor(item, guide);
@@ -640,7 +686,8 @@
     var nodes = document.querySelectorAll(ROW_SELECTORS);
     var diag = state.diagnostics;
     var rows = 0, parsed = 0, matched = 0, sampleTitle = '';
-    for (var i = 0; i < nodes.length && i < 1000; i++) {
+    var unknownMapping = 0, noClassification = 0, kodikRows = 0, numbering = '';
+    for (var i = 0; i < nodes.length; i++) {
       var node = nodes[i];
       if (node.closest('.laf-summary')) continue;
       rows++;
@@ -649,17 +696,29 @@
       var metadataEpisode = node.getAttribute('data-laf-episode');
       var metadataSeason = node.getAttribute('data-laf-season');
       var absolute = node.getAttribute('data-laf-absolute');
+      var kodikTitle = node.getAttribute('data-laf-kodik-title');
       var item = metadataEpisode ? { episode: metadataEpisode,
-        season: metadataSeason !== null ? metadataSeason : null } :
+        season: metadataSeason !== null ? metadataSeason : null, kodik_title: kodikTitle || '' } :
         absolute ? { absolute_episode: absolute } : label;
-      var n = typeof item === 'string' ? parseEpisode(item, state.guide.seasonOffsets) : indexFor(item, state.guide);
+      var detail = typeof item === 'string'
+        ? { number: parseEpisode(item, state.guide.seasonOffsets), reason: 'номер не распознан', numbering: 'title parser' }
+        : indexForDetailed(item, state.guide);
+      var n = detail.number;
+      if (kodikTitle) kodikRows++;
+      if (detail.numbering) numbering = detail.numbering;
       if (n) parsed++;
       var found = n && state.guide.episodes[n] ? { number: n, type: state.guide.episodes[n] } : null;
       if (found) { matched++; statusTag(node, found); }
-      else clearTag(node);
+      else {
+        if (!n) unknownMapping++;
+        else noClassification++;
+        clearTag(node);
+      }
     }
     if (rows) {
       diag.rows = rows; diag.parsed = parsed; diag.matched = matched;
+      diag.unknownMapping = unknownMapping; diag.noClassification = noClassification;
+      diag.kodikRows = kodikRows; diag.numbering = numbering;
       diag.sampleTitle = sampleTitle;
     }
   }
@@ -700,12 +759,18 @@
     var diag = state.diagnostics;
     var example = diag.sampleTitle || 'не захвачено';
     var lines = [
-      'Версия: 0.4.0',
+      'Версия: 0.5.0-kodik.1',
       'Карточка: ' + (state.movie ? (state.movie.name || state.movie.title || state.movie.original_name || 'без названия') + ' (TMDB ' + state.movie.id + ')' : 'не открывалась'),
       'Каталог: ' + (state.slug || 'не выбран'),
       'Состояние: ' + diag.phase,
       'Серий в каталоге: ' + (state.guide ? Object.keys(state.guide.episodes).length : 0),
       'Источник: ' + (state.guide ? state.guide.source : 'нет'),
+      'Целевой путь: Online_Mod → Kodik',
+      'Kodik-строк распознано: ' + diag.kodikRows,
+      'Система нумерации: ' + (diag.numbering || 'не определена'),
+      'Покрытие произведения Kodik: ' + (state.guide && state.guide.kodik
+        ? state.guide.kodik.coveredEpisodes + ' / ' + state.guide.kodik.totalEpisodes + ' (' + state.guide.kodik.status + ')'
+        : 'нет проверенной привязки'),
       'Data Provider: ' + (diag.provider || 'нет'),
       'Целостность: ' + (diag.integrity || 'не проверялась'),
       'Сопоставление: ' + (diag.resolution || 'нет'),
@@ -715,6 +780,8 @@
       'Строк на последнем экране: ' + diag.rows,
       'Номеров распознано: ' + diag.parsed,
       'Меток проставлено: ' + diag.matched,
+      'Без классификации: ' + diag.noClassification,
+      'Неизвестное соответствие: ' + diag.unknownMapping,
       'Пример названия: ' + example,
       'Ошибка: ' + (diag.error || 'нет')
     ];
@@ -744,6 +811,9 @@
       if (payload.episode != null) node.setAttribute('data-laf-episode', String(payload.episode));
       if (payload.season != null) node.setAttribute('data-laf-season', String(payload.season));
       if (payload.absolute_episode != null) node.setAttribute('data-laf-absolute', String(payload.absolute_episode));
+      if (templateName === 'online_mod' && payload.orig_title) {
+        node.setAttribute('data-laf-kodik-title', String(payload.orig_title));
+      }
       state.diagnostics.templateHits++;
       state.diagnostics.sampleTemplate = templateName + ' S' + (payload.season == null ? '?' : payload.season) + ' E' + (payload.episode || '?');
       scheduleScan();
@@ -790,11 +860,12 @@
     Lampa.Listener.follow('activity', scheduleScan);
     observer = new MutationObserver(scheduleScan);
     if (document.body) observer.observe(document.body, { childList: true, subtree: true });
-    log('Loaded 0.4.0, marking only');
+    log('Loaded 0.5.0-kodik.1, Online_Mod / Kodik marking only');
   }
   window.LampaAnimeFiller = { parseEpisode: parseEpisode, normalizeGuide: normalizeGuide,
     findGuide: findGuide, classify: classify, scan: scan, sha256Text: sha256Text,
-    loadBundleGuide: loadBundleGuide, state: state, version: '0.4.0' };
+    loadBundleGuide: loadBundleGuide, indexForDetailed: indexForDetailed,
+    state: state, version: '0.5.0-kodik.1' };
   if (window.appready) init();
   else Lampa.Listener.follow('app', function (evt) { if (evt.type === 'ready') init(); });
 })();

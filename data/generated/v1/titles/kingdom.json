@@ -4,13 +4,99 @@
   "identity": {
     "mediaType": "series",
     "title": "Kingdom",
-    "aliases": [],
-    "ids": {}
+    "aliases": [
+      "Kingdom (2013)",
+      "Kingdom (2020)",
+      "Kingdom (2022)",
+      "Kingdom (2024)",
+      "Kingdom (2025)",
+      "Kingdom 2",
+      "Царство [ТВ-1]",
+      "Царство [ТВ-2]",
+      "Царство [ТВ-3]",
+      "Царство [ТВ-4]",
+      "Царство [ТВ-5]",
+      "Царство [ТВ-6]"
+    ],
+    "ids": {
+      "imdb": "tt2404499",
+      "kinopoisk": 690182,
+      "tmdbTv": 46437
+    }
   },
   "numbering": {
     "scope": "regular",
     "basis": "absolute",
-    "startsAt": 1
+    "startsAt": 1,
+    "kodik": {
+      "status": "verified",
+      "coveredEpisodes": 155,
+      "totalEpisodes": 155,
+      "reason": "",
+      "rules": [
+        {
+          "shikimoriId": 12031,
+          "season": 1,
+          "offset": 0,
+          "episodes": 38,
+          "titles": [
+            "Kingdom",
+            "Царство [ТВ-1]"
+          ]
+        },
+        {
+          "shikimoriId": 17389,
+          "season": 2,
+          "offset": 38,
+          "episodes": 39,
+          "titles": [
+            "Kingdom (2013)",
+            "Kingdom 2",
+            "Царство [ТВ-2]"
+          ]
+        },
+        {
+          "shikimoriId": 40682,
+          "season": 3,
+          "offset": 77,
+          "episodes": 26,
+          "titles": [
+            "Kingdom (2020)",
+            "Царство [ТВ-3]"
+          ]
+        },
+        {
+          "shikimoriId": 50160,
+          "season": 4,
+          "offset": 103,
+          "episodes": 26,
+          "titles": [
+            "Kingdom (2022)",
+            "Царство [ТВ-4]"
+          ]
+        },
+        {
+          "shikimoriId": 53223,
+          "season": 5,
+          "offset": 129,
+          "episodes": 13,
+          "titles": [
+            "Kingdom (2024)",
+            "Царство [ТВ-5]"
+          ]
+        },
+        {
+          "shikimoriId": 61517,
+          "season": 6,
+          "offset": 142,
+          "episodes": 13,
+          "titles": [
+            "Kingdom (2025)",
+            "Царство [ТВ-6]"
+          ]
+        }
+      ]
+    }
   },
   "classification": {
     "sourceId": "skipthefiller",

@@ -4,13 +4,83 @@
   "identity": {
     "mediaType": "series",
     "title": "The Seven Deadly Sins",
-    "aliases": [],
-    "ids": {}
+    "aliases": [
+      "7DS",
+      "7DS 2",
+      "Los Siete Pecados Capitales: La Ira Imperial de los dioses",
+      "Nanatsu no Taizai",
+      "Nanatsu no Taizai 4th season",
+      "Nanatsu no Taizai: Fundo no Shinpan",
+      "Nanatsu no Taizai: Imashime no Fukkatsu",
+      "Nanatsu no Taizai: Kamigami no Gekirin",
+      "Nanatsu no Taizai: The Seven Deadly Sins",
+      "Семь смертных грехов [ТВ-1]",
+      "Семь смертных грехов [ТВ-2]",
+      "Семь смертных грехов [ТВ-3]",
+      "Семь смертных грехов [ТВ-4]"
+    ],
+    "ids": {
+      "imdb": "tt3909224",
+      "kinopoisk": 843954,
+      "tmdbTv": 62104
+    }
   },
   "numbering": {
     "scope": "regular",
     "basis": "absolute",
-    "startsAt": 1
+    "startsAt": 1,
+    "kodik": {
+      "status": "partial",
+      "coveredEpisodes": 96,
+      "totalEpisodes": 100,
+      "reason": "",
+      "rules": [
+        {
+          "shikimoriId": 23755,
+          "season": 1,
+          "offset": 0,
+          "episodes": 24,
+          "titles": [
+            "7DS",
+            "Nanatsu no Taizai: The Seven Deadly Sins",
+            "Семь смертных грехов [ТВ-1]"
+          ]
+        },
+        {
+          "shikimoriId": 34577,
+          "season": 2,
+          "offset": 24,
+          "episodes": 24,
+          "titles": [
+            "7DS 2",
+            "Nanatsu no Taizai: Imashime no Fukkatsu",
+            "Семь смертных грехов [ТВ-2]"
+          ]
+        },
+        {
+          "shikimoriId": 39701,
+          "season": 3,
+          "offset": 48,
+          "episodes": 24,
+          "titles": [
+            "Los Siete Pecados Capitales: La Ira Imperial de los dioses",
+            "Nanatsu no Taizai: Kamigami no Gekirin",
+            "Семь смертных грехов [ТВ-3]"
+          ]
+        },
+        {
+          "shikimoriId": 41491,
+          "season": 4,
+          "offset": 72,
+          "episodes": 24,
+          "titles": [
+            "Nanatsu no Taizai 4th season",
+            "Nanatsu no Taizai: Fundo no Shinpan",
+            "Семь смертных грехов [ТВ-4]"
+          ]
+        }
+      ]
+    }
   },
   "classification": {
     "sourceId": "skipthefiller",

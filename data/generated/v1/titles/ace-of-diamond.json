@@ -4,13 +4,82 @@
   "identity": {
     "mediaType": "series",
     "title": "Ace of Diamond",
-    "aliases": [],
-    "ids": {}
+    "aliases": [
+      "Ace Of Diamond: Act II",
+      "Ace of Diamond Act II S2",
+      "Ace of Diamond Saison 2",
+      "Dia no Ace",
+      "Dia no Ace: Act II",
+      "Dia no Ace: Act II Second Season",
+      "Dia no Ace: Second Season",
+      "Diamond no Ace",
+      "Путь аса [ТВ-1]",
+      "Путь аса [ТВ-2]",
+      "Путь аса [ТВ-4, часть 1]",
+      "Путь аса: Акт II [ТВ-1]"
+    ],
+    "ids": {
+      "imdb": "tt3105422",
+      "kinopoisk": 840074,
+      "tmdbTv": 60761
+    }
   },
   "numbering": {
     "scope": "regular",
     "basis": "absolute",
-    "startsAt": 1
+    "startsAt": 1,
+    "kodik": {
+      "status": "verified",
+      "coveredEpisodes": 191,
+      "totalEpisodes": 191,
+      "reason": "",
+      "rules": [
+        {
+          "shikimoriId": 18689,
+          "season": 1,
+          "offset": 0,
+          "episodes": 75,
+          "titles": [
+            "Ace of Diamond",
+            "Dia no Ace",
+            "Путь аса [ТВ-1]"
+          ]
+        },
+        {
+          "shikimoriId": 30230,
+          "season": 2,
+          "offset": 75,
+          "episodes": 51,
+          "titles": [
+            "Ace of Diamond Saison 2",
+            "Dia no Ace: Second Season",
+            "Путь аса [ТВ-2]"
+          ]
+        },
+        {
+          "shikimoriId": 38731,
+          "season": 3,
+          "offset": 126,
+          "episodes": 52,
+          "titles": [
+            "Ace Of Diamond: Act II",
+            "Dia no Ace: Act II",
+            "Путь аса: Акт II [ТВ-1]"
+          ]
+        },
+        {
+          "shikimoriId": 58877,
+          "season": 4,
+          "offset": 178,
+          "episodes": 13,
+          "titles": [
+            "Ace of Diamond Act II S2",
+            "Dia no Ace: Act II Second Season",
+            "Путь аса [ТВ-4, часть 1]"
+          ]
+        }
+      ]
+    }
   },
   "classification": {
     "sourceId": "skipthefiller",

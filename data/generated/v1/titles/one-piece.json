@@ -5,10 +5,12 @@
     "mediaType": "series",
     "title": "One Piece",
     "aliases": [
-      "Ван-Пис",
-      "ワンピース"
+      "1P",
+      "Ван-Пис [ТВ]"
     ],
     "ids": {
+      "imdb": "tt0388629",
+      "kinopoisk": 382731,
       "tmdbTv": 37854
     }
   },
@@ -16,8 +18,24 @@
     "scope": "regular",
     "basis": "absolute",
     "startsAt": 1,
-    "seasonOffsets": {
-      "1": 0
+    "kodik": {
+      "status": "verified",
+      "coveredEpisodes": 1173,
+      "totalEpisodes": 1173,
+      "reason": "",
+      "rules": [
+        {
+          "shikimoriId": 21,
+          "season": 1,
+          "offset": 0,
+          "episodes": 1173,
+          "titles": [
+            "1P",
+            "One Piece",
+            "Ван-Пис [ТВ]"
+          ]
+        }
+      ]
     }
   },
   "classification": {

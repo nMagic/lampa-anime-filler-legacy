@@ -4,13 +4,67 @@
   "identity": {
     "mediaType": "series",
     "title": "A Certain Magical Index",
-    "aliases": [],
-    "ids": {}
+    "aliases": [
+      "A Certain Magical Index 2",
+      "A Certain Magical Index III",
+      "Toaru Majutsu no Index",
+      "Toaru Majutsu no Index II",
+      "Toaru Majutsu no Index III",
+      "Индекс волшебства [ТВ-1]",
+      "Индекс волшебства [ТВ-2]",
+      "Индекс волшебства [ТВ-3]"
+    ],
+    "ids": {
+      "imdb": "tt1308089",
+      "kinopoisk": 437359,
+      "tmdbTv": 30980
+    }
   },
   "numbering": {
     "scope": "regular",
     "basis": "absolute",
-    "startsAt": 1
+    "startsAt": 1,
+    "kodik": {
+      "status": "verified",
+      "coveredEpisodes": 74,
+      "totalEpisodes": 74,
+      "reason": "",
+      "rules": [
+        {
+          "shikimoriId": 4654,
+          "season": 1,
+          "offset": 0,
+          "episodes": 24,
+          "titles": [
+            "A Certain Magical Index",
+            "Toaru Majutsu no Index",
+            "Индекс волшебства [ТВ-1]"
+          ]
+        },
+        {
+          "shikimoriId": 8937,
+          "season": 2,
+          "offset": 24,
+          "episodes": 24,
+          "titles": [
+            "A Certain Magical Index 2",
+            "Toaru Majutsu no Index II",
+            "Индекс волшебства [ТВ-2]"
+          ]
+        },
+        {
+          "shikimoriId": 36432,
+          "season": 3,
+          "offset": 48,
+          "episodes": 26,
+          "titles": [
+            "A Certain Magical Index III",
+            "Toaru Majutsu no Index III",
+            "Индекс волшебства [ТВ-3]"
+          ]
+        }
+      ]
+    }
   },
   "classification": {
     "sourceId": "skipthefiller",

@@ -4,13 +4,82 @@
   "identity": {
     "mediaType": "series",
     "title": "Blue Exorcist",
-    "aliases": [],
-    "ids": {}
+    "aliases": [
+      "AnE",
+      "Ao no Exorcist",
+      "Ao no Exorcist - Yosuga-hen",
+      "Ao no Exorcist - Yuki no Hate-hen",
+      "Ao no Exorcist 3",
+      "Ao no Exorcist: Shimane Illuminati Hen",
+      "Ao no Exorcist: Yosuga Hen",
+      "Ao no Exorcist: Yuki no Hate Hen",
+      "Синий экзорцист [ТВ-1]",
+      "Синий экзорцист [ТВ-3]",
+      "Синий экзорцист [ТВ-4, часть 1]",
+      "Синий экзорцист [ТВ-4, часть 2]"
+    ],
+    "ids": {
+      "imdb": "tt1799631",
+      "kinopoisk": 574182,
+      "tmdbTv": 38464
+    }
   },
   "numbering": {
     "scope": "regular",
     "basis": "absolute",
-    "startsAt": 1
+    "startsAt": 1,
+    "kodik": {
+      "status": "partial",
+      "coveredEpisodes": 61,
+      "totalEpisodes": 73,
+      "reason": "",
+      "rules": [
+        {
+          "shikimoriId": 9919,
+          "season": 1,
+          "offset": 0,
+          "episodes": 25,
+          "titles": [
+            "AnE",
+            "Ao no Exorcist",
+            "Синий экзорцист [ТВ-1]"
+          ]
+        },
+        {
+          "shikimoriId": 53889,
+          "season": 3,
+          "offset": 25,
+          "episodes": 12,
+          "titles": [
+            "Ao no Exorcist 3",
+            "Ao no Exorcist: Shimane Illuminati Hen",
+            "Синий экзорцист [ТВ-3]"
+          ]
+        },
+        {
+          "shikimoriId": 58516,
+          "season": 4,
+          "offset": 37,
+          "episodes": 12,
+          "titles": [
+            "Ao no Exorcist - Yuki no Hate-hen",
+            "Ao no Exorcist: Yuki no Hate Hen",
+            "Синий экзорцист [ТВ-4, часть 1]"
+          ]
+        },
+        {
+          "shikimoriId": 59226,
+          "season": 4,
+          "offset": 49,
+          "episodes": 12,
+          "titles": [
+            "Ao no Exorcist - Yosuga-hen",
+            "Ao no Exorcist: Yosuga Hen",
+            "Синий экзорцист [ТВ-4, часть 2]"
+          ]
+        }
+      ]
+    }
   },
   "classification": {
     "sourceId": "skipthefiller",

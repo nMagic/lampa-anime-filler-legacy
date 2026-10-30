@@ -4,13 +4,110 @@
   "identity": {
     "mediaType": "series",
     "title": "Food Wars! Shokugeki no Soma",
-    "aliases": [],
-    "ids": {}
+    "aliases": [
+      "Food Wars ! Shokugeki no Soma",
+      "Food Wars ! Shokugeki no Soma : Second Service",
+      "Food Wars ! Shokugeki no Soma : Troisième Service",
+      "Food Wars ! Shokugeki no Soma : Troisième Service (Totsuki Train-Arc)",
+      "Food Wars ! The Fifth Plate",
+      "Food Wars! Season 4",
+      "Shokugeki no Souma",
+      "Shokugeki no Souma: Gou no Sara",
+      "Shokugeki no Souma: Ni no Sara",
+      "Shokugeki no Souma: San no Sara",
+      "Shokugeki no Souma: San no Sara - Tootsuki Ressha Hen",
+      "Shokugeki no Souma: Shin no Sara",
+      "Кулинарные поединки Сомы [ТВ-1]",
+      "Кулинарные поединки Сомы [ТВ-2]",
+      "Кулинарные поединки Сомы [ТВ-3, сезон 1]",
+      "Кулинарные поединки Сомы [ТВ-3, сезон 2]",
+      "Кулинарные поединки Сомы [ТВ-4]",
+      "Кулинарные поединки Сомы [ТВ-5]"
+    ],
+    "ids": {
+      "imdb": "tt4731072",
+      "kinopoisk": 917288,
+      "tmdbTv": 62273
+    }
   },
   "numbering": {
     "scope": "regular",
     "basis": "absolute",
-    "startsAt": 1
+    "startsAt": 1,
+    "kodik": {
+      "status": "verified",
+      "coveredEpisodes": 86,
+      "totalEpisodes": 86,
+      "reason": "",
+      "rules": [
+        {
+          "shikimoriId": 28171,
+          "season": 1,
+          "offset": 0,
+          "episodes": 24,
+          "titles": [
+            "Food Wars ! Shokugeki no Soma",
+            "Shokugeki no Souma",
+            "Кулинарные поединки Сомы [ТВ-1]"
+          ]
+        },
+        {
+          "shikimoriId": 32282,
+          "season": 2,
+          "offset": 24,
+          "episodes": 13,
+          "titles": [
+            "Food Wars ! Shokugeki no Soma : Second Service",
+            "Shokugeki no Souma: Ni no Sara",
+            "Кулинарные поединки Сомы [ТВ-2]"
+          ]
+        },
+        {
+          "shikimoriId": 35788,
+          "season": 3,
+          "offset": 37,
+          "episodes": 12,
+          "titles": [
+            "Food Wars ! Shokugeki no Soma : Troisième Service",
+            "Shokugeki no Souma: San no Sara",
+            "Кулинарные поединки Сомы [ТВ-3, сезон 1]"
+          ]
+        },
+        {
+          "shikimoriId": 36949,
+          "season": 3,
+          "offset": 49,
+          "episodes": 12,
+          "titles": [
+            "Food Wars ! Shokugeki no Soma : Troisième Service (Totsuki Train-Arc)",
+            "Shokugeki no Souma: San no Sara - Tootsuki Ressha Hen",
+            "Кулинарные поединки Сомы [ТВ-3, сезон 2]"
+          ]
+        },
+        {
+          "shikimoriId": 39940,
+          "season": 4,
+          "offset": 61,
+          "episodes": 12,
+          "titles": [
+            "Food Wars! Season 4",
+            "Shokugeki no Souma: Shin no Sara",
+            "Кулинарные поединки Сомы [ТВ-4]"
+          ]
+        },
+        {
+          "shikimoriId": 40902,
+          "season": 5,
+          "offset": 73,
+          "episodes": 13,
+          "titles": [
+            "Food Wars ! The Fifth Plate",
+            "Shokugeki no Souma: Gou no Sara",
+            "Кулинарные поединки Сомы [ТВ-5]"
+          ]
+        }
+      ]
+    }
   },
   "classification": {
     "sourceId": "skipthefiller",

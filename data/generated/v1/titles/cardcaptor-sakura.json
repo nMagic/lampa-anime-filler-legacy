@@ -4,13 +4,39 @@
   "identity": {
     "mediaType": "series",
     "title": "Cardcaptor Sakura",
-    "aliases": [],
-    "ids": {}
+    "aliases": [
+      "CCS",
+      "Сакура - собирательница карт [ТВ-1]"
+    ],
+    "ids": {
+      "imdb": "tt0221735",
+      "kinopoisk": 229703,
+      "tmdbTv": 35790
+    }
   },
   "numbering": {
     "scope": "regular",
     "basis": "absolute",
-    "startsAt": 1
+    "startsAt": 1,
+    "kodik": {
+      "status": "partial",
+      "coveredEpisodes": 70,
+      "totalEpisodes": 93,
+      "reason": "",
+      "rules": [
+        {
+          "shikimoriId": 232,
+          "season": 1,
+          "offset": 0,
+          "episodes": 70,
+          "titles": [
+            "CCS",
+            "Cardcaptor Sakura",
+            "Сакура - собирательница карт [ТВ-1]"
+          ]
+        }
+      ]
+    }
   },
   "classification": {
     "sourceId": "skipthefiller",

@@ -4,13 +4,39 @@
   "identity": {
     "mediaType": "series",
     "title": "Inuyasha",
-    "aliases": [],
-    "ids": {}
+    "aliases": [
+      "Dog Yaksha",
+      "Инуяся [ТВ-1]"
+    ],
+    "ids": {
+      "imdb": "tt0290223",
+      "kinopoisk": 408433,
+      "tmdbTv": 35610
+    }
   },
   "numbering": {
     "scope": "regular",
     "basis": "absolute",
-    "startsAt": 1
+    "startsAt": 1,
+    "kodik": {
+      "status": "verified",
+      "coveredEpisodes": 167,
+      "totalEpisodes": 167,
+      "reason": "",
+      "rules": [
+        {
+          "shikimoriId": 249,
+          "season": 1,
+          "offset": 0,
+          "episodes": 167,
+          "titles": [
+            "Dog Yaksha",
+            "Inuyasha",
+            "Инуяся [ТВ-1]"
+          ]
+        }
+      ]
+    }
   },
   "classification": {
     "sourceId": "skipthefiller",

@@ -4,13 +4,39 @@
   "identity": {
     "mediaType": "series",
     "title": "Monster",
-    "aliases": [],
-    "ids": {}
+    "aliases": [
+      "Canavar",
+      "Монстр"
+    ],
+    "ids": {
+      "imdb": "tt0434706",
+      "kinopoisk": 258582,
+      "tmdbTv": 30981
+    }
   },
   "numbering": {
     "scope": "regular",
     "basis": "absolute",
-    "startsAt": 1
+    "startsAt": 1,
+    "kodik": {
+      "status": "verified",
+      "coveredEpisodes": 74,
+      "totalEpisodes": 74,
+      "reason": "",
+      "rules": [
+        {
+          "shikimoriId": 19,
+          "season": 1,
+          "offset": 0,
+          "episodes": 74,
+          "titles": [
+            "Canavar",
+            "Monster",
+            "Монстр"
+          ]
+        }
+      ]
+    }
   },
   "classification": {
     "sourceId": "skipthefiller",

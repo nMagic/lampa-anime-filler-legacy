@@ -11,6 +11,7 @@ const SOURCE_URL = `https://raw.githubusercontent.com/animecannonhunter-hash/ani
 const EXPECTED_TITLES = 45;
 const EXPECTED_EPISODES = 9552;
 const GENERATED_AT = '2026-10-22T00:00:00.000Z';
+const KODIK = JSON.parse(await readFile(resolve(ROOT, 'data/kodik.v1.json'), 'utf8'));
 
 const SOURCE = Object.freeze({
   id: 'skipthefiller',
@@ -21,13 +22,11 @@ const SOURCE = Object.freeze({
   attribution: 'Data from https://skipthefiller.com'
 });
 
-const IDENTITIES = Object.freeze({
-  'one-piece': {
-    ids: { tmdbTv: 37854 },
-    aliases: ['Ван-Пис', 'ワンピース'],
-    seasonOffsets: { 1: 0 }
-  }
-});
+const IDENTITIES = Object.freeze(Object.fromEntries(Object.entries(KODIK.titles).map(([slug, entry]) => [slug, {
+  ids: entry.ids || {},
+  aliases: entry.aliases || [],
+  kodik: entry
+}])));
 
 function usage() {
   return 'Usage: node scripts/build-data.mjs [--check | --out DIRECTORY | --verify DIRECTORY] [--input FILE]';
@@ -106,6 +105,7 @@ async function main() {
   const bundle = buildBundle(catalog, {
     source: SOURCE,
     identities: IDENTITIES,
+    buildId: 'skipthefiller-a7b28ff590b7-kodik-20261030',
     generatedAt: generatedAt.toISOString()
   });
 

@@ -1,0 +1,2234 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-30T20:16:27.242Z",
+  "source": {
+    "onlineModRepository": "https://github.com/nb557/plugins",
+    "onlineModRevision": "cde2cf057e6634df43553fe8deeaef5030f95945",
+    "kodikApi": "live search snapshot captured 2026-10-30T20:16:27.242Z",
+    "aodbRevision": "2026-10-25",
+    "aodbSha256": "89fcd92ccfaf8df2249bdaa0758911fc6de486a417b0d7980bfab2f11250f729"
+  },
+  "titles": {
+    "bobobo-bo-bobo": {
+      "status": "not_in_kodik",
+      "coveredEpisodes": 0,
+      "totalEpisodes": 76,
+      "reason": "Verified title was not returned by Kodik.",
+      "ids": {
+        "tmdbTv": 35236
+      },
+      "aliases": [],
+      "rules": []
+    },
+    "blue-exorcist": {
+      "status": "partial",
+      "coveredEpisodes": 61,
+      "totalEpisodes": 73,
+      "ids": {
+        "tmdbTv": 38464,
+        "kinopoisk": 574182,
+        "imdb": "tt1799631"
+      },
+      "aliases": [
+        "AnE",
+        "Ao no Exorcist",
+        "Ao no Exorcist - Yosuga-hen",
+        "Ao no Exorcist - Yuki no Hate-hen",
+        "Ao no Exorcist 3",
+        "Ao no Exorcist: Shimane Illuminati Hen",
+        "Ao no Exorcist: Yosuga Hen",
+        "Ao no Exorcist: Yuki no Hate Hen",
+        "Синий экзорцист [ТВ-1]",
+        "Синий экзорцист [ТВ-3]",
+        "Синий экзорцист [ТВ-4, часть 1]",
+        "Синий экзорцист [ТВ-4, часть 2]"
+      ],
+      "rules": [
+        {
+          "shikimoriId": 9919,
+          "season": 1,
+          "offset": 0,
+          "episodes": 25,
+          "titles": [
+            "Ao no Exorcist",
+            "Синий экзорцист [ТВ-1]",
+            "AnE"
+          ]
+        },
+        {
+          "shikimoriId": 53889,
+          "season": 3,
+          "offset": 25,
+          "episodes": 12,
+          "titles": [
+            "Ao no Exorcist: Shimane Illuminati Hen",
+            "Синий экзорцист [ТВ-3]",
+            "Ao no Exorcist 3"
+          ]
+        },
+        {
+          "shikimoriId": 58516,
+          "season": 4,
+          "offset": 37,
+          "episodes": 12,
+          "titles": [
+            "Ao no Exorcist: Yuki no Hate Hen",
+            "Синий экзорцист [ТВ-4, часть 1]",
+            "Ao no Exorcist - Yuki no Hate-hen"
+          ]
+        },
+        {
+          "shikimoriId": 59226,
+          "season": 4,
+          "offset": 49,
+          "episodes": 12,
+          "titles": [
+            "Ao no Exorcist: Yosuga Hen",
+            "Синий экзорцист [ТВ-4, часть 2]",
+            "Ao no Exorcist - Yosuga-hen"
+          ]
+        }
+      ]
+    },
+    "ace-of-diamond": {
+      "status": "verified",
+      "coveredEpisodes": 191,
+      "totalEpisodes": 191,
+      "ids": {
+        "tmdbTv": 60761,
+        "kinopoisk": 840074,
+        "imdb": "tt3105422"
+      },
+      "aliases": [
+        "Ace Of Diamond: Act II",
+        "Ace of Diamond",
+        "Ace of Diamond Act II S2",
+        "Ace of Diamond Saison 2",
+        "Dia no Ace",
+        "Dia no Ace: Act II",
+        "Dia no Ace: Act II Second Season",
+        "Dia no Ace: Second Season",
+        "Diamond no Ace",
+        "Путь аса [ТВ-1]",
+        "Путь аса [ТВ-2]",
+        "Путь аса [ТВ-4, часть 1]",
+        "Путь аса: Акт II [ТВ-1]"
+      ],
+      "rules": [
+        {
+          "shikimoriId": 18689,
+          "season": 1,
+          "offset": 0,
+          "episodes": 75,
+          "titles": [
+            "Dia no Ace",
+            "Путь аса [ТВ-1]",
+            "Ace of Diamond"
+          ]
+        },
+        {
+          "shikimoriId": 30230,
+          "season": 2,
+          "offset": 75,
+          "episodes": 51,
+          "titles": [
+            "Dia no Ace: Second Season",
+            "Путь аса [ТВ-2]",
+            "Ace of Diamond Saison 2"
+          ]
+        },
+        {
+          "shikimoriId": 38731,
+          "season": 3,
+          "offset": 126,
+          "episodes": 52,
+          "titles": [
+            "Dia no Ace: Act II",
+            "Путь аса: Акт II [ТВ-1]",
+            "Ace Of Diamond: Act II"
+          ]
+        },
+        {
+          "shikimoriId": 58877,
+          "season": 4,
+          "offset": 178,
+          "episodes": 13,
+          "titles": [
+            "Dia no Ace: Act II Second Season",
+            "Путь аса [ТВ-4, часть 1]",
+            "Ace of Diamond Act II S2"
+          ]
+        }
+      ]
+    },
+    "attack-on-titan": {
+      "status": "partial",
+      "coveredEpisodes": 87,
+      "totalEpisodes": 94,
+      "ids": {
+        "tmdbTv": 1429,
+        "kinopoisk": 749374,
+        "imdb": "tt2560140"
+      },
+      "aliases": [
+        "Advancing Giants",
+        "Angreifende Riesen 2",
+        "AoT 3",
+        "AoT 3 Part 2",
+        "AoT 4",
+        "Shingeki no Kyojin",
+        "Shingeki no Kyojin Season 2",
+        "Shingeki no Kyojin Season 3",
+        "Shingeki no Kyojin Season 3 (2019)",
+        "Shingeki no Kyojin: The Final Season",
+        "Shingeki no Kyojin: The Final Season (2022)",
+        "Атака титанов [ТВ-1]",
+        "Атака титанов [ТВ-2]",
+        "Атака титанов [ТВ-3, часть 1]",
+        "Атака титанов [ТВ-3, часть 2]",
+        "Атака титанов [ТВ-4, часть 1]",
+        "Атака титанов [ТВ-4, часть 2]"
+      ],
+      "rules": [
+        {
+          "shikimoriId": 16498,
+          "season": 1,
+          "offset": 0,
+          "episodes": 25,
+          "titles": [
+            "Shingeki no Kyojin",
+            "Атака титанов [ТВ-1]",
+            "Advancing Giants"
+          ]
+        },
+        {
+          "shikimoriId": 25777,
+          "season": 2,
+          "offset": 25,
+          "episodes": 12,
+          "titles": [
+            "Shingeki no Kyojin Season 2",
+            "Атака титанов [ТВ-2]",
+            "Angreifende Riesen 2"
+          ]
+        },
+        {
+          "shikimoriId": 35760,
+          "season": 3,
+          "offset": 37,
+          "episodes": 12,
+          "titles": [
+            "Shingeki no Kyojin Season 3",
+            "Атака титанов [ТВ-3, часть 1]",
+            "AoT 3"
+          ]
+        },
+        {
+          "shikimoriId": 38524,
+          "season": 3,
+          "offset": 49,
+          "episodes": 10,
+          "titles": [
+            "Shingeki no Kyojin Season 3 (2019)",
+            "Атака титанов [ТВ-3, часть 2]",
+            "AoT 3 Part 2"
+          ]
+        },
+        {
+          "shikimoriId": 40028,
+          "season": 4,
+          "offset": 59,
+          "episodes": 16,
+          "titles": [
+            "Shingeki no Kyojin: The Final Season",
+            "Атака титанов [ТВ-4, часть 1]",
+            "AoT 4"
+          ]
+        },
+        {
+          "shikimoriId": 48583,
+          "season": 4,
+          "offset": 75,
+          "episodes": 12,
+          "titles": [
+            "Shingeki no Kyojin: The Final Season (2022)",
+            "Атака титанов [ТВ-4, часть 2]",
+            "AoT 4"
+          ]
+        }
+      ]
+    },
+    "black-clover": {
+      "status": "verified",
+      "coveredEpisodes": 170,
+      "totalEpisodes": 170,
+      "ids": {
+        "tmdbTv": 73223,
+        "kinopoisk": 1049731,
+        "imdb": "tt7441658"
+      },
+      "aliases": [
+        "Black Clover",
+        "Чёрный клевер [ТВ-1]"
+      ],
+      "rules": [
+        {
+          "shikimoriId": 34572,
+          "season": 1,
+          "offset": 0,
+          "episodes": 170,
+          "titles": [
+            "Black Clover",
+            "Чёрный клевер [ТВ-1]"
+          ]
+        }
+      ]
+    },
+    "bleach": {
+      "status": "partial",
+      "coveredEpisodes": 366,
+      "totalEpisodes": 408,
+      "ids": {
+        "tmdbTv": 30984,
+        "kinopoisk": 258621,
+        "imdb": "tt0434665"
+      },
+      "aliases": [
+        "BLEACH",
+        "Bleach",
+        "Блич [ТВ-1]"
+      ],
+      "rules": [
+        {
+          "shikimoriId": 269,
+          "season": 1,
+          "offset": 0,
+          "episodes": 366,
+          "titles": [
+            "Bleach",
+            "Блич [ТВ-1]",
+            "BLEACH"
+          ]
+        }
+      ]
+    },
+    "cardcaptor-sakura": {
+      "status": "partial",
+      "coveredEpisodes": 70,
+      "totalEpisodes": 93,
+      "ids": {
+        "tmdbTv": 35790,
+        "kinopoisk": 229703,
+        "imdb": "tt0221735"
+      },
+      "aliases": [
+        "CCS",
+        "Cardcaptor Sakura",
+        "Сакура - собирательница карт [ТВ-1]"
+      ],
+      "rules": [
+        {
+          "shikimoriId": 232,
+          "season": 1,
+          "offset": 0,
+          "episodes": 70,
+          "titles": [
+            "Cardcaptor Sakura",
+            "Сакура - собирательница карт [ТВ-1]",
+            "CCS"
+          ]
+        }
+      ]
+    },
+    "boruto": {
+      "status": "verified",
+      "coveredEpisodes": 293,
+      "totalEpisodes": 293,
+      "ids": {
+        "tmdbTv": 70881,
+        "kinopoisk": 1042757,
+        "imdb": "tt6342474"
+      },
+      "aliases": [
+        "BORUTO -NARUTO NEXT GENERATIONS-",
+        "Boruto: Naruto Next Generations",
+        "Боруто: Новое поколение Наруто"
+      ],
+      "rules": [
+        {
+          "shikimoriId": 34566,
+          "season": 1,
+          "offset": 0,
+          "episodes": 293,
+          "titles": [
+            "Boruto: Naruto Next Generations",
+            "Боруто: Новое поколение Наруто",
+            "BORUTO -NARUTO NEXT GENERATIONS-"
+          ]
+        }
+      ]
+    },
+    "certain-magical-index": {
+      "status": "verified",
+      "coveredEpisodes": 74,
+      "totalEpisodes": 74,
+      "ids": {
+        "tmdbTv": 30980,
+        "kinopoisk": 437359,
+        "imdb": "tt1308089"
+      },
+      "aliases": [
+        "A Certain Magical Index",
+        "A Certain Magical Index 2",
+        "A Certain Magical Index III",
+        "Toaru Majutsu no Index",
+        "Toaru Majutsu no Index II",
+        "Toaru Majutsu no Index III",
+        "Индекс волшебства [ТВ-1]",
+        "Индекс волшебства [ТВ-2]",
+        "Индекс волшебства [ТВ-3]"
+      ],
+      "rules": [
+        {
+          "shikimoriId": 4654,
+          "season": 1,
+          "offset": 0,
+          "episodes": 24,
+          "titles": [
+            "Toaru Majutsu no Index",
+            "Индекс волшебства [ТВ-1]",
+            "A Certain Magical Index"
+          ]
+        },
+        {
+          "shikimoriId": 8937,
+          "season": 2,
+          "offset": 24,
+          "episodes": 24,
+          "titles": [
+            "Toaru Majutsu no Index II",
+            "Индекс волшебства [ТВ-2]",
+            "A Certain Magical Index 2"
+          ]
+        },
+        {
+          "shikimoriId": 36432,
+          "season": 3,
+          "offset": 48,
+          "episodes": 26,
+          "titles": [
+            "Toaru Majutsu no Index III",
+            "Индекс волшебства [ТВ-3]",
+            "A Certain Magical Index III"
+          ]
+        }
+      ]
+    },
+    "d-gray-man": {
+      "status": "partial",
+      "coveredEpisodes": 103,
+      "totalEpisodes": 116,
+      "ids": {
+        "kinopoisk": 408655,
+        "imdb": "tt0899258"
+      },
+      "aliases": [
+        "D. Gray-man",
+        "D.Gray-man",
+        "D.Gray-man Hallow",
+        "Ди Грэй-мен [ТВ-1]"
+      ],
+      "rules": [
+        {
+          "shikimoriId": 1482,
+          "season": 1,
+          "offset": 0,
+          "episodes": 103,
+          "titles": [
+            "D.Gray-man",
+            "Ди Грэй-мен [ТВ-1]",
+            "D. Gray-man"
+          ]
+        }
+      ]
+    },
+    "detective-conan": {
+      "status": "verified",
+      "coveredEpisodes": 1209,
+      "totalEpisodes": 1209,
+      "ids": {
+        "tmdbTv": 30983,
+        "kinopoisk": 391104,
+        "imdb": "tt0131179"
+      },
+      "aliases": [
+        "Al Mohackek Conan",
+        "Meitantei Conan",
+        "Детектив Конан [ТВ]"
+      ],
+      "rules": [
+        {
+          "shikimoriId": 235,
+          "season": 1,
+          "offset": 0,
+          "episodes": 1209,
+          "titles": [
+            "Meitantei Conan",
+            "Детектив Конан [ТВ]",
+            "Al Mohackek Conan"
+          ]
+        }
+      ]
+    },
+    "digimon-adventure": {
+      "status": "verified",
+      "coveredEpisodes": 104,
+      "totalEpisodes": 104,
+      "ids": {
+        "kinopoisk": 229590,
+        "imdb": "tt0210418"
+      },
+      "aliases": [
+        "DA02",
+        "Digimon",
+        "Digimon Adventure 02",
+        "Digimon: Digital Monsters",
+        "Приключения Дигимонов",
+        "Приключения Дигимонов 02"
+      ],
+      "rules": [
+        {
+          "shikimoriId": 552,
+          "season": 1,
+          "offset": 0,
+          "episodes": 54,
+          "titles": [
+            "Digimon: Digital Monsters",
+            "Приключения Дигимонов",
+            "Digimon"
+          ]
+        },
+        {
+          "shikimoriId": 1313,
+          "season": 2,
+          "offset": 54,
+          "episodes": 50,
+          "titles": [
+            "Digimon Adventure 02",
+            "Приключения Дигимонов 02",
+            "DA02"
+          ]
+        }
+      ]
+    },
+    "dragon-ball": {
+      "status": "verified",
+      "coveredEpisodes": 153,
+      "totalEpisodes": 153,
+      "ids": {
+        "tmdbTv": 12609,
+        "kinopoisk": 230611,
+        "imdb": "tt0280249"
+      },
+      "aliases": [
+        "7 viên ngọc rồng",
+        "Dragon Ball",
+        "Драгонболл [ТВ]"
+      ],
+      "rules": [
+        {
+          "shikimoriId": 223,
+          "season": 1,
+          "offset": 0,
+          "episodes": 153,
+          "titles": [
+            "Dragon Ball",
+            "Драгонболл [ТВ]",
+            "7 viên ngọc rồng"
+          ]
+        }
+      ]
+    },
+    "dr-stone": {
+      "status": "verified",
+      "coveredEpisodes": 94,
+      "totalEpisodes": 94,
+      "ids": {
+        "tmdbTv": 86031,
+        "kinopoisk": 1249511,
+        "imdb": "tt9679542"
+      },
+      "aliases": [
+        "DR.STONE ภาค 2",
+        "DR.STONE ภาค 3",
+        "Dcst",
+        "Doctor Stone 4th Season",
+        "Dr. STONE SCIENCE FUTURE Cour 2",
+        "Dr. STONE SCIENCE FUTURE Cour 3",
+        "Dr. Stone",
+        "Dr. Stone: New World",
+        "Dr. Stone: New World (2023)",
+        "Dr. Stone: Science Future",
+        "Dr. Stone: Science Future (2025)",
+        "Dr. Stone: Science Future (2026)",
+        "Dr. Stone: Stone Wars",
+        "Доктор Стоун [ТВ-1]",
+        "Доктор Стоун [ТВ-2]",
+        "Доктор Стоун [ТВ-3, часть 1]",
+        "Доктор Стоун [ТВ-3, часть 2]",
+        "Доктор Стоун [ТВ-4, часть 1]",
+        "Доктор Стоун [ТВ-4, часть 2]",
+        "Доктор Стоун [ТВ-4, часть 3]"
+      ],
+      "rules": [
+        {
+          "shikimoriId": 38691,
+          "season": 1,
+          "offset": 0,
+          "episodes": 24,
+          "titles": [
+            "Dr. Stone",
+            "Доктор Стоун [ТВ-1]",
+            "Dcst"
+          ]
+        },
+        {
+          "shikimoriId": 40852,
+          "season": 2,
+          "offset": 24,
+          "episodes": 11,
+          "titles": [
+            "Dr. Stone: Stone Wars",
+            "Доктор Стоун [ТВ-2]",
+            "DR.STONE ภาค 2"
+          ]
+        },
+        {
+          "shikimoriId": 48549,
+          "season": 3,
+          "offset": 35,
+          "episodes": 11,
+          "titles": [
+            "Dr. Stone: New World",
+            "Доктор Стоун [ТВ-3, часть 1]",
+            "DR.STONE ภาค 3"
+          ]
+        },
+        {
+          "shikimoriId": 55644,
+          "season": 3,
+          "offset": 46,
+          "episodes": 11,
+          "titles": [
+            "Dr. Stone: New World (2023)",
+            "Доктор Стоун [ТВ-3, часть 2]",
+            "DR.STONE ภาค 3"
+          ]
+        },
+        {
+          "shikimoriId": 57592,
+          "season": 4,
+          "offset": 57,
+          "episodes": 12,
+          "titles": [
+            "Dr. Stone: Science Future",
+            "Доктор Стоун [ТВ-4, часть 1]",
+            "Doctor Stone 4th Season"
+          ]
+        },
+        {
+          "shikimoriId": 61322,
+          "season": 4,
+          "offset": 69,
+          "episodes": 12,
+          "titles": [
+            "Dr. Stone: Science Future (2025)",
+            "Доктор Стоун [ТВ-4, часть 2]",
+            "Dr. STONE SCIENCE FUTURE Cour 2"
+          ]
+        },
+        {
+          "shikimoriId": 62568,
+          "season": 4,
+          "offset": 81,
+          "episodes": 13,
+          "titles": [
+            "Dr. Stone: Science Future (2026)",
+            "Доктор Стоун [ТВ-4, часть 3]",
+            "Dr. STONE SCIENCE FUTURE Cour 3"
+          ]
+        }
+      ]
+    },
+    "dragon-ball-super": {
+      "status": "verified",
+      "coveredEpisodes": 131,
+      "totalEpisodes": 131,
+      "ids": {
+        "tmdbTv": 62715,
+        "kinopoisk": 921973,
+        "imdb": "tt4644488"
+      },
+      "aliases": [
+        "Bola de Drac Super",
+        "Dragon Ball Super",
+        "Драгонболл Супер"
+      ],
+      "rules": [
+        {
+          "shikimoriId": 30694,
+          "season": 1,
+          "offset": 0,
+          "episodes": 131,
+          "titles": [
+            "Dragon Ball Super",
+            "Драгонболл Супер",
+            "Bola de Drac Super"
+          ]
+        }
+      ]
+    },
+    "dragon-ball-z": {
+      "status": "verified",
+      "coveredEpisodes": 291,
+      "totalEpisodes": 291,
+      "ids": {
+        "tmdbTv": 12971,
+        "kinopoisk": 230594,
+        "imdb": "tt0214341"
+      },
+      "aliases": [
+        "Bola De Drac Z",
+        "Dragon Ball Z",
+        "Драгонболл Зет [ТВ]"
+      ],
+      "rules": [
+        {
+          "shikimoriId": 813,
+          "season": 1,
+          "offset": 0,
+          "episodes": 291,
+          "titles": [
+            "Dragon Ball Z",
+            "Драгонболл Зет [ТВ]",
+            "Bola De Drac Z"
+          ]
+        }
+      ]
+    },
+    "fist-of-the-north-star": {
+      "status": "verified",
+      "coveredEpisodes": 152,
+      "totalEpisodes": 152,
+      "ids": {
+        "kinopoisk": 229693,
+        "imdb": "tt0091211"
+      },
+      "aliases": [
+        "El Puño de la Estrella del Norte",
+        "FOTNS 2",
+        "Seikimatsu Kyuseishu Densetsu: Hokuto no Ken",
+        "Seikimatsu Kyuseishu Densetsu: Hokuto no Ken 2",
+        "Кулак Северной звезды [ТВ-1]",
+        "Кулак Северной звезды [ТВ-2]"
+      ],
+      "rules": [
+        {
+          "shikimoriId": 967,
+          "season": 1,
+          "offset": 0,
+          "episodes": 109,
+          "titles": [
+            "Seikimatsu Kyuseishu Densetsu: Hokuto no Ken",
+            "Кулак Северной звезды [ТВ-1]",
+            "El Puño de la Estrella del Norte"
+          ]
+        },
+        {
+          "shikimoriId": 1356,
+          "season": 2,
+          "offset": 109,
+          "episodes": 43,
+          "titles": [
+            "Seikimatsu Kyuseishu Densetsu: Hokuto no Ken 2",
+            "Кулак Северной звезды [ТВ-2]",
+            "FOTNS 2"
+          ]
+        }
+      ]
+    },
+    "food-wars": {
+      "status": "verified",
+      "coveredEpisodes": 86,
+      "totalEpisodes": 86,
+      "ids": {
+        "tmdbTv": 62273,
+        "kinopoisk": 917288,
+        "imdb": "tt4731072"
+      },
+      "aliases": [
+        "Food Wars ! Shokugeki no Soma",
+        "Food Wars ! Shokugeki no Soma : Second Service",
+        "Food Wars ! Shokugeki no Soma : Troisième Service",
+        "Food Wars ! Shokugeki no Soma : Troisième Service (Totsuki Train-Arc)",
+        "Food Wars ! The Fifth Plate",
+        "Food Wars! Season 4",
+        "Shokugeki no Souma",
+        "Shokugeki no Souma: Gou no Sara",
+        "Shokugeki no Souma: Ni no Sara",
+        "Shokugeki no Souma: San no Sara",
+        "Shokugeki no Souma: San no Sara - Tootsuki Ressha Hen",
+        "Shokugeki no Souma: Shin no Sara",
+        "Кулинарные поединки Сомы [ТВ-1]",
+        "Кулинарные поединки Сомы [ТВ-2]",
+        "Кулинарные поединки Сомы [ТВ-3, сезон 1]",
+        "Кулинарные поединки Сомы [ТВ-3, сезон 2]",
+        "Кулинарные поединки Сомы [ТВ-4]",
+        "Кулинарные поединки Сомы [ТВ-5]"
+      ],
+      "rules": [
+        {
+          "shikimoriId": 28171,
+          "season": 1,
+          "offset": 0,
+          "episodes": 24,
+          "titles": [
+            "Shokugeki no Souma",
+            "Кулинарные поединки Сомы [ТВ-1]",
+            "Food Wars ! Shokugeki no Soma"
+          ]
+        },
+        {
+          "shikimoriId": 32282,
+          "season": 2,
+          "offset": 24,
+          "episodes": 13,
+          "titles": [
+            "Shokugeki no Souma: Ni no Sara",
+            "Кулинарные поединки Сомы [ТВ-2]",
+            "Food Wars ! Shokugeki no Soma : Second Service"
+          ]
+        },
+        {
+          "shikimoriId": 35788,
+          "season": 3,
+          "offset": 37,
+          "episodes": 12,
+          "titles": [
+            "Shokugeki no Souma: San no Sara",
+            "Кулинарные поединки Сомы [ТВ-3, сезон 1]",
+            "Food Wars ! Shokugeki no Soma : Troisième Service"
+          ]
+        },
+        {
+          "shikimoriId": 36949,
+          "season": 3,
+          "offset": 49,
+          "episodes": 12,
+          "titles": [
+            "Shokugeki no Souma: San no Sara - Tootsuki Ressha Hen",
+            "Кулинарные поединки Сомы [ТВ-3, сезон 2]",
+            "Food Wars ! Shokugeki no Soma : Troisième Service (Totsuki Train-Arc)"
+          ]
+        },
+        {
+          "shikimoriId": 39940,
+          "season": 4,
+          "offset": 61,
+          "episodes": 12,
+          "titles": [
+            "Shokugeki no Souma: Shin no Sara",
+            "Кулинарные поединки Сомы [ТВ-4]",
+            "Food Wars! Season 4"
+          ]
+        },
+        {
+          "shikimoriId": 40902,
+          "season": 5,
+          "offset": 73,
+          "episodes": 13,
+          "titles": [
+            "Shokugeki no Souma: Gou no Sara",
+            "Кулинарные поединки Сомы [ТВ-5]",
+            "Food Wars ! The Fifth Plate"
+          ]
+        }
+      ]
+    },
+    "fairy-tail": {
+      "status": "verified",
+      "coveredEpisodes": 328,
+      "totalEpisodes": 328,
+      "ids": {
+        "tmdbTv": 46261,
+        "kinopoisk": 480158,
+        "imdb": "tt1528406"
+      },
+      "aliases": [
+        "Conto de Fadas (2014)",
+        "Conto de Fadas (2018)",
+        "FAIRY TAIL",
+        "Fairy Tail",
+        "Fairy Tail (2014)",
+        "Fairy Tail (2018)",
+        "Фейри Тейл [ТВ-1]",
+        "Фейри Тейл [ТВ-2]",
+        "Фейри Тейл [ТВ-3]"
+      ],
+      "rules": [
+        {
+          "shikimoriId": 6702,
+          "season": 1,
+          "offset": 0,
+          "episodes": 175,
+          "titles": [
+            "Fairy Tail",
+            "Фейри Тейл [ТВ-1]",
+            "FAIRY TAIL"
+          ]
+        },
+        {
+          "shikimoriId": 22043,
+          "season": 2,
+          "offset": 175,
+          "episodes": 102,
+          "titles": [
+            "Fairy Tail (2014)",
+            "Фейри Тейл [ТВ-2]",
+            "Conto de Fadas (2014)"
+          ]
+        },
+        {
+          "shikimoriId": 35972,
+          "season": 3,
+          "offset": 277,
+          "episodes": 51,
+          "titles": [
+            "Fairy Tail (2018)",
+            "Фейри Тейл [ТВ-3]",
+            "Conto de Fadas (2018)"
+          ]
+        }
+      ]
+    },
+    "gintama": {
+      "status": "verified",
+      "coveredEpisodes": 367,
+      "totalEpisodes": 367,
+      "ids": {
+        "tmdbTv": 57041,
+        "kinopoisk": 490128,
+        "imdb": "tt0988818"
+      },
+      "aliases": [
+        "Gin Tama",
+        "Gintama",
+        "Gintama (2011)",
+        "Gintama (2017)",
+        "Gintama (Episoden 329-341)",
+        "Gintama (Episoden 342-353)",
+        "Gintama (Episodes 253-265)",
+        "Gintama Season 4",
+        "Gintama Season 4 (2017)",
+        "Gintama TV",
+        "Gintama'",
+        "Gintama' (2012)",
+        "Gintama': Enchousen",
+        "Gintama. (2017)",
+        "Gintama. (2018)",
+        "Gintama. Shirogane no Tamashii-hen - Kouhan-sen",
+        "Gintama°",
+        "Гинтама [ТВ-1]",
+        "Гинтама [ТВ-2]",
+        "Гинтама [ТВ-3]",
+        "Гинтама [ТВ-4]",
+        "Гинтама [ТВ-5]",
+        "Гинтама [ТВ-6]",
+        "Гинтама [ТВ-7]",
+        "Гинтама [ТВ-8]"
+      ],
+      "rules": [
+        {
+          "shikimoriId": 918,
+          "season": 1,
+          "offset": 0,
+          "episodes": 201,
+          "titles": [
+            "Gintama TV",
+            "Гинтама [ТВ-1]",
+            "Gin Tama"
+          ]
+        },
+        {
+          "shikimoriId": 9969,
+          "season": 2,
+          "offset": 201,
+          "episodes": 51,
+          "titles": [
+            "Gintama'",
+            "Гинтама [ТВ-2]",
+            "Gintama (2011)"
+          ]
+        },
+        {
+          "shikimoriId": 15417,
+          "season": 3,
+          "offset": 252,
+          "episodes": 13,
+          "titles": [
+            "Gintama' (2012)",
+            "Гинтама [ТВ-3]",
+            "Gintama (Episodes 253-265)"
+          ]
+        },
+        {
+          "shikimoriId": 28977,
+          "season": 4,
+          "offset": 265,
+          "episodes": 51,
+          "titles": [
+            "Gintama°",
+            "Гинтама [ТВ-4]",
+            "Gintama"
+          ]
+        },
+        {
+          "shikimoriId": 34096,
+          "season": 5,
+          "offset": 316,
+          "episodes": 12,
+          "titles": [
+            "Gintama Season 4",
+            "Гинтама [ТВ-5]",
+            "Gintama (2017)"
+          ]
+        },
+        {
+          "shikimoriId": 35843,
+          "season": 6,
+          "offset": 328,
+          "episodes": 13,
+          "titles": [
+            "Gintama Season 4 (2017)",
+            "Гинтама [ТВ-6]",
+            "Gintama (Episoden 329-341)"
+          ]
+        },
+        {
+          "shikimoriId": 36838,
+          "season": 7,
+          "offset": 341,
+          "episodes": 12,
+          "titles": [
+            "Gintama. (2018)",
+            "Гинтама [ТВ-7]",
+            "Gintama (Episoden 342-353)"
+          ]
+        },
+        {
+          "shikimoriId": 37491,
+          "season": 8,
+          "offset": 353,
+          "episodes": 14,
+          "titles": [
+            "Gintama",
+            "Гинтама [ТВ-8]"
+          ]
+        }
+      ]
+    },
+    "hajime-no-ippo": {
+      "status": "partial",
+      "coveredEpisodes": 75,
+      "totalEpisodes": 127,
+      "ids": {
+        "tmdbTv": 42705,
+        "kinopoisk": 408577,
+        "imdb": "tt0481256"
+      },
+      "aliases": [
+        "Espiritu de Pelea",
+        "Hajime no Ippo: The Fighting",
+        "Первый шаг [ТВ-1]"
+      ],
+      "rules": [
+        {
+          "shikimoriId": 263,
+          "season": 1,
+          "offset": 0,
+          "episodes": 75,
+          "titles": [
+            "Hajime no Ippo: The Fighting",
+            "Первый шаг [ТВ-1]",
+            "Espiritu de Pelea"
+          ]
+        }
+      ]
+    },
+    "haikyuu": {
+      "status": "verified",
+      "coveredEpisodes": 85,
+      "totalEpisodes": 85,
+      "ids": {
+        "tmdbTv": 60863,
+        "kinopoisk": 840073,
+        "imdb": "tt3398540"
+      },
+      "aliases": [
+        "HAIKYU!!",
+        "HAIKYU!! 2nd Season",
+        "HAIKYU!! 3rd Season",
+        "HAIKYU!! TO THE TOP",
+        "HAIKYU!! TO THE TOP Part 2",
+        "Haikyuu!!",
+        "Haikyuu!! Karasuno Koukou vs Shiratorizawa Gakuen Koukou",
+        "Haikyuu!! Second Season",
+        "Haikyuu!! To the Top",
+        "Haikyuu!! To the Top (2020)",
+        "Волейбол [ТВ-1]",
+        "Волейбол [ТВ-2]",
+        "Волейбол [ТВ-3]",
+        "Волейбол [ТВ-4, второй сезон]",
+        "Волейбол [ТВ-4, первый сезон]"
+      ],
+      "rules": [
+        {
+          "shikimoriId": 20583,
+          "season": 1,
+          "offset": 0,
+          "episodes": 25,
+          "titles": [
+            "Haikyuu!!",
+            "Волейбол [ТВ-1]",
+            "HAIKYU!!"
+          ]
+        },
+        {
+          "shikimoriId": 28891,
+          "season": 2,
+          "offset": 25,
+          "episodes": 25,
+          "titles": [
+            "Haikyuu!! Second Season",
+            "Волейбол [ТВ-2]",
+            "HAIKYU!! 2nd Season"
+          ]
+        },
+        {
+          "shikimoriId": 32935,
+          "season": 3,
+          "offset": 50,
+          "episodes": 10,
+          "titles": [
+            "Haikyuu!! Karasuno Koukou vs Shiratorizawa Gakuen Koukou",
+            "Волейбол [ТВ-3]",
+            "HAIKYU!! 3rd Season"
+          ]
+        },
+        {
+          "shikimoriId": 38883,
+          "season": 4,
+          "offset": 60,
+          "episodes": 13,
+          "titles": [
+            "Haikyuu!! To the Top",
+            "Волейбол [ТВ-4, первый сезон]",
+            "HAIKYU!! TO THE TOP"
+          ]
+        },
+        {
+          "shikimoriId": 40776,
+          "season": 4,
+          "offset": 73,
+          "episodes": 12,
+          "titles": [
+            "Haikyuu!! To the Top (2020)",
+            "Волейбол [ТВ-4, второй сезон]",
+            "HAIKYU!! TO THE TOP Part 2"
+          ]
+        }
+      ]
+    },
+    "hunter-x-hunter": {
+      "status": "verified",
+      "coveredEpisodes": 148,
+      "totalEpisodes": 148,
+      "ids": {
+        "tmdbTv": 46298,
+        "kinopoisk": 647602,
+        "imdb": "tt2098220"
+      },
+      "aliases": [
+        "HUNTERxHUNTER",
+        "Hunter x Hunter",
+        "Охотник х Охотник [ТВ-2]"
+      ],
+      "rules": [
+        {
+          "shikimoriId": 11061,
+          "season": 2,
+          "offset": 0,
+          "episodes": 148,
+          "titles": [
+            "Hunter x Hunter",
+            "Охотник х Охотник [ТВ-2]",
+            "HUNTERxHUNTER"
+          ]
+        }
+      ]
+    },
+    "inuyasha": {
+      "status": "verified",
+      "coveredEpisodes": 167,
+      "totalEpisodes": 167,
+      "ids": {
+        "tmdbTv": 35610,
+        "kinopoisk": 408433,
+        "imdb": "tt0290223"
+      },
+      "aliases": [
+        "Dog Yaksha",
+        "Inuyasha",
+        "Инуяся [ТВ-1]"
+      ],
+      "rules": [
+        {
+          "shikimoriId": 249,
+          "season": 1,
+          "offset": 0,
+          "episodes": 167,
+          "titles": [
+            "Inuyasha",
+            "Инуяся [ТВ-1]",
+            "Dog Yaksha"
+          ]
+        }
+      ]
+    },
+    "jojos-bizarre-adventure": {
+      "status": "partial",
+      "coveredEpisodes": 152,
+      "totalEpisodes": 191,
+      "ids": {
+        "tmdbTv": 45790,
+        "kinopoisk": 707636,
+        "imdb": "tt2359704"
+      },
+      "aliases": [
+        "Aventurile Bizare ale lui JoJo (2012)",
+        "Aventurile Bizare ale lui JoJo Partea 3: Vitejii Stelelor",
+        "Aventurile Bizare ale lui JoJo Partea 3: Vitejii Stelelor - Lupta din Egipt",
+        "Aventurile Bizare ale lui JoJo Partea 4: Diamant Indestructibil",
+        "Aventurile Bizare ale lui JoJo Partea 5: Vântul de Aur",
+        "JoJo no Kimyou na Bouken (2012)",
+        "JoJo no Kimyou na Bouken (TV)",
+        "JoJo no Kimyou na Bouken: Diamond wa Kudakenai",
+        "JoJo no Kimyou na Bouken: Ougon no Kaze",
+        "JoJo no Kimyou na Bouken: Stardust Crusaders",
+        "JoJo no Kimyou na Bouken: Stardust Crusaders - Egypt Hen",
+        "Невероятные приключения Джоджо [ТВ-1]",
+        "Невероятные приключения Джоджо [ТВ-2, сезон 1]",
+        "Невероятные приключения Джоджо [ТВ-2, сезон 2]",
+        "Невероятные приключения Джоджо [ТВ-3]",
+        "Невероятные приключения Джоджо [ТВ-4]"
+      ],
+      "rules": [
+        {
+          "shikimoriId": 14719,
+          "season": 1,
+          "offset": 0,
+          "episodes": 26,
+          "titles": [
+            "JoJo no Kimyou na Bouken (2012)",
+            "Невероятные приключения Джоджо [ТВ-1]",
+            "Aventurile Bizare ale lui JoJo (2012)"
+          ]
+        },
+        {
+          "shikimoriId": 20899,
+          "season": 2,
+          "offset": 26,
+          "episodes": 24,
+          "titles": [
+            "JoJo no Kimyou na Bouken: Stardust Crusaders",
+            "Невероятные приключения Джоджо [ТВ-2, сезон 1]",
+            "Aventurile Bizare ale lui JoJo Partea 3: Vitejii Stelelor"
+          ]
+        },
+        {
+          "shikimoriId": 26055,
+          "season": 2,
+          "offset": 50,
+          "episodes": 24,
+          "titles": [
+            "JoJo no Kimyou na Bouken: Stardust Crusaders - Egypt Hen",
+            "Невероятные приключения Джоджо [ТВ-2, сезон 2]",
+            "Aventurile Bizare ale lui JoJo Partea 3: Vitejii Stelelor - Lupta din Egipt"
+          ]
+        },
+        {
+          "shikimoriId": 31933,
+          "season": 3,
+          "offset": 74,
+          "episodes": 39,
+          "titles": [
+            "JoJo no Kimyou na Bouken: Diamond wa Kudakenai",
+            "Невероятные приключения Джоджо [ТВ-3]",
+            "Aventurile Bizare ale lui JoJo Partea 4: Diamant Indestructibil"
+          ]
+        },
+        {
+          "shikimoriId": 37991,
+          "season": 4,
+          "offset": 113,
+          "episodes": 39,
+          "titles": [
+            "JoJo no Kimyou na Bouken: Ougon no Kaze",
+            "Невероятные приключения Джоджо [ТВ-4]",
+            "Aventurile Bizare ale lui JoJo Partea 5: Vântul de Aur"
+          ]
+        }
+      ]
+    },
+    "katekyo-hitman-reborn": {
+      "status": "verified",
+      "coveredEpisodes": 203,
+      "totalEpisodes": 203,
+      "ids": {
+        "tmdbTv": 45857,
+        "kinopoisk": 481421,
+        "imdb": "tt1224144"
+      },
+      "aliases": [
+        "Gia sư HITMAN REBORN!",
+        "Katei Kyoshi Hitman Reborn!",
+        "Katekyou Hitman Reborn!",
+        "Учитель-мафиози Реборн!"
+      ],
+      "rules": [
+        {
+          "shikimoriId": 1604,
+          "season": 1,
+          "offset": 0,
+          "episodes": 203,
+          "titles": [
+            "Katei Kyoshi Hitman Reborn!",
+            "Учитель-мафиози Реборн!",
+            "Gia sư HITMAN REBORN!"
+          ]
+        }
+      ]
+    },
+    "kuroko-no-basketball": {
+      "status": "verified",
+      "coveredEpisodes": 75,
+      "totalEpisodes": 75,
+      "ids": {
+        "tmdbTv": 45783,
+        "kinopoisk": 676672,
+        "imdb": "tt2348803"
+      },
+      "aliases": [
+        "El baloncesto de Kuroko",
+        "KNB2",
+        "KNB3",
+        "Kuroko no Baske",
+        "Kuroko no Baske 3",
+        "Kuroko no Basket",
+        "Kuroko no Basuke 2",
+        "Баскетбол Куроко [ТВ-1]",
+        "Баскетбол Куроко [ТВ-2]",
+        "Баскетбол Куроко [ТВ-3]"
+      ],
+      "rules": [
+        {
+          "shikimoriId": 11771,
+          "season": 1,
+          "offset": 0,
+          "episodes": 25,
+          "titles": [
+            "Kuroko no Baske",
+            "Баскетбол Куроко [ТВ-1]",
+            "El baloncesto de Kuroko"
+          ]
+        },
+        {
+          "shikimoriId": 16894,
+          "season": 2,
+          "offset": 25,
+          "episodes": 25,
+          "titles": [
+            "Kuroko no Basuke 2",
+            "Баскетбол Куроко [ТВ-2]",
+            "KNB2"
+          ]
+        },
+        {
+          "shikimoriId": 24415,
+          "season": 3,
+          "offset": 50,
+          "episodes": 25,
+          "titles": [
+            "Kuroko no Baske 3",
+            "Баскетбол Куроко [ТВ-3]",
+            "KNB3"
+          ]
+        }
+      ]
+    },
+    "kingdom": {
+      "status": "verified",
+      "coveredEpisodes": 155,
+      "totalEpisodes": 155,
+      "ids": {
+        "tmdbTv": 46437,
+        "kinopoisk": 690182,
+        "imdb": "tt2404499"
+      },
+      "aliases": [
+        "Kingdom",
+        "Kingdom (2013)",
+        "Kingdom (2020)",
+        "Kingdom (2022)",
+        "Kingdom (2024)",
+        "Kingdom (2025)",
+        "Kingdom 2",
+        "Царство [ТВ-1]",
+        "Царство [ТВ-2]",
+        "Царство [ТВ-3]",
+        "Царство [ТВ-4]",
+        "Царство [ТВ-5]",
+        "Царство [ТВ-6]"
+      ],
+      "rules": [
+        {
+          "shikimoriId": 12031,
+          "season": 1,
+          "offset": 0,
+          "episodes": 38,
+          "titles": [
+            "Kingdom",
+            "Царство [ТВ-1]"
+          ]
+        },
+        {
+          "shikimoriId": 17389,
+          "season": 2,
+          "offset": 38,
+          "episodes": 39,
+          "titles": [
+            "Kingdom 2",
+            "Царство [ТВ-2]",
+            "Kingdom (2013)"
+          ]
+        },
+        {
+          "shikimoriId": 40682,
+          "season": 3,
+          "offset": 77,
+          "episodes": 26,
+          "titles": [
+            "Kingdom (2020)",
+            "Царство [ТВ-3]"
+          ]
+        },
+        {
+          "shikimoriId": 50160,
+          "season": 4,
+          "offset": 103,
+          "episodes": 26,
+          "titles": [
+            "Kingdom (2022)",
+            "Царство [ТВ-4]"
+          ]
+        },
+        {
+          "shikimoriId": 53223,
+          "season": 5,
+          "offset": 129,
+          "episodes": 13,
+          "titles": [
+            "Kingdom (2024)",
+            "Царство [ТВ-5]"
+          ]
+        },
+        {
+          "shikimoriId": 61517,
+          "season": 6,
+          "offset": 142,
+          "episodes": 13,
+          "titles": [
+            "Kingdom (2025)",
+            "Царство [ТВ-6]"
+          ]
+        }
+      ]
+    },
+    "monster": {
+      "status": "verified",
+      "coveredEpisodes": 74,
+      "totalEpisodes": 74,
+      "ids": {
+        "tmdbTv": 30981,
+        "kinopoisk": 258582,
+        "imdb": "tt0434706"
+      },
+      "aliases": [
+        "Canavar",
+        "Monster",
+        "Монстр"
+      ],
+      "rules": [
+        {
+          "shikimoriId": 19,
+          "season": 1,
+          "offset": 0,
+          "episodes": 74,
+          "titles": [
+            "Monster",
+            "Монстр",
+            "Canavar"
+          ]
+        }
+      ]
+    },
+    "naruto-shippuden": {
+      "status": "verified",
+      "coveredEpisodes": 500,
+      "totalEpisodes": 500,
+      "ids": {
+        "tmdbTv": 31910,
+        "kinopoisk": 281884,
+        "imdb": "tt0988824"
+      },
+      "aliases": [
+        "NARUTO -ナルト- 疾風伝",
+        "Naruto Shippuuden",
+        "Naruto: Shippuuden",
+        "Наруто [ТВ-2]"
+      ],
+      "rules": [
+        {
+          "shikimoriId": 1735,
+          "season": 2,
+          "offset": 0,
+          "episodes": 500,
+          "titles": [
+            "Naruto Shippuuden",
+            "Наруто [ТВ-2]",
+            "NARUTO -ナルト- 疾風伝"
+          ]
+        }
+      ]
+    },
+    "naruto": {
+      "status": "verified",
+      "coveredEpisodes": 220,
+      "totalEpisodes": 220,
+      "ids": {
+        "tmdbTv": 46260,
+        "kinopoisk": 283290,
+        "imdb": "tt0409591"
+      },
+      "aliases": [
+        "NARUTO",
+        "Naruto",
+        "Наруто [ТВ-1]"
+      ],
+      "rules": [
+        {
+          "shikimoriId": 20,
+          "season": 1,
+          "offset": 0,
+          "episodes": 220,
+          "titles": [
+            "Naruto",
+            "Наруто [ТВ-1]",
+            "NARUTO"
+          ]
+        }
+      ]
+    },
+    "my-hero-academia": {
+      "status": "verified",
+      "coveredEpisodes": 138,
+      "totalEpisodes": 138,
+      "ids": {
+        "tmdbTv": 65930,
+        "kinopoisk": 975897,
+        "imdb": "tt5626028"
+      },
+      "aliases": [
+        "3أكاديميتي للأبطال",
+        "Akademia bohaterów",
+        "Akademia bohaterów (2017)",
+        "BNHA 4",
+        "BNHA 5",
+        "BNHA 6",
+        "Boku no Hero Academia",
+        "Boku no Hero Academia (2018)",
+        "Boku no Hero Academia 2",
+        "Boku no Hero Academia 3rd Season",
+        "Boku no Hero Academia 4th Season",
+        "Boku no Hero Academia 5",
+        "Boku no Hero Academia 5th Season",
+        "Boku no Hero Academia 6",
+        "Boku no Hero Academia 6th Season",
+        "Boku no Hero Academia 7th Season",
+        "Boku no Hero Academia: Final Season",
+        "My Hero Academia Season 4",
+        "Моя геройская академия [ТВ-1]",
+        "Моя геройская академия [ТВ-2]",
+        "Моя геройская академия [ТВ-3]",
+        "Моя геройская академия [ТВ-4]",
+        "Моя геройская академия [ТВ-5]",
+        "Моя геройская академия [ТВ-6]"
+      ],
+      "rules": [
+        {
+          "shikimoriId": 31964,
+          "season": 1,
+          "offset": 0,
+          "episodes": 13,
+          "titles": [
+            "Boku no Hero Academia",
+            "Моя геройская академия [ТВ-1]",
+            "Akademia bohaterów"
+          ]
+        },
+        {
+          "shikimoriId": 33486,
+          "season": 2,
+          "offset": 13,
+          "episodes": 25,
+          "titles": [
+            "Boku no Hero Academia 2",
+            "Моя геройская академия [ТВ-2]",
+            "Akademia bohaterów (2017)"
+          ]
+        },
+        {
+          "shikimoriId": 36456,
+          "season": 3,
+          "offset": 38,
+          "episodes": 25,
+          "titles": [
+            "Boku no Hero Academia (2018)",
+            "Моя геройская академия [ТВ-3]",
+            "3أكاديميتي للأبطال"
+          ]
+        },
+        {
+          "shikimoriId": 38408,
+          "season": 4,
+          "offset": 63,
+          "episodes": 25,
+          "titles": [
+            "My Hero Academia Season 4",
+            "Моя геройская академия [ТВ-4]",
+            "BNHA 4"
+          ]
+        },
+        {
+          "shikimoriId": 41587,
+          "season": 5,
+          "offset": 88,
+          "episodes": 25,
+          "titles": [
+            "Boku no Hero Academia 5",
+            "Моя геройская академия [ТВ-5]",
+            "BNHA 5"
+          ]
+        },
+        {
+          "shikimoriId": 49918,
+          "season": 6,
+          "offset": 113,
+          "episodes": 25,
+          "titles": [
+            "Boku no Hero Academia 6",
+            "Моя геройская академия [ТВ-6]",
+            "BNHA 6"
+          ]
+        }
+      ]
+    },
+    "pokemon": {
+      "status": "verified",
+      "coveredEpisodes": 276,
+      "totalEpisodes": 276,
+      "ids": {
+        "tmdbTv": 60572,
+        "kinopoisk": 79517,
+        "imdb": "tt0176385"
+      },
+      "aliases": [
+        "Adventures on the Orange Islands",
+        "Pocket Monsters",
+        "Покемон"
+      ],
+      "rules": [
+        {
+          "shikimoriId": 527,
+          "season": 1,
+          "offset": 0,
+          "episodes": 276,
+          "titles": [
+            "Pocket Monsters",
+            "Покемон",
+            "Adventures on the Orange Islands"
+          ]
+        }
+      ]
+    },
+    "one-piece": {
+      "status": "verified",
+      "coveredEpisodes": 1173,
+      "totalEpisodes": 1173,
+      "ids": {
+        "tmdbTv": 37854,
+        "kinopoisk": 382731,
+        "imdb": "tt0388629"
+      },
+      "aliases": [
+        "1P",
+        "One Piece",
+        "Ван-Пис [ТВ]"
+      ],
+      "rules": [
+        {
+          "shikimoriId": 21,
+          "season": 1,
+          "offset": 0,
+          "episodes": 1173,
+          "titles": [
+            "One Piece",
+            "Ван-Пис [ТВ]",
+            "1P"
+          ]
+        }
+      ]
+    },
+    "ranma-1-2": {
+      "status": "verified",
+      "coveredEpisodes": 161,
+      "totalEpisodes": 161,
+      "ids": {
+        "tmdbTv": 57706,
+        "kinopoisk": 258291,
+        "imdb": "tt0096686"
+      },
+      "aliases": [
+        "Ranma 1/2",
+        "Ранма 1/2"
+      ],
+      "rules": [
+        {
+          "shikimoriId": 210,
+          "season": 1,
+          "offset": 0,
+          "episodes": 161,
+          "titles": [
+            "Ranma 1/2",
+            "Ранма 1/2"
+          ]
+        }
+      ]
+    },
+    "rurouni-kenshin": {
+      "status": "partial",
+      "coveredEpisodes": 94,
+      "totalEpisodes": 95,
+      "ids": {
+        "tmdbTv": 28136,
+        "kinopoisk": 268758,
+        "imdb": "tt0182629"
+      },
+      "aliases": [
+        "El Guerrero Samuraï",
+        "Rurouni Kenshin: Meiji Kenkaku Romantan",
+        "Бродяга Кэнсин [ТВ-1]"
+      ],
+      "rules": [
+        {
+          "shikimoriId": 45,
+          "season": 1,
+          "offset": 0,
+          "episodes": 94,
+          "titles": [
+            "Rurouni Kenshin: Meiji Kenkaku Romantan",
+            "Бродяга Кэнсин [ТВ-1]",
+            "El Guerrero Samuraï"
+          ]
+        }
+      ]
+    },
+    "sailor-moon": {
+      "status": "partial",
+      "coveredEpisodes": 46,
+      "totalEpisodes": 200,
+      "ids": {
+        "tmdbTv": 3570,
+        "kinopoisk": 229704,
+        "imdb": "tt0103369"
+      },
+      "aliases": [
+        "Ay Savaşçısı",
+        "Bishoujo Senshi Sailor Moon",
+        "Красавица-воин Сейлор Мун [ТВ]"
+      ],
+      "rules": [
+        {
+          "shikimoriId": 530,
+          "season": 1,
+          "offset": 0,
+          "episodes": 46,
+          "titles": [
+            "Bishoujo Senshi Sailor Moon",
+            "Красавица-воин Сейлор Мун [ТВ]",
+            "Ay Savaşçısı"
+          ]
+        }
+      ]
+    },
+    "slime-isekai": {
+      "status": "verified",
+      "coveredEpisodes": 75,
+      "totalEpisodes": 75,
+      "ids": {
+        "tmdbTv": 82684,
+        "kinopoisk": 1224030,
+        "imdb": "tt9054364"
+      },
+      "aliases": [
+        "Aquella vez que me convertí en slime - Temporada 4",
+        "Bereinkarnasi Malah Menjadi Slime",
+        "Meine Wiedergeburt als Schleim in einer anderen Welt (2021)",
+        "Meine Wiedergeburt als Schleim in einer anderen Welt (2021) Teil 2",
+        "Meine Wiedergeburt als Schleim in einer anderen Welt Staffel 3",
+        "Tensei Shitara Slime Datta Ken",
+        "Tensei Shitara Slime Datta Ken (2021 Dai 2 Bu)",
+        "Tensei Shitara Slime Datta Ken (2021)",
+        "Tensei Shitara Slime Datta Ken (2026)",
+        "Tensei Shitara Slime Datta Ken 3",
+        "Tensei shitara Slime Datta Ken",
+        "О моём перерождении в слизь [ТВ-1]",
+        "О моём перерождении в слизь [ТВ-2, второй сезон]",
+        "О моём перерождении в слизь [ТВ-2, первый сезон]",
+        "О моём перерождении в слизь [ТВ-3]",
+        "О моём перерождении в слизь [ТВ-4]"
+      ],
+      "rules": [
+        {
+          "shikimoriId": 37430,
+          "season": 1,
+          "offset": 0,
+          "episodes": 24,
+          "titles": [
+            "Tensei Shitara Slime Datta Ken",
+            "О моём перерождении в слизь [ТВ-1]",
+            "Bereinkarnasi Malah Menjadi Slime"
+          ]
+        },
+        {
+          "shikimoriId": 41487,
+          "season": 2,
+          "offset": 24,
+          "episodes": 12,
+          "titles": [
+            "Tensei Shitara Slime Datta Ken (2021 Dai 2 Bu)",
+            "О моём перерождении в слизь [ТВ-2, второй сезон]",
+            "Meine Wiedergeburt als Schleim in einer anderen Welt (2021) Teil 2"
+          ]
+        },
+        {
+          "shikimoriId": 39551,
+          "season": 2,
+          "offset": 36,
+          "episodes": 12,
+          "titles": [
+            "Tensei Shitara Slime Datta Ken (2021)",
+            "О моём перерождении в слизь [ТВ-2, первый сезон]",
+            "Meine Wiedergeburt als Schleim in einer anderen Welt (2021)"
+          ]
+        },
+        {
+          "shikimoriId": 53580,
+          "season": 3,
+          "offset": 48,
+          "episodes": 24,
+          "titles": [
+            "Tensei Shitara Slime Datta Ken 3",
+            "О моём перерождении в слизь [ТВ-3]",
+            "Meine Wiedergeburt als Schleim in einer anderen Welt Staffel 3"
+          ]
+        },
+        {
+          "shikimoriId": 59970,
+          "season": 4,
+          "offset": 72,
+          "episodes": 3,
+          "titles": [
+            "Tensei Shitara Slime Datta Ken (2026)",
+            "О моём перерождении в слизь [ТВ-4]",
+            "Aquella vez que me convertí en slime - Temporada 4"
+          ]
+        }
+      ]
+    },
+    "the-seven-deadly-sins": {
+      "status": "partial",
+      "coveredEpisodes": 96,
+      "totalEpisodes": 100,
+      "ids": {
+        "tmdbTv": 62104,
+        "kinopoisk": 843954,
+        "imdb": "tt3909224"
+      },
+      "aliases": [
+        "7DS",
+        "7DS 2",
+        "Los Siete Pecados Capitales: La Ira Imperial de los dioses",
+        "Nanatsu no Taizai",
+        "Nanatsu no Taizai 4th season",
+        "Nanatsu no Taizai: Fundo no Shinpan",
+        "Nanatsu no Taizai: Imashime no Fukkatsu",
+        "Nanatsu no Taizai: Kamigami no Gekirin",
+        "Nanatsu no Taizai: The Seven Deadly Sins",
+        "Семь смертных грехов [ТВ-1]",
+        "Семь смертных грехов [ТВ-2]",
+        "Семь смертных грехов [ТВ-3]",
+        "Семь смертных грехов [ТВ-4]"
+      ],
+      "rules": [
+        {
+          "shikimoriId": 23755,
+          "season": 1,
+          "offset": 0,
+          "episodes": 24,
+          "titles": [
+            "Nanatsu no Taizai: The Seven Deadly Sins",
+            "Семь смертных грехов [ТВ-1]",
+            "7DS"
+          ]
+        },
+        {
+          "shikimoriId": 34577,
+          "season": 2,
+          "offset": 24,
+          "episodes": 24,
+          "titles": [
+            "Nanatsu no Taizai: Imashime no Fukkatsu",
+            "Семь смертных грехов [ТВ-2]",
+            "7DS 2"
+          ]
+        },
+        {
+          "shikimoriId": 39701,
+          "season": 3,
+          "offset": 48,
+          "episodes": 24,
+          "titles": [
+            "Nanatsu no Taizai: Kamigami no Gekirin",
+            "Семь смертных грехов [ТВ-3]",
+            "Los Siete Pecados Capitales: La Ira Imperial de los dioses"
+          ]
+        },
+        {
+          "shikimoriId": 41491,
+          "season": 4,
+          "offset": 72,
+          "episodes": 24,
+          "titles": [
+            "Nanatsu no Taizai: Fundo no Shinpan",
+            "Семь смертных грехов [ТВ-4]",
+            "Nanatsu no Taizai 4th season"
+          ]
+        }
+      ]
+    },
+    "yowamushi-pedal": {
+      "status": "verified",
+      "coveredEpisodes": 137,
+      "totalEpisodes": 137,
+      "ids": {
+        "tmdbTv": 61441,
+        "kinopoisk": 804556,
+        "imdb": "tt2942228"
+      },
+      "aliases": [
+        "En Selle, Sakamichi !",
+        "En Selle, Sakamichi - Grande Road",
+        "YowaPeda 3",
+        "YowaPeda 4",
+        "YowaPeda 5",
+        "Yowamushi Pedal",
+        "Yowamushi Pedal: Glory Line",
+        "Yowamushi Pedal: Grande Road",
+        "Yowamushi Pedal: Limit Break",
+        "Yowamushi Pedal: New Generation",
+        "Трусливый велосипедист [ТВ-1]",
+        "Трусливый велосипедист [ТВ-2]",
+        "Трусливый велосипедист [ТВ-3]",
+        "Трусливый велосипедист [ТВ-4]",
+        "Трусливый велосипедист [ТВ-5]"
+      ],
+      "rules": [
+        {
+          "shikimoriId": 18179,
+          "season": 1,
+          "offset": 0,
+          "episodes": 38,
+          "titles": [
+            "Yowamushi Pedal",
+            "Трусливый велосипедист [ТВ-1]",
+            "En Selle, Sakamichi !"
+          ]
+        },
+        {
+          "shikimoriId": 24277,
+          "season": 2,
+          "offset": 38,
+          "episodes": 24,
+          "titles": [
+            "Yowamushi Pedal: Grande Road",
+            "Трусливый велосипедист [ТВ-2]",
+            "En Selle, Sakamichi - Grande Road"
+          ]
+        },
+        {
+          "shikimoriId": 31783,
+          "season": 3,
+          "offset": 62,
+          "episodes": 25,
+          "titles": [
+            "Yowamushi Pedal: New Generation",
+            "Трусливый велосипедист [ТВ-3]",
+            "YowaPeda 3"
+          ]
+        },
+        {
+          "shikimoriId": 35789,
+          "season": 4,
+          "offset": 87,
+          "episodes": 25,
+          "titles": [
+            "Yowamushi Pedal: Glory Line",
+            "Трусливый велосипедист [ТВ-4]",
+            "YowaPeda 4"
+          ]
+        },
+        {
+          "shikimoriId": 50552,
+          "season": 5,
+          "offset": 112,
+          "episodes": 25,
+          "titles": [
+            "Yowamushi Pedal: Limit Break",
+            "Трусливый велосипедист [ТВ-5]",
+            "YowaPeda 5"
+          ]
+        }
+      ]
+    },
+    "sword-art-online": {
+      "status": "verified",
+      "coveredEpisodes": 96,
+      "totalEpisodes": 96,
+      "ids": {
+        "tmdbTv": 45782,
+        "kinopoisk": 691223,
+        "imdb": "tt2250192"
+      },
+      "aliases": [
+        "Alicization",
+        "GGO",
+        "S.A.O",
+        "SAO 3 3rd Season",
+        "SAO Alicization 2",
+        "Sword Art Online",
+        "Sword Art Online II",
+        "Sword Art Online: Alicization",
+        "Sword Art Online: Alicization - War of Underworld",
+        "Sword Art Online: Alicization - War of Underworld (2020)",
+        "Мастера меча онлайн [ТВ-1]",
+        "Мастера меча онлайн [ТВ-2]",
+        "Мастера меча онлайн: Алисизация",
+        "Мастера меча онлайн: Алисизация - Война в Подмирье [ТВ-1]",
+        "Мастера меча онлайн: Алисизация - Война в Подмирье [ТВ-2]"
+      ],
+      "rules": [
+        {
+          "shikimoriId": 11757,
+          "season": 1,
+          "offset": 0,
+          "episodes": 25,
+          "titles": [
+            "Sword Art Online",
+            "Мастера меча онлайн [ТВ-1]",
+            "S.A.O"
+          ]
+        },
+        {
+          "shikimoriId": 21881,
+          "season": 2,
+          "offset": 25,
+          "episodes": 24,
+          "titles": [
+            "Sword Art Online II",
+            "Мастера меча онлайн [ТВ-2]",
+            "GGO"
+          ]
+        },
+        {
+          "shikimoriId": 36474,
+          "season": 3,
+          "offset": 49,
+          "episodes": 24,
+          "titles": [
+            "Sword Art Online: Alicization",
+            "Мастера меча онлайн: Алисизация",
+            "Alicization"
+          ]
+        },
+        {
+          "shikimoriId": 39597,
+          "season": 4,
+          "offset": 73,
+          "episodes": 12,
+          "titles": [
+            "Sword Art Online: Alicization - War of Underworld",
+            "Мастера меча онлайн: Алисизация - Война в Подмирье [ТВ-1]",
+            "SAO Alicization 2"
+          ]
+        },
+        {
+          "shikimoriId": 40540,
+          "season": 5,
+          "offset": 85,
+          "episodes": 11,
+          "titles": [
+            "Sword Art Online: Alicization - War of Underworld (2020)",
+            "Мастера меча онлайн: Алисизация - Война в Подмирье [ТВ-2]",
+            "SAO 3 3rd Season"
+          ]
+        }
+      ]
+    },
+    "urusei-yatsura-1981": {
+      "status": "verified",
+      "coveredEpisodes": 167,
+      "totalEpisodes": 167,
+      "ids": {
+        "tmdbTv": 34163,
+        "kinopoisk": 334703,
+        "imdb": "tt0081954"
+      },
+      "aliases": [
+        "Alien Musibat",
+        "Urusei Yatsura",
+        "Urusei yatsura",
+        "Несносные пришельцы"
+      ],
+      "rules": [
+        {
+          "shikimoriId": 1293,
+          "season": 1,
+          "offset": 0,
+          "episodes": 167,
+          "titles": [
+            "Urusei yatsura",
+            "Несносные пришельцы",
+            "Alien Musibat"
+          ]
+        }
+      ]
+    },
+    "yu-gi-oh": {
+      "status": "verified",
+      "coveredEpisodes": 224,
+      "totalEpisodes": 224,
+      "ids": {
+        "tmdbTv": 902,
+        "kinopoisk": 230088,
+        "imdb": "tt0247902"
+      },
+      "aliases": [
+        "König der Spiele",
+        "Yuu Gi Ou: Duel Monsters",
+        "Yu☆Gi☆Oh! Duel Monsters",
+        "Югио! Дуэльные монстры"
+      ],
+      "rules": [
+        {
+          "shikimoriId": 481,
+          "season": 2,
+          "offset": 0,
+          "episodes": 224,
+          "titles": [
+            "Yuu Gi Ou: Duel Monsters",
+            "Югио! Дуэльные монстры",
+            "König der Spiele"
+          ]
+        }
+      ]
+    },
+    "yu-yu-hakusho": {
+      "status": "verified",
+      "coveredEpisodes": 112,
+      "totalEpisodes": 112,
+      "ids": {
+        "tmdbTv": 30669,
+        "kinopoisk": 230090,
+        "imdb": "tt0185133"
+      },
+      "aliases": [
+        "Ghost Detectives",
+        "Yuu Yuu Hakusho",
+        "Yuu☆Yuu☆Hakusho",
+        "Отчет о буйстве духов [ТВ]"
+      ],
+      "rules": [
+        {
+          "shikimoriId": 392,
+          "season": 1,
+          "offset": 0,
+          "episodes": 112,
+          "titles": [
+            "Yuu Yuu Hakusho",
+            "Отчет о буйстве духов [ТВ]",
+            "Ghost Detectives"
+          ]
+        }
+      ]
+    },
+    "zatch-bell": {
+      "status": "verified",
+      "coveredEpisodes": 150,
+      "totalEpisodes": 150,
+      "ids": {
+        "tmdbTv": 35894,
+        "kinopoisk": 1049465,
+        "imdb": "tt0455295"
+      },
+      "aliases": [
+        "GASH BELL!!",
+        "Konjiki no Gash Bell!!",
+        "Златовласый Гаш Белл"
+      ],
+      "rules": [
+        {
+          "shikimoriId": 250,
+          "season": 1,
+          "offset": 0,
+          "episodes": 150,
+          "titles": [
+            "Konjiki no Gash Bell!!",
+            "Златовласый Гаш Белл",
+            "GASH BELL!!"
+          ]
+        }
+      ]
+    }
+  }
+}

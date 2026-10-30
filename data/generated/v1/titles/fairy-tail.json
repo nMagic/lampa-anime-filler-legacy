@@ -4,13 +4,67 @@
   "identity": {
     "mediaType": "series",
     "title": "Fairy Tail",
-    "aliases": [],
-    "ids": {}
+    "aliases": [
+      "Conto de Fadas (2014)",
+      "Conto de Fadas (2018)",
+      "FAIRY TAIL",
+      "Fairy Tail (2014)",
+      "Fairy Tail (2018)",
+      "Фейри Тейл [ТВ-1]",
+      "Фейри Тейл [ТВ-2]",
+      "Фейри Тейл [ТВ-3]"
+    ],
+    "ids": {
+      "imdb": "tt1528406",
+      "kinopoisk": 480158,
+      "tmdbTv": 46261
+    }
   },
   "numbering": {
     "scope": "regular",
     "basis": "absolute",
-    "startsAt": 1
+    "startsAt": 1,
+    "kodik": {
+      "status": "verified",
+      "coveredEpisodes": 328,
+      "totalEpisodes": 328,
+      "reason": "",
+      "rules": [
+        {
+          "shikimoriId": 6702,
+          "season": 1,
+          "offset": 0,
+          "episodes": 175,
+          "titles": [
+            "FAIRY TAIL",
+            "Fairy Tail",
+            "Фейри Тейл [ТВ-1]"
+          ]
+        },
+        {
+          "shikimoriId": 22043,
+          "season": 2,
+          "offset": 175,
+          "episodes": 102,
+          "titles": [
+            "Conto de Fadas (2014)",
+            "Fairy Tail (2014)",
+            "Фейри Тейл [ТВ-2]"
+          ]
+        },
+        {
+          "shikimoriId": 35972,
+          "season": 3,
+          "offset": 277,
+          "episodes": 51,
+          "titles": [
+            "Conto de Fadas (2018)",
+            "Fairy Tail (2018)",
+            "Фейри Тейл [ТВ-3]"
+          ]
+        }
+      ]
+    }
   },
   "classification": {
     "sourceId": "skipthefiller",

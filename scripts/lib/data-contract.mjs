@@ -76,6 +76,32 @@ function normalizeSeasonOffsets(value, context) {
   return Object.fromEntries(Object.entries(result).sort(([a], [b]) => Number(a) - Number(b)));
 }
 
+function normalizeKodik(value, episodeCount, context) {
+  if (value === undefined) return undefined;
+  invariant(isPlainObject(value), `${context}: kodik must be an object`);
+  invariant(['verified', 'partial', 'not_in_kodik', 'unresolved_identity', 'unresolved_numbering', 'request_error'].includes(value.status),
+    `${context}: invalid Kodik status`);
+  const coveredEpisodes = Number(value.coveredEpisodes) || 0;
+  invariant(Number.isSafeInteger(coveredEpisodes) && coveredEpisodes >= 0 && coveredEpisodes <= episodeCount,
+    `${context}: invalid Kodik coverage`);
+  const rules = (value.rules || []).map((rule, index) => {
+    invariant(isPlainObject(rule), `${context}: Kodik rule ${index} must be an object`);
+    invariant(Number.isSafeInteger(rule.shikimoriId) && rule.shikimoriId > 0,
+      `${context}: invalid Kodik Shikimori ID`);
+    invariant(Number.isSafeInteger(rule.season) && rule.season > 0,
+      `${context}: invalid Kodik season`);
+    invariant(Number.isSafeInteger(rule.offset) && rule.offset >= 0 &&
+      Number.isSafeInteger(rule.episodes) && rule.episodes > 0 && rule.offset + rule.episodes <= episodeCount,
+      `${context}: invalid Kodik episode range`);
+    const titles = normalizeAliases(rule.titles, '', `${context} Kodik rule ${index}`);
+    invariant(titles.length, `${context}: Kodik rule ${index} has no titles`);
+    return { shikimoriId: rule.shikimoriId, season: rule.season, offset: rule.offset,
+      episodes: rule.episodes, titles };
+  });
+  return { status: value.status, coveredEpisodes, totalEpisodes: episodeCount,
+    reason: String(value.reason || ''), rules };
+}
+
 function normalizeHttpsUrl(value, context) {
   let url;
   try { url = new URL(String(value || '')); }
@@ -117,6 +143,7 @@ function normalizeShow(show, source, identity = {}) {
   const ids = normalizeIds(identity.ids, context);
   const aliases = normalizeAliases(identity.aliases, title, context);
   const seasonOffsets = normalizeSeasonOffsets(identity.seasonOffsets, context);
+  const kodik = normalizeKodik(identity.kodik, numbers.length, context);
 
   const numbering = {
     scope: 'regular',
@@ -124,6 +151,7 @@ function normalizeShow(show, source, identity = {}) {
     startsAt: 1
   };
   if (seasonOffsets) numbering.seasonOffsets = seasonOffsets;
+  if (kodik) numbering.kodik = kodik;
 
   return {
     schemaVersion: SCHEMA_VERSION,
@@ -213,7 +241,7 @@ export function buildBundle(catalog, options) {
   const episodeCount = indexItems.reduce((sum, item) => sum + item.episodeCount, 0);
   const manifest = {
     schemaVersion: SCHEMA_VERSION,
-    buildId: `${source.id}-${source.revision.slice(0, 12)}`,
+    buildId: String(options.buildId || `${source.id}-${source.revision.slice(0, 12)}`),
     generatedAt: String(options.generatedAt || new Date().toISOString()),
     sources: [source],
     catalog: {

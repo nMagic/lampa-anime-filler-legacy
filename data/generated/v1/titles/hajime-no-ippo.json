@@ -4,13 +4,40 @@
   "identity": {
     "mediaType": "series",
     "title": "Hajime no Ippo",
-    "aliases": [],
-    "ids": {}
+    "aliases": [
+      "Espiritu de Pelea",
+      "Hajime no Ippo: The Fighting",
+      "Первый шаг [ТВ-1]"
+    ],
+    "ids": {
+      "imdb": "tt0481256",
+      "kinopoisk": 408577,
+      "tmdbTv": 42705
+    }
   },
   "numbering": {
     "scope": "regular",
     "basis": "absolute",
-    "startsAt": 1
+    "startsAt": 1,
+    "kodik": {
+      "status": "partial",
+      "coveredEpisodes": 75,
+      "totalEpisodes": 127,
+      "reason": "",
+      "rules": [
+        {
+          "shikimoriId": 263,
+          "season": 1,
+          "offset": 0,
+          "episodes": 75,
+          "titles": [
+            "Espiritu de Pelea",
+            "Hajime no Ippo: The Fighting",
+            "Первый шаг [ТВ-1]"
+          ]
+        }
+      ]
+    }
   },
   "classification": {
     "sourceId": "skipthefiller",

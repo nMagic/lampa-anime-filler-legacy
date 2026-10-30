@@ -4,13 +4,137 @@
   "identity": {
     "mediaType": "series",
     "title": "Gintama",
-    "aliases": [],
-    "ids": {}
+    "aliases": [
+      "Gin Tama",
+      "Gintama (2011)",
+      "Gintama (2017)",
+      "Gintama (Episoden 329-341)",
+      "Gintama (Episoden 342-353)",
+      "Gintama (Episodes 253-265)",
+      "Gintama Season 4",
+      "Gintama Season 4 (2017)",
+      "Gintama TV",
+      "Gintama'",
+      "Gintama' (2012)",
+      "Gintama': Enchousen",
+      "Gintama. (2017)",
+      "Gintama. (2018)",
+      "Gintama. Shirogane no Tamashii-hen - Kouhan-sen",
+      "Gintama°",
+      "Гинтама [ТВ-1]",
+      "Гинтама [ТВ-2]",
+      "Гинтама [ТВ-3]",
+      "Гинтама [ТВ-4]",
+      "Гинтама [ТВ-5]",
+      "Гинтама [ТВ-6]",
+      "Гинтама [ТВ-7]",
+      "Гинтама [ТВ-8]"
+    ],
+    "ids": {
+      "imdb": "tt0988818",
+      "kinopoisk": 490128,
+      "tmdbTv": 57041
+    }
   },
   "numbering": {
     "scope": "regular",
     "basis": "absolute",
-    "startsAt": 1
+    "startsAt": 1,
+    "kodik": {
+      "status": "verified",
+      "coveredEpisodes": 367,
+      "totalEpisodes": 367,
+      "reason": "",
+      "rules": [
+        {
+          "shikimoriId": 918,
+          "season": 1,
+          "offset": 0,
+          "episodes": 201,
+          "titles": [
+            "Gin Tama",
+            "Gintama TV",
+            "Гинтама [ТВ-1]"
+          ]
+        },
+        {
+          "shikimoriId": 9969,
+          "season": 2,
+          "offset": 201,
+          "episodes": 51,
+          "titles": [
+            "Gintama (2011)",
+            "Gintama'",
+            "Гинтама [ТВ-2]"
+          ]
+        },
+        {
+          "shikimoriId": 15417,
+          "season": 3,
+          "offset": 252,
+          "episodes": 13,
+          "titles": [
+            "Gintama (Episodes 253-265)",
+            "Gintama' (2012)",
+            "Гинтама [ТВ-3]"
+          ]
+        },
+        {
+          "shikimoriId": 28977,
+          "season": 4,
+          "offset": 265,
+          "episodes": 51,
+          "titles": [
+            "Gintama",
+            "Gintama°",
+            "Гинтама [ТВ-4]"
+          ]
+        },
+        {
+          "shikimoriId": 34096,
+          "season": 5,
+          "offset": 316,
+          "episodes": 12,
+          "titles": [
+            "Gintama (2017)",
+            "Gintama Season 4",
+            "Гинтама [ТВ-5]"
+          ]
+        },
+        {
+          "shikimoriId": 35843,
+          "season": 6,
+          "offset": 328,
+          "episodes": 13,
+          "titles": [
+            "Gintama (Episoden 329-341)",
+            "Gintama Season 4 (2017)",
+            "Гинтама [ТВ-6]"
+          ]
+        },
+        {
+          "shikimoriId": 36838,
+          "season": 7,
+          "offset": 341,
+          "episodes": 12,
+          "titles": [
+            "Gintama (Episoden 342-353)",
+            "Gintama. (2018)",
+            "Гинтама [ТВ-7]"
+          ]
+        },
+        {
+          "shikimoriId": 37491,
+          "season": 8,
+          "offset": 353,
+          "episodes": 14,
+          "titles": [
+            "Gintama",
+            "Гинтама [ТВ-8]"
+          ]
+        }
+      ]
+    }
   },
   "classification": {
     "sourceId": "skipthefiller",

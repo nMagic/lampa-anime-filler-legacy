@@ -16,7 +16,7 @@ async function flushMany(count = 8) {
 }
 
 function bundleFixture(options = {}) {
-  const base = 'https://nmagic.github.io/lampa-anime-filler/data/generated/v1';
+  const base = 'https://raw.githubusercontent.com/nMagic/lampa-anime-filler/kodik-test/data/generated/v1';
   const episodes = {};
   for (let number = 1; number <= 55; number++) episodes[number] = number === 55 ? 'filler' : 'canon';
   const shard = {
@@ -100,7 +100,11 @@ function createHarness(options = {}) {
     body: null,
     createElement() { return fakeNode(); },
     querySelector() { return null; },
-    querySelectorAll() { return []; }
+    querySelectorAll(selector) {
+      if (selector === '.laf-badge' || selector === '.laf-filler') return [];
+      if (String(selector).includes('.online')) return templates.map(entry => entry.node);
+      return [];
+    }
   };
   const context = {
     window: {
@@ -187,7 +191,7 @@ test('loads and verifies manifest, index and one title shard', async () => {
 });
 
 test('loads the committed One Piece bundle end to end', async () => {
-  const base = 'https://nmagic.github.io/lampa-anime-filler/data/generated/v1/';
+  const base = 'https://raw.githubusercontent.com/nMagic/lampa-anime-filler/kodik-test/data/generated/v1/';
   const fetch = async url => {
     assert.ok(url.startsWith(base), 'unexpected URL ' + url);
     const relative = url.slice(base.length);
@@ -199,6 +203,29 @@ test('loads the committed One Piece bundle end to end', async () => {
   assert.equal(guide.episodes[54], 'filler');
   assert.equal(guide.episodes[58], 'filler');
   assert.equal(api.classify({ season: 1, episode: 55 }, guide).type, 'filler');
+});
+
+test('loads real Kodik numbering for Bleach and multi-season My Hero Academia', async () => {
+  const base = 'https://raw.githubusercontent.com/nMagic/lampa-anime-filler/kodik-test/data/generated/v1/';
+  const fetch = async url => {
+    assert.ok(url.startsWith(base), 'unexpected URL ' + url);
+    const relative = url.slice(base.length);
+    const target = path.join(__dirname, '..', 'data', 'generated', 'v1', ...relative.split('/'));
+    return { ok: true, text: async () => fs.readFileSync(target, 'utf8') };
+  };
+  const bleachHarness = createHarness({ fetch });
+  const bleach = await bleachHarness.api.loadBundleGuide({ id: 30984, name: 'Блич' });
+  assert.equal(bleach.kodik.status, 'partial');
+  assert.equal(bleachHarness.api.indexForDetailed({ season: 1, episode: 366,
+    orig_title: 'Bleach' }, bleach).number, 366);
+  assert.equal(bleachHarness.api.indexForDetailed({ season: 1, episode: 367,
+    orig_title: 'Bleach' }, bleach).number, null);
+
+  const heroHarness = createHarness({ fetch });
+  const hero = await heroHarness.api.loadBundleGuide({ id: 65930, name: 'Моя геройская академия' });
+  assert.equal(hero.kodik.status, 'verified');
+  assert.equal(heroHarness.api.indexForDetailed({ season: 6, episode: 25,
+    orig_title: 'Boku no Hero Academia 6' }, hero).number, 138);
 });
 
 test('uses a previously verified bundle cache when the network is unavailable', async () => {
@@ -296,6 +323,63 @@ test('requires verified offsets for structured seasons and honors explicit absol
   assert.equal(api.classify({ absolute_episode: 13 }, guide).type, 'filler');
   assert.equal(api.classify({ filename: 'Season 3 Episode 1.mkv' }, guide), null);
   assert.equal(api.classify('Episode 999', guide), null);
+});
+
+test('maps split Kodik seasons by the exact original title and never guesses an unknown part', () => {
+  const { api } = createHarness();
+  const guide = api.normalizeGuide({
+    episodes: { 38: 'Canon', 50: 'Filler' },
+    kodik: { status: 'partial', coveredEpisodes: 59, totalEpisodes: 94, rules: [
+      { season: 3, offset: 37, episodes: 12, titles: ['Shingeki no Kyojin Season 3'] },
+      { season: 3, offset: 49, episodes: 10, titles: ['Shingeki no Kyojin Season 3 (2019)'] }
+    ] }
+  });
+  assert.equal(api.indexForDetailed({ season: 3, episode: 1,
+    orig_title: 'Shingeki no Kyojin Season 3 (2019)' }, guide).number, 50);
+  assert.equal(api.indexForDetailed({ season: 3, episode: 1 }, guide).number, null);
+  assert.match(api.indexForDetailed({ season: 3, episode: 99,
+    orig_title: 'Shingeki no Kyojin Season 3' }, guide).reason, /диапазона/);
+});
+
+test('marks the actual Online_Mod row from Kodik metadata and does not duplicate its badge', () => {
+  const { api, context } = createHarness();
+  api.state.guide = api.normalizeGuide({
+    episodes: { 50: 'Filler' },
+    kodik: { status: 'partial', coveredEpisodes: 59, totalEpisodes: 94, rules: [
+      { season: 3, offset: 49, episodes: 10, titles: ['Shingeki no Kyojin Season 3 (2019)'] }
+    ] }
+  }, 'fixture');
+  const row = context.Lampa.Template.get('online_mod', {
+    season: 3, episode: 1, orig_title: 'Shingeki no Kyojin Season 3 (2019)'
+  })[0];
+  api.scan();
+  api.scan();
+  assert.equal(row.children.length, 1);
+  assert.equal(row.children[0].getAttribute('data-episode'), '50');
+  assert.equal(row.children[0].getAttribute('data-type'), 'filler');
+  assert.equal(api.state.diagnostics.matched, 1);
+  assert.equal(api.state.diagnostics.unknownMapping, 0);
+});
+
+test('scans every Kodik row in a list longer than one thousand episodes', () => {
+  const { api, context } = createHarness();
+  const episodes = {};
+  for (let number = 1; number <= 1005; number++) episodes[number] = 'Canon';
+  api.state.guide = api.normalizeGuide({ episodes,
+    kodik: { status: 'verified', coveredEpisodes: 1005, totalEpisodes: 1005, rules: [
+      { season: 1, offset: 0, episodes: 1005, titles: ['Long Anime'] }
+    ] }
+  }, 'fixture');
+  let last;
+  for (let number = 1; number <= 1005; number++) {
+    last = context.Lampa.Template.get('online_mod', {
+      season: 1, episode: number, orig_title: 'Long Anime'
+    })[0];
+  }
+  api.scan();
+  assert.equal(api.state.diagnostics.rows, 1005);
+  assert.equal(api.state.diagnostics.matched, 1005);
+  assert.equal(last.children[0].getAttribute('data-episode'), '1005');
 });
 
 test('template hook carries source metadata for Online_Mod and BWA but ignores unknown templates', () => {

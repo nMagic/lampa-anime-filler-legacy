@@ -4,13 +4,69 @@
   "identity": {
     "mediaType": "series",
     "title": "Kuroko's Basketball",
-    "aliases": [],
-    "ids": {}
+    "aliases": [
+      "El baloncesto de Kuroko",
+      "KNB2",
+      "KNB3",
+      "Kuroko no Baske",
+      "Kuroko no Baske 3",
+      "Kuroko no Basket",
+      "Kuroko no Basuke 2",
+      "Баскетбол Куроко [ТВ-1]",
+      "Баскетбол Куроко [ТВ-2]",
+      "Баскетбол Куроко [ТВ-3]"
+    ],
+    "ids": {
+      "imdb": "tt2348803",
+      "kinopoisk": 676672,
+      "tmdbTv": 45783
+    }
   },
   "numbering": {
     "scope": "regular",
     "basis": "absolute",
-    "startsAt": 1
+    "startsAt": 1,
+    "kodik": {
+      "status": "verified",
+      "coveredEpisodes": 75,
+      "totalEpisodes": 75,
+      "reason": "",
+      "rules": [
+        {
+          "shikimoriId": 11771,
+          "season": 1,
+          "offset": 0,
+          "episodes": 25,
+          "titles": [
+            "El baloncesto de Kuroko",
+            "Kuroko no Baske",
+            "Баскетбол Куроко [ТВ-1]"
+          ]
+        },
+        {
+          "shikimoriId": 16894,
+          "season": 2,
+          "offset": 25,
+          "episodes": 25,
+          "titles": [
+            "KNB2",
+            "Kuroko no Basuke 2",
+            "Баскетбол Куроко [ТВ-2]"
+          ]
+        },
+        {
+          "shikimoriId": 24415,
+          "season": 3,
+          "offset": 50,
+          "episodes": 25,
+          "titles": [
+            "KNB3",
+            "Kuroko no Baske 3",
+            "Баскетбол Куроко [ТВ-3]"
+          ]
+        }
+      ]
+    }
   },
   "classification": {
     "sourceId": "skipthefiller",

@@ -4,13 +4,37 @@
   "identity": {
     "mediaType": "series",
     "title": "Black Clover",
-    "aliases": [],
-    "ids": {}
+    "aliases": [
+      "Чёрный клевер [ТВ-1]"
+    ],
+    "ids": {
+      "imdb": "tt7441658",
+      "kinopoisk": 1049731,
+      "tmdbTv": 73223
+    }
   },
   "numbering": {
     "scope": "regular",
     "basis": "absolute",
-    "startsAt": 1
+    "startsAt": 1,
+    "kodik": {
+      "status": "verified",
+      "coveredEpisodes": 170,
+      "totalEpisodes": 170,
+      "reason": "",
+      "rules": [
+        {
+          "shikimoriId": 34572,
+          "season": 1,
+          "offset": 0,
+          "episodes": 170,
+          "titles": [
+            "Black Clover",
+            "Чёрный клевер [ТВ-1]"
+          ]
+        }
+      ]
+    }
   },
   "classification": {
     "sourceId": "skipthefiller",

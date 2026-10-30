@@ -4,13 +4,97 @@
   "identity": {
     "mediaType": "series",
     "title": "That Time I Got Reincarnated as a Slime",
-    "aliases": [],
-    "ids": {}
+    "aliases": [
+      "Aquella vez que me convertí en slime - Temporada 4",
+      "Bereinkarnasi Malah Menjadi Slime",
+      "Meine Wiedergeburt als Schleim in einer anderen Welt (2021)",
+      "Meine Wiedergeburt als Schleim in einer anderen Welt (2021) Teil 2",
+      "Meine Wiedergeburt als Schleim in einer anderen Welt Staffel 3",
+      "Tensei Shitara Slime Datta Ken",
+      "Tensei Shitara Slime Datta Ken (2021 Dai 2 Bu)",
+      "Tensei Shitara Slime Datta Ken (2021)",
+      "Tensei Shitara Slime Datta Ken (2026)",
+      "Tensei Shitara Slime Datta Ken 3",
+      "Tensei shitara Slime Datta Ken",
+      "О моём перерождении в слизь [ТВ-1]",
+      "О моём перерождении в слизь [ТВ-2, второй сезон]",
+      "О моём перерождении в слизь [ТВ-2, первый сезон]",
+      "О моём перерождении в слизь [ТВ-3]",
+      "О моём перерождении в слизь [ТВ-4]"
+    ],
+    "ids": {
+      "imdb": "tt9054364",
+      "kinopoisk": 1224030,
+      "tmdbTv": 82684
+    }
   },
   "numbering": {
     "scope": "regular",
     "basis": "absolute",
-    "startsAt": 1
+    "startsAt": 1,
+    "kodik": {
+      "status": "verified",
+      "coveredEpisodes": 75,
+      "totalEpisodes": 75,
+      "reason": "",
+      "rules": [
+        {
+          "shikimoriId": 37430,
+          "season": 1,
+          "offset": 0,
+          "episodes": 24,
+          "titles": [
+            "Bereinkarnasi Malah Menjadi Slime",
+            "Tensei Shitara Slime Datta Ken",
+            "О моём перерождении в слизь [ТВ-1]"
+          ]
+        },
+        {
+          "shikimoriId": 41487,
+          "season": 2,
+          "offset": 24,
+          "episodes": 12,
+          "titles": [
+            "Meine Wiedergeburt als Schleim in einer anderen Welt (2021) Teil 2",
+            "Tensei Shitara Slime Datta Ken (2021 Dai 2 Bu)",
+            "О моём перерождении в слизь [ТВ-2, второй сезон]"
+          ]
+        },
+        {
+          "shikimoriId": 39551,
+          "season": 2,
+          "offset": 36,
+          "episodes": 12,
+          "titles": [
+            "Meine Wiedergeburt als Schleim in einer anderen Welt (2021)",
+            "Tensei Shitara Slime Datta Ken (2021)",
+            "О моём перерождении в слизь [ТВ-2, первый сезон]"
+          ]
+        },
+        {
+          "shikimoriId": 53580,
+          "season": 3,
+          "offset": 48,
+          "episodes": 24,
+          "titles": [
+            "Meine Wiedergeburt als Schleim in einer anderen Welt Staffel 3",
+            "Tensei Shitara Slime Datta Ken 3",
+            "О моём перерождении в слизь [ТВ-3]"
+          ]
+        },
+        {
+          "shikimoriId": 59970,
+          "season": 4,
+          "offset": 72,
+          "episodes": 3,
+          "titles": [
+            "Aquella vez que me convertí en slime - Temporada 4",
+            "Tensei Shitara Slime Datta Ken (2026)",
+            "О моём перерождении в слизь [ТВ-4]"
+          ]
+        }
+      ]
+    }
   },
   "classification": {
     "sourceId": "skipthefiller",

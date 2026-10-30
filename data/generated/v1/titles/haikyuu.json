@@ -4,13 +4,96 @@
   "identity": {
     "mediaType": "series",
     "title": "Haikyu!!",
-    "aliases": [],
-    "ids": {}
+    "aliases": [
+      "HAIKYU!!",
+      "HAIKYU!! 2nd Season",
+      "HAIKYU!! 3rd Season",
+      "HAIKYU!! TO THE TOP",
+      "HAIKYU!! TO THE TOP Part 2",
+      "Haikyuu!!",
+      "Haikyuu!! Karasuno Koukou vs Shiratorizawa Gakuen Koukou",
+      "Haikyuu!! Second Season",
+      "Haikyuu!! To the Top",
+      "Haikyuu!! To the Top (2020)",
+      "Волейбол [ТВ-1]",
+      "Волейбол [ТВ-2]",
+      "Волейбол [ТВ-3]",
+      "Волейбол [ТВ-4, второй сезон]",
+      "Волейбол [ТВ-4, первый сезон]"
+    ],
+    "ids": {
+      "imdb": "tt3398540",
+      "kinopoisk": 840073,
+      "tmdbTv": 60863
+    }
   },
   "numbering": {
     "scope": "regular",
     "basis": "absolute",
-    "startsAt": 1
+    "startsAt": 1,
+    "kodik": {
+      "status": "verified",
+      "coveredEpisodes": 85,
+      "totalEpisodes": 85,
+      "reason": "",
+      "rules": [
+        {
+          "shikimoriId": 20583,
+          "season": 1,
+          "offset": 0,
+          "episodes": 25,
+          "titles": [
+            "HAIKYU!!",
+            "Haikyuu!!",
+            "Волейбол [ТВ-1]"
+          ]
+        },
+        {
+          "shikimoriId": 28891,
+          "season": 2,
+          "offset": 25,
+          "episodes": 25,
+          "titles": [
+            "HAIKYU!! 2nd Season",
+            "Haikyuu!! Second Season",
+            "Волейбол [ТВ-2]"
+          ]
+        },
+        {
+          "shikimoriId": 32935,
+          "season": 3,
+          "offset": 50,
+          "episodes": 10,
+          "titles": [
+            "HAIKYU!! 3rd Season",
+            "Haikyuu!! Karasuno Koukou vs Shiratorizawa Gakuen Koukou",
+            "Волейбол [ТВ-3]"
+          ]
+        },
+        {
+          "shikimoriId": 38883,
+          "season": 4,
+          "offset": 60,
+          "episodes": 13,
+          "titles": [
+            "HAIKYU!! TO THE TOP",
+            "Haikyuu!! To the Top",
+            "Волейбол [ТВ-4, первый сезон]"
+          ]
+        },
+        {
+          "shikimoriId": 40776,
+          "season": 4,
+          "offset": 73,
+          "episodes": 12,
+          "titles": [
+            "HAIKYU!! TO THE TOP Part 2",
+            "Haikyuu!! To the Top (2020)",
+            "Волейбол [ТВ-4, второй сезон]"
+          ]
+        }
+      ]
+    }
   },
   "classification": {
     "sourceId": "skipthefiller",

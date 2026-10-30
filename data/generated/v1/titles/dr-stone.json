@@ -4,13 +4,122 @@
   "identity": {
     "mediaType": "series",
     "title": "Dr. Stone",
-    "aliases": [],
-    "ids": {}
+    "aliases": [
+      "DR.STONE ภาค 2",
+      "DR.STONE ภาค 3",
+      "Dcst",
+      "Doctor Stone 4th Season",
+      "Dr. STONE SCIENCE FUTURE Cour 2",
+      "Dr. STONE SCIENCE FUTURE Cour 3",
+      "Dr. Stone: New World",
+      "Dr. Stone: New World (2023)",
+      "Dr. Stone: Science Future",
+      "Dr. Stone: Science Future (2025)",
+      "Dr. Stone: Science Future (2026)",
+      "Dr. Stone: Stone Wars",
+      "Доктор Стоун [ТВ-1]",
+      "Доктор Стоун [ТВ-2]",
+      "Доктор Стоун [ТВ-3, часть 1]",
+      "Доктор Стоун [ТВ-3, часть 2]",
+      "Доктор Стоун [ТВ-4, часть 1]",
+      "Доктор Стоун [ТВ-4, часть 2]",
+      "Доктор Стоун [ТВ-4, часть 3]"
+    ],
+    "ids": {
+      "imdb": "tt9679542",
+      "kinopoisk": 1249511,
+      "tmdbTv": 86031
+    }
   },
   "numbering": {
     "scope": "regular",
     "basis": "absolute",
-    "startsAt": 1
+    "startsAt": 1,
+    "kodik": {
+      "status": "verified",
+      "coveredEpisodes": 94,
+      "totalEpisodes": 94,
+      "reason": "",
+      "rules": [
+        {
+          "shikimoriId": 38691,
+          "season": 1,
+          "offset": 0,
+          "episodes": 24,
+          "titles": [
+            "Dcst",
+            "Dr. Stone",
+            "Доктор Стоун [ТВ-1]"
+          ]
+        },
+        {
+          "shikimoriId": 40852,
+          "season": 2,
+          "offset": 24,
+          "episodes": 11,
+          "titles": [
+            "DR.STONE ภาค 2",
+            "Dr. Stone: Stone Wars",
+            "Доктор Стоун [ТВ-2]"
+          ]
+        },
+        {
+          "shikimoriId": 48549,
+          "season": 3,
+          "offset": 35,
+          "episodes": 11,
+          "titles": [
+            "DR.STONE ภาค 3",
+            "Dr. Stone: New World",
+            "Доктор Стоун [ТВ-3, часть 1]"
+          ]
+        },
+        {
+          "shikimoriId": 55644,
+          "season": 3,
+          "offset": 46,
+          "episodes": 11,
+          "titles": [
+            "DR.STONE ภาค 3",
+            "Dr. Stone: New World (2023)",
+            "Доктор Стоун [ТВ-3, часть 2]"
+          ]
+        },
+        {
+          "shikimoriId": 57592,
+          "season": 4,
+          "offset": 57,
+          "episodes": 12,
+          "titles": [
+            "Doctor Stone 4th Season",
+            "Dr. Stone: Science Future",
+            "Доктор Стоун [ТВ-4, часть 1]"
+          ]
+        },
+        {
+          "shikimoriId": 61322,
+          "season": 4,
+          "offset": 69,
+          "episodes": 12,
+          "titles": [
+            "Dr. STONE SCIENCE FUTURE Cour 2",
+            "Dr. Stone: Science Future (2025)",
+            "Доктор Стоун [ТВ-4, часть 2]"
+          ]
+        },
+        {
+          "shikimoriId": 62568,
+          "season": 4,
+          "offset": 81,
+          "episodes": 13,
+          "titles": [
+            "Dr. STONE SCIENCE FUTURE Cour 3",
+            "Dr. Stone: Science Future (2026)",
+            "Доктор Стоун [ТВ-4, часть 3]"
+          ]
+        }
+      ]
+    }
   },
   "classification": {
     "sourceId": "skipthefiller",

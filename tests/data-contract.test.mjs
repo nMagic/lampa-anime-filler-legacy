@@ -89,3 +89,18 @@ test('rejects non-series-safe input instead of guessing', () => {
   assert.throws(() => build([{ ...base, url: 'http://example.test/naruto' }]), /only HTTPS URLs/);
   assert.throws(() => build(fixture, { naruto: { seasonOffsets: { 1: -1 } } }), /offset/);
 });
+
+test('committed Kodik snapshot covers every catalog title with an explicit outcome', async () => {
+  const root = resolve(HERE, '..');
+  const index = JSON.parse(await readFile(resolve(root, 'data/generated/v1/index.json'), 'utf8'));
+  const snapshot = JSON.parse(await readFile(resolve(root, 'data/kodik.v1.json'), 'utf8'));
+  assert.equal(index.titles.length, 45);
+  assert.deepEqual(Object.keys(snapshot.titles).sort(), index.titles.map(item => item.slug).sort());
+  const rows = Object.values(snapshot.titles);
+  assert.equal(rows.filter(item => item.status === 'verified').length, 34);
+  assert.equal(rows.filter(item => item.status === 'partial').length, 10);
+  assert.equal(rows.filter(item => item.status === 'not_in_kodik').length, 1);
+  assert.equal(rows.reduce((sum, item) => sum + item.coveredEpisodes, 0), 9129);
+  assert.ok(rows.every(item => item.status && Number.isInteger(item.coveredEpisodes) &&
+    item.coveredEpisodes <= item.totalEpisodes));
+});

@@ -4,13 +4,95 @@
   "identity": {
     "mediaType": "series",
     "title": "Sword Art Online",
-    "aliases": [],
-    "ids": {}
+    "aliases": [
+      "Alicization",
+      "GGO",
+      "S.A.O",
+      "SAO 3 3rd Season",
+      "SAO Alicization 2",
+      "Sword Art Online II",
+      "Sword Art Online: Alicization",
+      "Sword Art Online: Alicization - War of Underworld",
+      "Sword Art Online: Alicization - War of Underworld (2020)",
+      "Мастера меча онлайн [ТВ-1]",
+      "Мастера меча онлайн [ТВ-2]",
+      "Мастера меча онлайн: Алисизация",
+      "Мастера меча онлайн: Алисизация - Война в Подмирье [ТВ-1]",
+      "Мастера меча онлайн: Алисизация - Война в Подмирье [ТВ-2]"
+    ],
+    "ids": {
+      "imdb": "tt2250192",
+      "kinopoisk": 691223,
+      "tmdbTv": 45782
+    }
   },
   "numbering": {
     "scope": "regular",
     "basis": "absolute",
-    "startsAt": 1
+    "startsAt": 1,
+    "kodik": {
+      "status": "verified",
+      "coveredEpisodes": 96,
+      "totalEpisodes": 96,
+      "reason": "",
+      "rules": [
+        {
+          "shikimoriId": 11757,
+          "season": 1,
+          "offset": 0,
+          "episodes": 25,
+          "titles": [
+            "S.A.O",
+            "Sword Art Online",
+            "Мастера меча онлайн [ТВ-1]"
+          ]
+        },
+        {
+          "shikimoriId": 21881,
+          "season": 2,
+          "offset": 25,
+          "episodes": 24,
+          "titles": [
+            "GGO",
+            "Sword Art Online II",
+            "Мастера меча онлайн [ТВ-2]"
+          ]
+        },
+        {
+          "shikimoriId": 36474,
+          "season": 3,
+          "offset": 49,
+          "episodes": 24,
+          "titles": [
+            "Alicization",
+            "Sword Art Online: Alicization",
+            "Мастера меча онлайн: Алисизация"
+          ]
+        },
+        {
+          "shikimoriId": 39597,
+          "season": 4,
+          "offset": 73,
+          "episodes": 12,
+          "titles": [
+            "SAO Alicization 2",
+            "Sword Art Online: Alicization - War of Underworld",
+            "Мастера меча онлайн: Алисизация - Война в Подмирье [ТВ-1]"
+          ]
+        },
+        {
+          "shikimoriId": 40540,
+          "season": 5,
+          "offset": 85,
+          "episodes": 11,
+          "titles": [
+            "SAO 3 3rd Season",
+            "Sword Art Online: Alicization - War of Underworld (2020)",
+            "Мастера меча онлайн: Алисизация - Война в Подмирье [ТВ-2]"
+          ]
+        }
+      ]
+    }
   },
   "classification": {
     "sourceId": "skipthefiller",
