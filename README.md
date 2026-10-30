@@ -7,7 +7,7 @@
 В Lampa откройте **Настройки → Расширения / Плагины → Добавить плагин** и укажите:
 
 ```text
-https://cdn.jsdelivr.net/gh/nMagic/lampa-anime-filler@kodik-test/a.js?v=0.5.0-kodik.3
+https://cdn.jsdelivr.net/gh/nMagic/lampa-anime-filler@kodik-test/install-kodik3.js
 ```
 
 Затем полностью перезапустите Lampa. Стабильный адрес `https://nmagic.github.io/lampa-anime-filler/a.js` этой веткой не изменяется.
