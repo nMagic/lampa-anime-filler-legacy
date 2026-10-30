@@ -115,6 +115,7 @@ function createHarness(options = {}) {
     document,
     MutationObserver: function MutationObserver() { this.observe = function observe() {}; },
     Lampa: {
+      Reguest: options.Reguest,
       SettingsApi: { addComponent() {}, addParam() {} },
       Listener: { follow(name, callback) { (listeners[name] ||= []).push(callback); } },
       Template: { get(name) {
@@ -188,6 +189,46 @@ test('loads and verifies manifest, index and one title shard', async () => {
   assert.ok(storage.has('laf_bundle_active_v1'));
   assert.ok([...storage.keys()].some(key => key.startsWith('laf_bundle_shard_v1_')));
   assert.equal(guide.bundle.resolution, 'TMDB ID');
+});
+
+test('uses the Lampa transport on webOS and requests response bodies as text', async () => {
+  const fixture = bundleFixture();
+  const calls = [];
+  function Reguest() {
+    this.timeout = value => assert.equal(value, 8000);
+    this.silent = (url, success, error, post, options) => {
+      calls.push(url);
+      assert.equal(post, false);
+      assert.equal(options.dataType, 'text');
+      setImmediate(() => fixture.responses.has(url)
+        ? success(fixture.responses.get(url))
+        : error({ status: 404, statusText: 'not found' }));
+    };
+  }
+  const { api } = createHarness({
+    Reguest,
+    fetch: () => Promise.reject(new Error('native fetch must not be used'))
+  });
+  const guide = await api.loadBundleGuide({ id: 37854, name: 'Ван-Пис' });
+  assert.equal(guide.episodes[55], 'filler');
+  assert.equal(calls.length, 3);
+});
+
+test('coalesces repeated full-screen events while the same card is loading', async () => {
+  const fixture = bundleFixture();
+  let calls = 0;
+  const fetch = async url => {
+    calls++;
+    return { ok: true, text: async () => fixture.responses.get(url) };
+  };
+  const { api, listeners } = createHarness({ fetch });
+  const event = { type: 'complite', data: { movie: { id: 37854, name: 'Ван-Пис' } }, object: {} };
+  listeners.full[0](event);
+  listeners.full[0](event);
+  listeners.full[0](event);
+  await flushMany(12);
+  assert.equal(api.state.guide.slug, 'one-piece');
+  assert.equal(calls, 3, 'manifest, index and shard must each be requested only once');
 });
 
 test('loads the committed One Piece bundle end to end', async () => {

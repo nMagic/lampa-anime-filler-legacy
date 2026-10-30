@@ -1,5 +1,5 @@
 /*
- * Lampa Anime Filler — Online_Mod / Kodik test build 0.5.0-kodik.2
+ * Lampa Anime Filler — Online_Mod / Kodik test build 0.5.0-kodik.3
  * Source code is independently written; no Lampa code copied.
  * Metadata backends: optional user-provided AFL JSON, fallback CC BY 4.0 SkipTheFiller dataset.
  * Phase 1: labels only; no playback/playlist modification.
@@ -18,8 +18,8 @@
   var PREFIX = 'laf_';
   var CACHE_TTL = 24 * 60 * 60 * 1000;
   var FETCH_TIMEOUT = 8000;
-  var state = { movie: null, slug: '', guide: null, loadId: 0, dataset: null, datasetPromise: null,
-    bundleCatalog: null,
+  var state = { movie: null, movieKey: '', slug: '', guide: null, loadId: 0, dataset: null, datasetPromise: null,
+    bundleCatalog: null, bundleCatalogPromise: null,
     diagnostics: { phase: 'ожидаем карточку аниме', error: '', fullEvents: 0, templateHits: 0,
       rows: 0, matched: 0, parsed: 0, unknownMapping: 0, noClassification: 0,
       kodikRows: 0, numbering: '', sampleTitle: '', sampleTemplate: '',
@@ -144,6 +144,27 @@
       source: input.source || source || 'Пользовательские данные' };
   }
   function isObject(value) { return value && typeof value === 'object' && !Array.isArray(value); }
+  function withTimeout(promise, label) {
+    return new Promise(function (resolve, reject) {
+      var settled = false;
+      var timeout = setTimeout(function () {
+        if (settled) return;
+        settled = true;
+        reject(new Error(label + ': timeout ' + FETCH_TIMEOUT + 'ms'));
+      }, FETCH_TIMEOUT);
+      promise.then(function (value) {
+        if (settled) return;
+        settled = true;
+        clearTimeout(timeout);
+        resolve(value);
+      }, function (error) {
+        if (settled) return;
+        settled = true;
+        clearTimeout(timeout);
+        reject(error);
+      });
+    });
+  }
   function fetchResponse(url) {
     return new Promise(function (resolve, reject) {
       var settled = false;
@@ -171,12 +192,36 @@
     });
   }
   function fetchJSON(url) {
-    return fetchResponse(url).then(function (response) { return response.json(); });
+    if (Lampa.Reguest) {
+      return fetchText(url).then(function (text) {
+        return typeof text === 'string' ? parseJSON(text, 'HTTP JSON') : text;
+      });
+    }
+    return fetchResponse(url).then(function (response) {
+      if (typeof response.text === 'function') {
+        return withTimeout(response.text(), 'Fetch JSON body').then(function (text) {
+          return parseJSON(text, 'HTTP JSON');
+        });
+      }
+      if (typeof response.json === 'function') return withTimeout(response.json(), 'Fetch JSON body');
+      throw new Error('JSON response is unavailable');
+    });
   }
   function fetchText(url) {
+    // Online_Mod uses this transport too; it is reliable on old webOS WebViews.
+    if (Lampa.Reguest) {
+      return withTimeout(new Promise(function (resolve, reject) {
+        var network = new Lampa.Reguest();
+        if (typeof network.timeout === 'function') network.timeout(FETCH_TIMEOUT);
+        network.silent(url, resolve, function (request, status) {
+          var detail = request && (request.statusText || request.status);
+          reject(new Error('Lampa.Reguest ' + (detail || status || 'error')));
+        }, false, { dataType: 'text' });
+      }), 'Lampa.Reguest body');
+    }
     return fetchResponse(url).then(function (response) {
       if (typeof response.text !== 'function') throw new Error('Text response is unavailable');
-      return response.text();
+      return withTimeout(response.text(), 'Fetch body');
     });
   }
 
@@ -318,6 +363,18 @@
       });
     });
   }
+  function fetchBundleCatalogOnce() {
+    if (!state.bundleCatalogPromise) {
+      state.bundleCatalogPromise = fetchBundleCatalog().then(function (candidate) {
+        state.bundleCatalogPromise = null;
+        return candidate;
+      }, function (error) {
+        state.bundleCatalogPromise = null;
+        throw error;
+      });
+    }
+    return state.bundleCatalogPromise;
+  }
   function resolveBundleItem(index, movie) {
     var id = String(movie && movie.id || '');
     var matches = index.titles.filter(function (item) {
@@ -424,13 +481,13 @@
     var previous = readBundleCatalog('previous');
     if (active && active.date > Date.now() - CACHE_TTL) {
       return tryBundleCandidates(uniqueCatalogs([active, previous]), movie, 0, null, false).catch(function (cachedError) {
-        return fetchBundleCatalog().then(function (network) {
+        return fetchBundleCatalogOnce().then(function (network) {
           state.bundleCatalog = network;
           return tryBundleCandidates(uniqueCatalogs([network, active, previous]), movie, 0, cachedError, false);
         });
       });
     }
-    return fetchBundleCatalog().then(function (network) {
+    return fetchBundleCatalogOnce().then(function (network) {
       state.bundleCatalog = network;
       return tryBundleCandidates(uniqueCatalogs([network, active, previous]), movie, 0, null, false);
     }).catch(function (error) {
@@ -470,9 +527,20 @@
     return mapped && mapped[String(movie.id)] ? clean(mapped[String(movie.id)]) : null;
   }
   function loadFor(movie) {
+    var movieKey = String(movie && movie.media_type || 'tv') + ':' + String(movie && movie.id || '');
+    if (state.movieKey === movieKey && state.diagnostics.phase === 'загружаем каталог') {
+      updateCard();
+      return;
+    }
+    if (state.movieKey === movieKey && state.guide) {
+      updateCard();
+      scheduleScan();
+      return;
+    }
     var requestId = ++state.loadId;
     clearAllTags();
     state.movie = movie;
+    state.movieKey = movieKey;
     state.guide = null;
     state.diagnostics.phase = 'загружаем каталог';
     state.diagnostics.error = '';
@@ -759,7 +827,7 @@
     var diag = state.diagnostics;
     var example = diag.sampleTitle || 'не захвачено';
     var lines = [
-      'Версия: 0.5.0-kodik.2',
+      'Версия: 0.5.0-kodik.3',
       'Карточка: ' + (state.movie ? (state.movie.name || state.movie.title || state.movie.original_name || 'без названия') + ' (TMDB ' + state.movie.id + ')' : 'не открывалась'),
       'Каталог: ' + (state.slug || 'не выбран'),
       'Состояние: ' + diag.phase,
@@ -860,12 +928,12 @@
     Lampa.Listener.follow('activity', scheduleScan);
     observer = new MutationObserver(scheduleScan);
     if (document.body) observer.observe(document.body, { childList: true, subtree: true });
-    log('Loaded 0.5.0-kodik.2, Online_Mod / Kodik marking only');
+    log('Loaded 0.5.0-kodik.3, Online_Mod / Kodik marking only');
   }
   window.LampaAnimeFiller = { parseEpisode: parseEpisode, normalizeGuide: normalizeGuide,
     findGuide: findGuide, classify: classify, scan: scan, sha256Text: sha256Text,
     loadBundleGuide: loadBundleGuide, indexForDetailed: indexForDetailed,
-    state: state, version: '0.5.0-kodik.2' };
+    state: state, version: '0.5.0-kodik.3' };
   if (window.appready) init();
   else Lampa.Listener.follow('app', function (evt) { if (evt.type === 'ready') init(); });
 })();
