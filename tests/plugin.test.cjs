@@ -90,6 +90,23 @@ function fakeNode() {
   };
 }
 
+function cardEvent(movie) {
+  const host = fakeNode();
+  const root = {
+    querySelector(selector) {
+      if (selector === '.laf-summary') {
+        return host.children.find(child => child.className === 'laf-summary') || null;
+      }
+      if (selector.includes('.full-start')) return host;
+      return null;
+    }
+  };
+  return {
+    host,
+    event: { type: 'complite', data: { movie }, object: { activity: { render: () => root } } }
+  };
+}
+
 function createHarness(options = {}) {
   const listeners = Object.create(null);
   const storage = new Map(Object.entries(options.storage || {}));
@@ -215,7 +232,7 @@ test('uses the Lampa transport on webOS and requests response bodies as text', a
 });
 
 test('standalone build activates Naruto synchronously from the actual Lampa card event', () => {
-  const standalone = fs.readFileSync(path.join(__dirname, '..', 'lampa-anime-filler-kodik7.js'), 'utf8');
+  const standalone = fs.readFileSync(path.join(__dirname, '..', 'lampa-anime-filler-kodik8.js'), 'utf8');
   let networkCalls = 0;
   const { api, listeners } = createHarness({
     source: standalone,
@@ -224,7 +241,7 @@ test('standalone build activates Naruto synchronously from the actual Lampa card
   listeners.full[0]({ type: 'complite', data: { movie: {
     id: 46260, name: 'Наруто', media_type: 'tv'
   } }, object: {} });
-  assert.equal(api.version, '0.5.0-kodik.7');
+  assert.equal(api.version, '0.5.0-kodik.8');
   assert.equal(api.state.diagnostics.phase, 'встроенный каталог активирован');
   assert.equal(api.state.diagnostics.provider, 'встроенный каталог 45 / 9552');
   assert.equal(api.state.diagnostics.embeddedItems, 45);
@@ -233,6 +250,27 @@ test('standalone build activates Naruto synchronously from the actual Lampa card
   assert.equal(api.state.guide.episodes[136], 'filler');
   assert.equal(api.state.guide.kodik.coveredEpisodes, 220);
   assert.equal(networkCalls, 0);
+});
+
+test('shows the card summary only for a title present in the classification catalog', () => {
+  const standalone = fs.readFileSync(path.join(__dirname, '..', 'lampa-anime-filler-kodik8.js'), 'utf8');
+  const known = createHarness({ source: standalone });
+  const naruto = cardEvent({ id: 46260, name: 'Наруто', media_type: 'tv' });
+  known.listeners.full[0](naruto.event);
+  const knownSummary = naruto.host.children.find(child => child.className === 'laf-summary');
+  assert.ok(knownSummary);
+  assert.equal(knownSummary.style.display, '');
+  assert.match(knownSummary.textContent, /^Anime Filler: 90 филлеров, 56 смешанных/);
+
+  const unknown = createHarness({ source: standalone });
+  const slayers = cardEvent({ id: 26318, name: 'Рубаки', media_type: 'tv' });
+  unknown.listeners.full[0](slayers.event);
+  const unknownSummary = slayers.host.children.find(child => child.className === 'laf-summary');
+  assert.ok(unknownSummary);
+  assert.equal(unknownSummary.style.display, 'none');
+  assert.equal(unknownSummary.textContent, '');
+  assert.equal(unknown.api.state.diagnostics.phase, 'карточка не сопоставлена');
+  assert.match(unknown.api.state.diagnostics.error, /нет TMDB-привязки/);
 });
 
 test('coalesces repeated full-screen events while the same card is loading', async () => {

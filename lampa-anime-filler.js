@@ -1,5 +1,5 @@
 /*
- * Lampa Anime Filler — Online_Mod / Kodik test build 0.5.0-kodik.7
+ * Lampa Anime Filler — Online_Mod / Kodik test build 0.5.0-kodik.8
  * Source code is independently written; no Lampa code copied.
  * Metadata backends: optional user-provided AFL JSON, fallback CC BY 4.0 SkipTheFiller dataset.
  * Phase 1: labels only; no playback/playlist modification.
@@ -21,7 +21,7 @@
   // The standalone build replaces this exact declaration with the validated catalog.
   // Lexical storage avoids host cleanup or sandboxing of temporary window globals.
   var EMBEDDED_GUIDES = null;
-  var state = { movie: null, movieKey: '', slug: '', guide: null, loadId: 0, dataset: null, datasetPromise: null,
+  var state = { movie: null, movieKey: '', slug: '', guide: null, summary: null, loadId: 0, dataset: null, datasetPromise: null,
     bundleCatalog: null,
     diagnostics: { phase: 'ожидаем карточку аниме', error: '', fullEvents: 0, templateHits: 0,
       rows: 0, matched: 0, parsed: 0, unknownMapping: 0, noClassification: 0,
@@ -825,24 +825,35 @@
     timer = setTimeout(function () { timer = null; scan(); }, 150);
   }
   function updateCard() {
-    var summary = document.querySelector('.laf-summary');
+    var summary = state.summary || document.querySelector('.laf-summary');
     if (!summary) return;
-    if (!state.guide) { summary.textContent = 'Anime Filler: нет данных для этого названия'; return; }
+    if (!state.guide) {
+      summary.textContent = '';
+      summary.style.display = 'none';
+      return;
+    }
     var counts = { filler: 0, mixed: 0, manga_canon: 0, anime_canon: 0, canon: 0 };
     Object.keys(state.guide.episodes).forEach(function (n) { counts[state.guide.episodes[n]]++; });
     summary.textContent = 'Anime Filler: ' + counts.filler + ' филлеров, ' + counts.mixed + ' смешанных · ' + state.guide.source;
+    summary.style.display = '';
   }
   function addSummary(evt) {
     if (!evt || !evt.object || !evt.object.activity || typeof evt.object.activity.render !== 'function') return;
     var root = evt.object.activity.render();
     var dom = root && (root.jquery ? root[0] : root);
-    if (!dom || !dom.querySelector || dom.querySelector('.laf-summary')) return;
+    if (!dom || !dom.querySelector) return;
+    var existing = dom.querySelector('.laf-summary');
+    if (existing) {
+      state.summary = existing;
+      return;
+    }
     var host = dom.querySelector('.full-start-new__details, .full-start__title, .full-start-new__title, .full__details');
     if (!host) return;
     var summary = document.createElement('div');
     summary.className = 'laf-summary';
-    summary.textContent = 'Anime Filler: загружаем классификацию…';
+    summary.style.display = 'none';
     host.appendChild(summary);
+    state.summary = summary;
   }
   function addStyle() {
     var css = document.createElement('style');
@@ -857,7 +868,7 @@
     var diag = state.diagnostics;
     var example = diag.sampleTitle || 'не захвачено';
     var lines = [
-      'Версия: 0.5.0-kodik.7',
+      'Версия: 0.5.0-kodik.8',
       'Карточка: ' + (state.movie ? (state.movie.name || state.movie.title || state.movie.original_name || 'без названия') + ' (TMDB ' + state.movie.id + ')' : 'не открывалась'),
       'Каталог: ' + (state.slug || 'не выбран'),
       'Состояние: ' + diag.phase,
@@ -960,12 +971,12 @@
     Lampa.Listener.follow('activity', scheduleScan);
     observer = new MutationObserver(scheduleScan);
     if (document.body) observer.observe(document.body, { childList: true, subtree: true });
-    log('Loaded 0.5.0-kodik.7, Online_Mod / Kodik marking only');
+    log('Loaded 0.5.0-kodik.8, Online_Mod / Kodik marking only');
   }
   window.LampaAnimeFiller = { parseEpisode: parseEpisode, normalizeGuide: normalizeGuide,
     findGuide: findGuide, classify: classify, scan: scan, sha256Text: sha256Text,
     loadBundleGuide: loadBundleGuide, indexForDetailed: indexForDetailed,
-    state: state, version: '0.5.0-kodik.7' };
+    state: state, version: '0.5.0-kodik.8' };
   if (window.appready) init();
   else Lampa.Listener.follow('app', function (evt) { if (evt.type === 'ready') init(); });
 })();
